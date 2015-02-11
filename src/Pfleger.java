@@ -6,8 +6,35 @@
 
 /**
  *
- * @author becksusanna
+ * @author becksusanna yeah!!!
  */
-public class Pfleger {
+
+import java.util.*;
+
+public class Pfleger extends Personal{
+    
+    public ArrayList<Integer> pfTiere;
+    
+    public Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    {
+        pNr = nr;
+        pName = name;
+        pVName = vName;
+        pStrNr = strNr;
+        pPLZ = plz;
+        pOrt = ort;
+        pGebDat = gebDat;
+        pTel = tel;
+        pMail = mail;
+        gehalt = gehAlt;
+    }
+    
+    public void addTier (int tNr) {
+        pfTiere.add(tNr);
+    }
+    
+    public ArrayList<Integer> getPfTiere() {
+        return pfTiere;
+    }
     
 }

@@ -5,9 +5,34 @@
  */
 
 /**
- *
- * @author becksusanna
+ * @author becksusanna yeah!!!
  */
-public class Arzt {
+
+import java.util.*;
+
+public class Arzt extends Personal{
     
+    public int rNr;
+    
+    public Arzt(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    {
+        pNr = nr;
+        pName = name;
+        pVName = vName;
+        pStrNr = strNr;
+        pPLZ = plz;
+        pOrt = ort;
+        pGebDat = gebDat;
+        pTel = tel;
+        pMail = mail;
+        gehalt = gehAlt;
+    }
+    
+public int getRNr() {
+        return rNr;
+    }
+    
+    public void setRNr(int neuerRaum){
+        rNr = neuerRaum;
+    }
 }
