@@ -23,9 +23,55 @@ public class Halter {
     ArrayList <String> haTiere;
     int haNr;
     
-    public void getHaVollname(){
-    System.out.print(haVorname);
-    System.out.print(haNachname);
+    public String getHaVorname(){
+    return haVorname;
     }
+<<<<<<< Updated upstream
+=======
+    public String getHaNachname(){
+    return haNachname;
+    }
+    public void Kundenname(Halter h){
+    System.out.println(h.getHaVorname());
+    System.out.print(h.getHaNachname());
+    }
+    public int getHaPLZ(){
+    return haPLZ;
+    }
+    public String getHaStrNr(){
+    return haStrNr;
+    }
+    public String getHaOrt(){
+    return haOrt;
+    }
+    public void Adresse(Halter h){
+    System.out.println(h.getHaStrNr());
+    System.out.println(h.getHaPLZ());
+    System.out.print(h.getHaOrt());
+    }
+    public int getHaTel(){
+    return haTel;
+    }
+    public  String getHaMail(){
+    return haMail;
+    }
+    public  Date getHaGebDat(){
+    return haGebDat;
+    }
+    public  boolean getHaAufDauer(){
+    return haAufDauer;
+    }
+    public void haDauerhaft(Halter h){
+    if (h.getHaAufDauer() = true){
+        System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
+        }
+    else{
+        System.out.println("Dieser Halter betreut ");
+    }
+    
+    }
+    
+
+>>>>>>> Stashed changes
 
 }
