@@ -35,4 +35,7 @@ public int getRNr() {
     public void setRNr(int neuerRaum){
         rNr = neuerRaum;
     }
+    
+    
+    
 }
