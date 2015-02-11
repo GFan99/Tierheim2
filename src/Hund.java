@@ -9,8 +9,12 @@
  * @author becksusanna
  */
 public class Hund extends Tier
-{
+
     public boolean heuteGassi;
+
+ class Hund extends Tier{
+     String hMarke;
+>>>>>>> Stashed changes
     
     public boolean getGassi()
     {
@@ -19,5 +23,10 @@ public class Hund extends Tier
     public void setGassi(boolean trueoderfalse)
     {
         heuteGassi = trueoderfalse;
+    }
+
+    public String gethMarke()
+    {
+        return hMarke;
     }
 }

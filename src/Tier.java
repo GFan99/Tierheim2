@@ -9,5 +9,44 @@
  * @author becksusanna
  */
 public class Tier {
+    int tNr;
+    float tGebühr;
+    int rNr;
+    String tName;
+    String tRasse;
+    String tGeschlecht;
+    String gebDat;
+    String tFarbe;
     
+
+
+    public String getName()
+    {
+        return tName;
+    }
+    public int gettNr()
+    {
+        return tNr;
+    }
+    public String gettRasse()
+    {
+        return tRasse;
+    }
+    public int getrNr()
+    {
+        return rNr;
+    }
+    public String gettGeschlecht()
+    {
+        return tGeschlecht;
+    }
+    public String gebDat()
+    {
+        return gebDat;
+    }
+    public String tFarbe()
+    {
+        return tFarbe;
+    }
+
 }
