@@ -8,6 +8,8 @@
  *
  * @author becksusanna
  */
+import java.util.*;
+
 public class Personal {
     public int pNr;
     public String pName;
@@ -15,7 +17,7 @@ public class Personal {
     public String pStrNr;
     public int pPLZ;
     public String pOrt;
-    public String pGebDat;
+    public Date pGebDat;
     public String pTel;
     public String pMail;
     public float gehalt;
