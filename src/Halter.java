@@ -26,7 +26,6 @@ public class Halter {
     public String getHaVorname(){
     return haVorname;
     }
-
     public String getHaNachname(){
     return haNachname;
     }
@@ -68,10 +67,15 @@ public class Halter {
         System.out.println("Dieser Halter betreut nicht dauerhaft");
         }
     }
-    
+    public  ArrayList <String> getHaTiere(){
+    return haTiere;
+    }
+    public  int getHaNr(){
+    return haNr;
     }
     
-
-
-
-}
+    
+    
+    
+    
+}   
