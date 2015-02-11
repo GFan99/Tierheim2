@@ -17,7 +17,7 @@ public class Helfer extends Personal
     public ArrayList<Integer> hTiere;
 
     // Constructor for objects of class HELFER
-    public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail)
     {
         pNr = nr;
         pName = name;
@@ -28,7 +28,7 @@ public class Helfer extends Personal
         pGebDat = gebDat;
         pTel = tel;
         pMail = mail;
-        gehalt = gehAlt;
+        gehalt = 0f;
     }
     
     public void gassi(Hund hund)

@@ -21,4 +21,6 @@ public class Personal {
     public String pTel;
     public String pMail;
     public float gehalt;
+    
+    public void setAdresse
 }
