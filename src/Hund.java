@@ -8,6 +8,16 @@
  *
  * @author becksusanna
  */
-public class Hund {
+public class Hund extends Tier
+{
+    public boolean heuteGassi;
     
+    public boolean getGassi()
+    {
+        return heuteGassi;
+    }
+    public void setGassi(boolean trueoderfalse)
+    {
+        heuteGassi = trueoderfalse;
+    }
 }

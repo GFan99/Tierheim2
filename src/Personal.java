@@ -9,5 +9,14 @@
  * @author becksusanna
  */
 public class Personal {
-    
+    public int pNr;
+    public String pName;
+    public String pVName;
+    public String pStrNr;
+    public int pPLZ;
+    public String pOrt;
+    public String pGebDat;
+    public String pTel;
+    public String pMail;
+    public float gehalt;
 }
