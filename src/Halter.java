@@ -27,9 +27,5 @@ public class Halter {
     System.out.print(haVorname);
     System.out.print(haNachname);
     }
-    public getHaAdresse(){
-    return haStrNr,haOrt;
-    }
-    
 
 }
