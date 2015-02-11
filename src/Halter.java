@@ -14,7 +14,7 @@ public class Halter {
     String haVorname;
     String haNachname;
     int haPLZ;
-    String haStraße;
+    String haStrNr;
     String haOrt;
     int haTel;
     String haMail;
@@ -23,4 +23,13 @@ public class Halter {
     ArrayList <String> haTiere;
     int haNr;
     
+    public void getHaVollname(){
+    System.out.print(haVorname);
+    System.out.print(haNachname);
+    }
+    public getHaAdresse(){
+    return haStrNr,haOrt;
+    }
+    
+
 }
