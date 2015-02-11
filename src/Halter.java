@@ -26,8 +26,7 @@ public class Halter {
     public String getHaVorname(){
     return haVorname;
     }
-<<<<<<< Updated upstream
-=======
+
     public String getHaNachname(){
     return haNachname;
     }
@@ -62,16 +61,17 @@ public class Halter {
     return haAufDauer;
     }
     public void haDauerhaft(Halter h){
-    if (h.getHaAufDauer() = true){
+    if (h.getHaAufDauer() == true){
         System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
     else{
-        System.out.println("Dieser Halter betreut ");
+        System.out.println("Dieser Halter betreut nicht dauerhaft");
+        }
     }
     
     }
     
 
->>>>>>> Stashed changes
+
 
 }
