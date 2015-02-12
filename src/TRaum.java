@@ -7,8 +7,8 @@ import java.util.*;
 public class TRaum extends Raum{
     public String tierart;
     public int groesseAuslauf;
-    public ArrayList<Integer> tiere;
-    public ArrayList<Integer> warteliste;
+    public ArrayList<Tier> tiere;
+    public ArrayList<Tier> warteliste;
 
     // Konstruktor für Objekte der Klasse TRaum
     public TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
@@ -27,8 +27,14 @@ public class TRaum extends Raum{
     public void addTier(int tier) {
         tiere.add(tier);
     }
-    public void add2Warteliste(int tier) {
+    public void removeFromTiere(Tier tier) {
+        tiere.remove(tier);
+    }
+    public void add2Warteliste(Tier tier) {
         warteliste.add(tier);
+    }
+    public void removeFromWartel(Tier tier) {
+        warteliste.remove(tier);
     }
     
     public String getTierart() {
@@ -37,10 +43,10 @@ public class TRaum extends Raum{
     public int getAuslaufGr() {
         return groesseAuslauf;
     }
-    public ArrayList<Integer> getTiere() {
+    public ArrayList<Tier> getTiere() {
         return tiere;
     }
-    public ArrayList<Integer> getWarteliste() {
+    public ArrayList<Tier> getWarteliste() {
         return warteliste;
     }
 }
