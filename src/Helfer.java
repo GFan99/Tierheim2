@@ -14,7 +14,7 @@ public class Helfer extends Personal
 {
     public ArrayList<String> aufgabe;
     public ArrayList<String> tage;
-    public ArrayList<Integer> hTiere;
+    public ArrayList<Tier> hTiere;
 
     // Constructor for objects of class HELFER
     public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail)
@@ -31,8 +31,7 @@ public class Helfer extends Personal
         gehalt = 0f;
     }
     
-    public void gassi(Hund hund)
-    {
+    public void gassi(Hund hund) {
         if (hund.getGassi() == false)
         {
             hund.setGassi(true);
