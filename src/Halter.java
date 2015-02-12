@@ -11,23 +11,27 @@
 import java.util.*;
         
 public class Halter {
-    String haVorname;
-    String haNachname;
-    int haPLZ;
-    String haStrNr;
-    String haOrt;
-    int haTel;
-    String haMail;
-    Date haGebDat;
-    boolean haAufDauer;
-    ArrayList <String> haTiere;
-    int haNr;
+    public String haVorname;
+    public String haNachname;
+    public int haPLZ;
+    public String haStrNr;
+    public String haOrt;
+    public int haTel;
+    public String haMail;
+    public Date haGebDat;
+    public boolean haAufDauer;
+    public ArrayList <String> haTiere;
+    public int haNr;
     
     public String getHaVorname(){
     return haVorname;
     }
     public String getHaNachname(){
     return haNachname;
+    }
+    public void setKundenname(String Nachname, String Vorname) {
+        haNachname = Nachname;
+        haVorname = Vorname;
     }
     public void Kundenname(Halter h){
     System.out.println(h.getHaVorname());
@@ -42,6 +46,11 @@ public class Halter {
     public String getHaOrt(){
     return haOrt;
     }
+    public void setAdresse(String StraßeNummer, int PLZ, String Ort) {
+        haStrNr = StraßeNummer;
+        haPLZ = PLZ;
+        haOrt = Ort;
+    }
     public void Adresse(Halter h){
     System.out.println(h.getHaStrNr());
     System.out.println(h.getHaPLZ());
@@ -50,28 +59,44 @@ public class Halter {
     public int getHaTel(){
     return haTel;
     }
+    public void setHaTel(int Telefonnummer){
+        haTel = Telefonnummer;
+    }
     public  String getHaMail(){
     return haMail;
+    }
+    public void setHaMail(String Mail){
+        haMail = Mail;
     }
     public  Date getHaGebDat(){
     return haGebDat;
     }
+    // Ein Halter kann sein GebDat nicht verändern.
     public  boolean getHaAufDauer(){
     return haAufDauer;
+    }
+    public void setHaAufDauer(boolean dauerhaft){
+        haAufDauer = dauerhaft;
     }
     public void haDauerhaft(Halter h){
     if (h.getHaAufDauer() == true){
         System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
     else{
-        System.out.println("Dieser Halter betreut nicht dauerhaft");
+        System.out.println("Dieser Halter betreut nur zeitweise");
         }
     }
     public  ArrayList <String> getHaTiere(){
     return haTiere;
     }
+    public void setHaTiere(ArrayList <String> betreuendeTiere){
+        haTiere = betreuendeTiere;
+    }
     public  int getHaNr(){
     return haNr;
+    }
+    public void setHaNr(int neueNr){
+        haNr = neueNr;
     }
     
     
