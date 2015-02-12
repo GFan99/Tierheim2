@@ -13,7 +13,7 @@ import java.util.*;
 
 public class Verwalter extends Personal{
     public int rNr;
-    public String VBereich;
+    public String vBereich;
     
     public Verwalter(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
     {
@@ -27,5 +27,19 @@ public class Verwalter extends Personal{
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
+    }
+    
+    public void setRNr(int nr) {
+        rNr = nr;
+    }
+    public void setBereich(String nBereich) {
+        vBereich = nBereich;
+    }
+    
+    public int getRNr() {
+        return rNr;
+    }
+    public String getBereich() {
+        return vBereich;
     }
 }
