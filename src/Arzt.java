@@ -28,14 +28,11 @@ public class Arzt extends Personal{
         gehalt = gehAlt;
     }
     
-public int getRNr() {
+    public int getRNr() {
         return rNr;
     }
     
     public void setRNr(int neuerRaum){
         rNr = neuerRaum;
     }
-    
-    
-    
 }
