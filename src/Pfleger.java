@@ -13,7 +13,7 @@ import java.util.*;
 
 public class Pfleger extends Personal{
     
-    public ArrayList<Integer> pfTiere;
+    public ArrayList<Tier> pfTiere;
     
     public Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
     {
@@ -29,11 +29,14 @@ public class Pfleger extends Personal{
         gehalt = gehAlt;
     }
     
-    public void addTier (int tNr) {
-        pfTiere.add(tNr);
+    public void addTier (Tier tier) {
+        pfTiere.add(tier);
+    }
+    public void removeTier(Tier tier) {
+        pfTiere.remove(tier);
     }
     
-    public ArrayList<Integer> getPfTiere() {
+    public ArrayList<Tier> getPfTiere() {
         return pfTiere;
     }
     
