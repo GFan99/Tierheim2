@@ -39,7 +39,7 @@ public class Verwalter extends Personal{
     public int getRNr() {
         return rNr;
     }
-    public String getBereich() {
+    public String getBereich() {
         return vBereich;
     }
 }

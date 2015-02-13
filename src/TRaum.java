@@ -24,7 +24,7 @@ public class TRaum extends Raum{
     public void setAuslaufGr(int auslaufNeu) {
         groesseAuslauf = auslaufNeu;
     }
-    public void addTier(int tier) {
+    public void addTier(Tier tier) {
         tiere.add(tier);
     }
     public void removeFromTiere(Tier tier) {
