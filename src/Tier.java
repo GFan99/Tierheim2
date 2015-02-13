@@ -10,7 +10,7 @@
  */
 public class Tier {
     int tNr;
-    float tGebühr;
+    float tGebuehr;
     int rNr;
     String tName;
     String tRasse;
@@ -18,8 +18,6 @@ public class Tier {
     String gebDat;
     String tFarbe;
     
-
-
     public String getName()
     {
         return tName;
@@ -47,6 +45,15 @@ public class Tier {
     public String tFarbe()
     {
         return tFarbe;
+    }
+
+    public void setGebuehr(float gebuehr)
+    {
+        tGebuehr = gebuehr;
+    }
+    public void setraumNr(int raumNr)
+    {
+        rNr=raumNr;
     }
 
 }

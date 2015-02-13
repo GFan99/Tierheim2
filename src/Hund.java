@@ -8,13 +8,10 @@
  *
  * @author becksusanna
  */
-public class Hund extends Tier
-
+public class Hund extends Tier {
+//Hallo
     public boolean heuteGassi;
-
- class Hund extends Tier{
-     String hMarke;
->>>>>>> Stashed changes
+    String hMarke;
     
     public boolean getGassi()
     {
