@@ -17,7 +17,7 @@ public class Personal {
     public String pStrNr;
     public int pPLZ;
     public String pOrt;
-    public Date pGebDat;
+    public String pGebDat;
     public String pTel;
     public String pMail;
     public float gehalt;

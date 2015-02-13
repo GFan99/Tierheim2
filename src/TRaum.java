@@ -49,4 +49,10 @@ public class TRaum extends Raum{
     public ArrayList<Tier> getWarteliste() {
         return warteliste;
     }
+    
+    /* public void neuerTag() {
+        for(int i = 0; i <= tiere.size(); i++) {
+            tiere.get(i).setGassi(false);
+        }
+    }*/
 }

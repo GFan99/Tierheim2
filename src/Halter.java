@@ -18,7 +18,7 @@ public class Halter {
     public String haOrt;
     public int haTel;
     public String haMail;
-    public Date haGebDat;
+    public String haGebDat;
     public boolean haAufDauer;
     public ArrayList <String> haTiere;
     public int haNr;
