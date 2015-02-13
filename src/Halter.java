@@ -16,13 +16,29 @@ public class Halter {
     public int haPLZ;
     public String haStrNr;
     public String haOrt;
-    public int haTel;
+    public String haTel;
     public String haMail;
     public String haGebDat;
     public boolean haAufDauer;
     public ArrayList <String> haTiere;
     public int haNr;
     
+    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer, ArrayList<String> nhaTiere)
+    {
+    haVorname = nhaVorname;
+    haNachname = nhaNachname;
+    haPLZ = nhaPLZ;
+    haStrNr = nhaStrNr;
+    haOrt = nhaOrt;
+    haTel = nhaTel;
+    haMail = nhaMail;
+    haGebDat = nhaGebDat;
+    haAufDauer = nhaAufDauer;
+    haTiere = nhaTiere;
+    haNr = nhaNr; 
+    
+
+    }
     public String getHaVorname(){
     return haVorname;
     }
@@ -56,10 +72,10 @@ public class Halter {
     System.out.println(h.getHaPLZ());
     System.out.print(h.getHaOrt());
     }
-    public int getHaTel(){
+    public String getHaTel(){
     return haTel;
     }
-    public void setHaTel(int Telefonnummer){
+    public void setHaTel(String Telefonnummer){
         haTel = Telefonnummer;
     }
     public  String getHaMail(){

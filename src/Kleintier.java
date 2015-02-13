@@ -8,5 +8,5 @@
  * @author schueler
  */
 class Kleintier extends Tier{
-//Hallo
+
 }

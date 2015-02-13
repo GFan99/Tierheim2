@@ -8,16 +8,17 @@
  *
  * @author becksusanna
  */
-public class Tier {
-    int tNr;
-    float tGebuehr;
-    int rNr;
-    String tName;
-    String tRasse;
-    String tGeschlecht;
-    String gebDat;
-    String tFarbe;
-    String tFutterzeit;
+public class Tier{
+    
+    public int tNr;
+    public float tGebuehr;
+    public int rNr;
+    public String tName;
+    public String tRasse;
+    public  String tGeschlecht;
+    public String gebDat;
+    public String tFarbe;
+    public String tFutterzeit;
     
     public String getName()
     {
