@@ -71,7 +71,7 @@ public class Personal {
     public String getOrt() {
         return pOrt;
     }
-    public Date getGebDat() {
+    public String getGebDat() {
         return pGebDat;
     }
     public String getTel() {

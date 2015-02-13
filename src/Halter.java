@@ -68,7 +68,7 @@ public class Halter {
     public void setHaMail(String Mail){
         haMail = Mail;
     }
-    public  Date getHaGebDat(){
+    public  String getHaGebDat(){
     return haGebDat;
     }
     // Ein Halter kann sein GebDat nicht verändern.

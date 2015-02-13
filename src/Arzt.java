@@ -14,7 +14,7 @@ public class Arzt extends Personal{
     
     public int rNr;
     
-    public Arzt(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    public Arzt(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;

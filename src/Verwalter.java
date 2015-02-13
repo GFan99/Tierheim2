@@ -15,7 +15,7 @@ public class Verwalter extends Personal{
     public int rNr;
     public String vBereich;
     
-    public Verwalter(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    public Verwalter(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;

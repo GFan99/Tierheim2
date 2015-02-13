@@ -17,7 +17,7 @@ public class Helfer extends Personal
     public ArrayList<Tier> hTiere;
 
     // Constructor for objects of class HELFER
-    public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail)
+    public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
     {
         pNr = nr;
         pName = name;
