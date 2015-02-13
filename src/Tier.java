@@ -17,6 +17,7 @@ public class Tier {
     String tGeschlecht;
     String gebDat;
     String tFarbe;
+    String tFutterzeit;
     
     public String getName()
     {
@@ -38,11 +39,11 @@ public class Tier {
     {
         return tGeschlecht;
     }
-    public String gebDat()
+    public String getgebDat()
     {
         return gebDat;
     }
-    public String tFarbe()
+    public String gettFarbe()
     {
         return tFarbe;
     }
@@ -54,6 +55,10 @@ public class Tier {
     public void setraumNr(int raumNr)
     {
         rNr=raumNr;
+    }
+    public String gettFutterzeit()
+    {
+        return tFutterzeit;
     }
 
 }

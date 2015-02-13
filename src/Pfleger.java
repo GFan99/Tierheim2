@@ -15,7 +15,7 @@ public class Pfleger extends Personal{
     
     public ArrayList<Tier> pfTiere;
     
-    public Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, Date gebDat, String tel, String mail, float gehAlt)
+    public Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;
