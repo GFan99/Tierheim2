@@ -29,9 +29,13 @@ public class Pfleger extends Personal{
         gehalt = gehAlt;
     }
     
-    public void addTier (Tier tier) {
-        pfTiere.add(tier);
-    }
+    //public void addTier () {
+        //for (int i = 0; i <= pfTiere.len(); i++) {
+         //   System.out.println(pfTiere[i]);
+        //}
+        //Tier tier = 
+        //pfTiere.add(tier);
+    //}
     public void removeTier(Tier tier) {
         pfTiere.remove(tier);
     }

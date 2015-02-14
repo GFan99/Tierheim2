@@ -19,11 +19,11 @@ public class Halter {
     public String haTel;
     public String haMail;
     public String haGebDat;
-    public boolean haAufDauer;
-    public ArrayList <String> haTiere;
+    public boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
+    public ArrayList<Tier> haTiere;
     public int haNr;
     
-    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer, ArrayList<String> nhaTiere)
+    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer, ArrayList<Tier> nhaTiere)
     {
     haVorname = nhaVorname;
     haNachname = nhaNachname;
@@ -102,11 +102,17 @@ public class Halter {
         System.out.println("Dieser Halter betreut nur zeitweise");
         }
     }
-    public  ArrayList <String> getHaTiere(){
+    public  ArrayList<Tier> getHaTiere(){
     return haTiere;
     }
-    public void setHaTiere(ArrayList <String> betreuendeTiere){
+    public void setHaTiere(ArrayList<Tier> betreuendeTiere){
         haTiere = betreuendeTiere;
+    }
+    public void addHaTiere(Tier tier){
+        haTiere.add(tier);
+    }
+    public void remove(Tier tier){
+        haTiere.remove(tier);
     }
     public  int getHaNr(){
     return haNr;
