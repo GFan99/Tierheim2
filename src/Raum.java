@@ -7,9 +7,9 @@
 /**
  * @author becksusanna yeah!!!
  */
-public class Raum {
-    public int rNr;
-    public int anzPlaetze;
+abstract class Raum {
+    protected int rNr;
+    protected int anzPlaetze;
     
     public void setplaetze(int plaetze) {
         anzPlaetze = plaetze;

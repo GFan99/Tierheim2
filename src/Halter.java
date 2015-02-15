@@ -36,7 +36,7 @@ class Halter {
     haAufDauer = nhaAufDauer;
     haNr = nhaNr;
     }
-    protected String getHaVorname(){
+    public String getHaVorname(){
     return haVorname;
     }
     public String getHaNachname(){

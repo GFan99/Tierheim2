@@ -5,10 +5,10 @@
 import java.util.*;
 
 public class TRaum extends Raum{
-    public String tierart;
-    public int groesseAuslauf;
-    public ArrayList<Tier> tiere;
-    public ArrayList<Tier> warteliste;
+    private String tierart;
+    private int groesseAuslauf;
+    private ArrayList<Tier> tiere;
+    private ArrayList<Tier> warteliste;
 
     // Konstruktor für Objekte der Klasse TRaum
     public TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {

@@ -6,13 +6,13 @@
  * @author becksusanna yeah!!!
  */
 public class PRaum extends Raum{
-    public String rArt;
-    public int anzCom;
+    private String rArt;
+    private int anzCom;
     
     // Konstruktor für Objekte der Klasse PRAUM
     public PRaum(int nr, String art, int plaetze) {
         rNr=nr;
-        String rArt = art;
+        rArt = art;
         anzPlaetze = plaetze;
         anzCom = 0;
     }
