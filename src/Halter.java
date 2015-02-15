@@ -23,7 +23,7 @@ class Halter {
     private ArrayList<Tier> haTiere;
     private int haNr;
  
-    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer, ArrayList<Tier> nhaTiere)
+    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
     {
     haVorname = nhaVorname;
     haNachname = nhaNachname;
@@ -34,10 +34,9 @@ class Halter {
     haMail = nhaMail;
     haGebDat = nhaGebDat;
     haAufDauer = nhaAufDauer;
-    haTiere = nhaTiere;
-    haNr = nhaNr; 
+    haNr = nhaNr;
     }
-    public String getHaVorname(){
+    protected String getHaVorname(){
     return haVorname;
     }
     public String getHaNachname(){
@@ -46,10 +45,6 @@ class Halter {
     public void setKundenname(String Nachname, String Vorname) {
         haNachname = Nachname;
         haVorname = Vorname;
-    }
-    public void Kundenname(Halter h){
-    System.out.println(h.getHaVorname());
-    System.out.print(h.getHaNachname());
     }
     public int getHaPLZ(){
     return haPLZ;
