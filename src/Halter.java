@@ -10,19 +10,19 @@
  */
 import java.util.*;
         
-public class Halter {
-    public String haVorname;
-    public String haNachname;
-    public int haPLZ;
-    public String haStrNr;
-    public String haOrt;
-    public String haTel;
-    public String haMail;
-    public String haGebDat;
-    public boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
-    public ArrayList<Tier> haTiere;
-    public int haNr;
-    
+class Halter {
+    private String haVorname;
+    private String haNachname;
+    private int haPLZ;
+    private String haStrNr;
+    private String haOrt;
+    private String haTel;
+    private String haMail;
+    private final String haGebDat;
+    private boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
+    private ArrayList<Tier> haTiere;
+    private int haNr;
+ 
     public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer, ArrayList<Tier> nhaTiere)
     {
     haVorname = nhaVorname;
@@ -36,8 +36,6 @@ public class Halter {
     haAufDauer = nhaAufDauer;
     haTiere = nhaTiere;
     haNr = nhaNr; 
-    
-
     }
     public String getHaVorname(){
     return haVorname;
