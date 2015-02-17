@@ -8,10 +8,21 @@
  *
  * @author becksusanna
  */
-protected class Hund extends Tier {
-//Hallo
-    protected boolean heuteGassi;
+class Hund extends Tier {
     String hMarke;
+    protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke)
+    {
+    this.tNr=tNr;
+    this.tGebuehr=tGebuehr;
+    this.rNr=rNr;
+    this.tName=tName;
+    this.tRasse=tRasse;
+    this.tGeschlecht=tGeschlecht;
+    this.gebDat=gebDat;
+    this.tFarbe=tFarbe;
+    this.tFutterzeit=tFutterzeit;
+    this.hMarke=hMarke;
+    }
     
     protected boolean getGassi()
     {
