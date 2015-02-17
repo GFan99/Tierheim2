@@ -8,6 +8,7 @@
  * @author becksusanna yeah!!!
  */
 
+import Prog1Tools.IOTools;
 import java.util.*;
 
 public class Arzt extends Personal{
@@ -32,7 +33,9 @@ public class Arzt extends Personal{
         return rNr;
     }
     
-    public void setRNr(int neuerRaum){
+    public void setRNr(){
+        int neuerRaum;
+        neuerRaum = IOTools.readInteger("Bitte geben Sie eine neue Raum-Nummer für diesen Arzt ein:  ");
         rNr = neuerRaum;
     }
 }
