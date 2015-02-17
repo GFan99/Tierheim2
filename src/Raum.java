@@ -7,11 +7,14 @@
 /**
  * @author becksusanna yeah!!!
  */
-abstract class Raum {
+abstract class Raum{
     protected int rNr;
     protected int anzPlaetze;
     
-    protected void setplaetze(int plaetze) {
+
+    
+    public void setplaetze(int plaetze) {
+
         anzPlaetze = plaetze;
     }
     

@@ -9,6 +9,11 @@
  * @author becksusanna
  */
 class Hund extends Tier {
+<<<<<<< HEAD
+=======
+//Hallo
+    protected boolean heuteGassi;
+>>>>>>> FETCH_HEAD
     String hMarke;
     protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke)
     {

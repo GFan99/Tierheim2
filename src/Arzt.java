@@ -11,7 +11,7 @@
 import Prog1Tools.IOTools;
 import java.util.*;
 
-protected class Arzt extends Personal{
+class Arzt extends Personal{
     
     protected int rNr;
     

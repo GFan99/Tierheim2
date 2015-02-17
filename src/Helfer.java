@@ -10,7 +10,7 @@
  */
 import java.util.*;
 
-protected class Helfer extends Personal
+class Helfer extends Personal
 {
     protected ArrayList<String> aufgabe;
     protected ArrayList<String> tage;
