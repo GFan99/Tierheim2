@@ -11,11 +11,11 @@
 
 import java.util.*;
 
-public class Verwalter extends Personal{
-    public int rNr;
-    public String vBereich;
+protected class Verwalter extends Personal{
+    protected int rNr;
+    protected String vBereich;
     
-    public Verwalter(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
+    protected Verwalter(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;
@@ -29,17 +29,17 @@ public class Verwalter extends Personal{
         gehalt = gehAlt;
     }
     
-    public void setRNr(int nr) {
+    protected void setRNr(int nr) {
         rNr = nr;
     }
-    public void setBereich(String nBereich) {
+    protected void setBereich(String nBereich) {
         vBereich = nBereich;
     }
     
-    public int getRNr() {
+    protected int getRNr() {
         return rNr;
     }
-    public String getBereich() {
+    protected String getBereich() {
         return vBereich;
     }
 }

@@ -23,7 +23,7 @@ class Halter {
     private ArrayList<Tier> haTiere;
     private int haNr;
  
-    public Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
+    protected Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
     {
     haVorname = nhaVorname;
     haNachname = nhaNachname;
@@ -36,49 +36,49 @@ class Halter {
     haAufDauer = nhaAufDauer;
     haNr = nhaNr;
     }
-    public String getHaVorname(){
+    protected String getHaVorname(){
         return haVorname;
     }
-    public String getHaNachname(){
+    protected String getHaNachname(){
         return haNachname;
     }
 <<<<<<< Updated upstream
-    public void setKundenname(String Nachname, String Vorname) {
+    protected void setKundenname(String Nachname, String Vorname) {
         haNachname = Nachname;
         haVorname = Vorname;
 =======
-    public void getKundenname(){
+    protected void getKundenname(){
         System.out.println(getHaVorname());
         System.out.print(getHaNachname());
 >>>>>>> Stashed changes
     }
-    public int getHaPLZ(){
+    protected int getHaPLZ(){
         return haPLZ;
     }
-    public String getHaStrNr(){
+    protected String getHaStrNr(){
         return haStrNr;
     }
-    public String getHaOrt(){
+    protected String getHaOrt(){
         return haOrt;
     }
-    public void getAdresse(){
+    protected void getAdresse(){
         System.out.println(getHaStrNr());
         System.out.println(getHaPLZ());
         System.out.print(getHaOrt());
     }
-    public int getHaTel(){
+    protected int getHaTel(){
         return haTel;
     }
-    public  String getHaMail(){
+    protected  String getHaMail(){
         return haMail;
     }
-    public  String getHaGebDat(){
+    protected  String getHaGebDat(){
         return haGebDat;
     }
-    public  boolean getHaAufDauer(){
+    protected  boolean getHaAufDauer(){
         return haAufDauer;
     }
-    public void getHaDauerhaft(){
+    protected void getHaDauerhaft(){
         if (getHaAufDauer() == true){
             System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
@@ -86,50 +86,50 @@ class Halter {
             System.out.println("Dieser Halter betreut nur zeitweise");
         }
     }
-    public  ArrayList<String> getHaTiere(){
+    protected  ArrayList<String> getHaTiere(){
         return haTiere;
     }
-    public  int getHaNr(){
+    protected  int getHaNr(){
         return haNr;
     }
 
 
 
 
-    public void setName() {
+    protected void setName() {
         String name = IOTools.readString("Geben sie den neuen Nachnamen ein: ");
         haNachname = name;
     }
     // Es wird davon ausgegangen, dass man seinen Vornamen nicht ändert, auch wenn diese Möglichkeit in Realität besteht.
-    public void setAdresse(String StraßeNummer, int PLZ, String Ort) {
+    protected void setAdresse(String StraßeNummer, int PLZ, String Ort) {
         haStrNr = StraßeNummer;
         haPLZ = PLZ;
         haOrt = Ort;
     }
 <<<<<<< Updated upstream
-    public void Adresse(Halter h){
+    protected void Adresse(Halter h){
     System.out.println(h.getHaStrNr());
     System.out.println(h.getHaPLZ());
     System.out.print(h.getHaOrt());
     }
-    public String getHaTel(){
+    protected String getHaTel(){
     return haTel;
     }
-    public void setHaTel(String Telefonnummer){
+    protected void setHaTel(String Telefonnummer){
 =======
-    public void setHaTel(int Telefonnummer){
+    protected void setHaTel(int Telefonnummer){
 >>>>>>> Stashed changes
         haTel = Telefonnummer;
     }
-    public void setHaMail(String Mail){
+    protected void setHaMail(String Mail){
         haMail = Mail;
     }
     // Ein Halter kann sein GebDat nicht verändern.
-    public void setHaAufDauer(boolean dauerhaft){
+    protected void setHaAufDauer(boolean dauerhaft){
         haAufDauer = dauerhaft;
     }
 <<<<<<< Updated upstream
-    public void haDauerhaft(Halter h){
+    protected void haDauerhaft(Halter h){
     if (h.getHaAufDauer() == true){
         System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
@@ -137,27 +137,27 @@ class Halter {
         System.out.println("Dieser Halter betreut nur zeitweise");
         }
     }
-    public  ArrayList<Tier> getHaTiere(){
+    protected  ArrayList<Tier> getHaTiere(){
     return haTiere;
     }
-    public void setHaTiere(ArrayList<Tier> betreuendeTiere){
+    protected void setHaTiere(ArrayList<Tier> betreuendeTiere){
         haTiere = betreuendeTiere;
     }
-    public void addHaTiere(Tier tier){
+    protected void addHaTiere(Tier tier){
         haTiere.add(tier);
     }
-    public void remove(Tier tier){
+    protected void remove(Tier tier){
         haTiere.remove(tier);
     }
-    public  int getHaNr(){
+    protected  int getHaNr(){
     return haNr;
     }
 =======
-    public void setHaTiere(ArrayList <String> betreuendeTiere){
+    protected void setHaTiere(ArrayList <String> betreuendeTiere){
         haTiere = betreuendeTiere;
     }
 >>>>>>> Stashed changes
-    public void setHaNr(int neueNr){
+    protected void setHaNr(int neueNr){
         haNr = neueNr;
     }
     

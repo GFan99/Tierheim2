@@ -11,11 +11,11 @@
 
 import java.util.*;
 
-public class Pfleger extends Personal{
+protected class Pfleger extends Personal{
     
-    public ArrayList<Tier> pfTiere;
+    protected ArrayList<Tier> pfTiere;
     
-    public Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
+    protected Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;
@@ -29,18 +29,18 @@ public class Pfleger extends Personal{
         gehalt = gehAlt;
     }
     
-    //public void addTier () {
+    //protected void addTier () {
         //for (int i = 0; i <= pfTiere.len(); i++) {
          //   System.out.println(pfTiere[i]);
         //}
         //Tier tier = 
         //pfTiere.add(tier);
     //}
-    public void removeTier(Tier tier) {
+    protected void removeTier(Tier tier) {
         pfTiere.remove(tier);
     }
     
-    public ArrayList<Tier> getPfTiere() {
+    protected ArrayList<Tier> getPfTiere() {
         return pfTiere;
     }
     

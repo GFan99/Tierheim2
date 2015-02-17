@@ -4,53 +4,53 @@
  */
 import java.util.*;
 
-public class TRaum extends Raum{
+protected class TRaum extends Raum{
     private String tierart;
     private int groesseAuslauf;
     private ArrayList<Tier> tiere;
     private ArrayList<Tier> warteliste;
 
     // Konstruktor für Objekte der Klasse TRaum
-    public TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
+    protected TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
         rNr = nr;
         anzPlaetze = anzKaefige;
         tierart = tierartx;
         groesseAuslauf = auslaufGr;
     }
 
-    public void setTierart(String nTierart) {
+    protected void setTierart(String nTierart) {
         tierart = nTierart;
     }
-    public void setAuslaufGr(int auslaufNeu) {
+    protected void setAuslaufGr(int auslaufNeu) {
         groesseAuslauf = auslaufNeu;
     }
-    public void addTier(Tier tier) {
+    protected void addTier(Tier tier) {
         tiere.add(tier);
     }
-    public void removeFromTiere(Tier tier) {
+    protected void removeFromTiere(Tier tier) {
         tiere.remove(tier);
     }
-    public void add2Warteliste(Tier tier) {
+    protected void add2Warteliste(Tier tier) {
         warteliste.add(tier);
     }
-    public void removeFromWartel(Tier tier) {
+    protected void removeFromWartel(Tier tier) {
         warteliste.remove(tier);
     }
     
-    public String getTierart() {
+    protected String getTierart() {
         return tierart;
     }
-    public int getAuslaufGr() {
+    protected int getAuslaufGr() {
         return groesseAuslauf;
     }
-    public ArrayList<Tier> getTiere() {
+    protected ArrayList<Tier> getTiere() {
         return tiere;
     }
-    public ArrayList<Tier> getWarteliste() {
+    protected ArrayList<Tier> getWarteliste() {
         return warteliste;
     }
     
-    /* public void neuerTag() {
+    /* protected void neuerTag() {
         for(int i = 0; i <= tiere.size(); i++) {
             tiere.get(i).setGassi(false);
         }

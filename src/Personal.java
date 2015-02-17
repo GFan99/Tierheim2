@@ -10,46 +10,46 @@
  */
 import java.util.*;
 
-public class Personal {
-    public int pNr;
-    public String pName;
-    public String pVName;
-    public String pStrNr;
-    public int pPLZ;
-    public String pOrt;
-    public String pGebDat;
-    public String pTel;
-    public String pMail;
-    public float gehalt;
+protected class Personal {
+    protected int pNr;
+    protected String pName;
+    protected String pVName;
+    protected String pStrNr;
+    protected int pPLZ;
+    protected String pOrt;
+    protected String pGebDat;
+    protected String pTel;
+    protected String pMail;
+    protected float gehalt;
     
-    public void setAdresse(String strNr, int plz, String ort) {
+    protected void setAdresse(String strNr, int plz, String ort) {
         pStrNr = strNr;
         pPLZ = plz;
         pOrt = ort;
     }
-    public void setNName(String name) {
+    protected void setNName(String name) {
         pName = name;
     }
-    public void setTel(String tel) {
+    protected void setTel(String tel) {
         pTel = tel;
     }
-    public void setMail(String mail) {
+    protected void setMail(String mail) {
         pMail = mail;
     }
-    public void setGehalt(float gehAlt) {
+    protected void setGehalt(float gehAlt) {
         gehalt = gehAlt;
     }
     
-    public int getPNr() {
+    protected int getPNr() {
         return pNr;
     }
-    public String getName() {
+    protected String getName() {
         return pName;
     }
-    public String getVName() {
+    protected String getVName() {
         return pVName;
     }
-    /*public String getAdresse() {
+    /*protected String getAdresse() {
         ArrayList adresse;
         adresse.add(pStrNr);
         adresse.add(", ");        
@@ -59,28 +59,28 @@ public class Personal {
         return adresse;
     }
     */
-    public void getAdresse() {
+    protected void getAdresse() {
         System.out.println(pStrNr+", "+pPLZ+pOrt);
     }
-    public String getStrNr() {
+    protected String getStrNr() {
         return pStrNr;
     }
-    public int getPLZ() {
+    protected int getPLZ() {
         return pPLZ;
     }
-    public String getOrt() {
+    protected String getOrt() {
         return pOrt;
     }
-    public String getGebDat() {
+    protected String getGebDat() {
         return pGebDat;
     }
-    public String getTel() {
+    protected String getTel() {
         return pTel;
     }
-    public String getMail() {
+    protected String getMail() {
         return pMail;
     }
-    public float getGehalt() {
+    protected float getGehalt() {
         return gehalt;
     }
 }

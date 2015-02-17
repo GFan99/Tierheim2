@@ -8,21 +8,21 @@
  *
  * @author becksusanna
  */
-public class Hund extends Tier {
+protected class Hund extends Tier {
 //Hallo
-    public boolean heuteGassi;
+    protected boolean heuteGassi;
     String hMarke;
     
-    public boolean getGassi()
+    protected boolean getGassi()
     {
         return heuteGassi;
     }
-    public void setGassi(boolean trueoderfalse)
+    protected void setGassi(boolean trueoderfalse)
     {
         heuteGassi = trueoderfalse;
     }
 
-    public String gethMarke()
+    protected String gethMarke()
     {
         return hMarke;
     }

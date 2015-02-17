@@ -10,7 +10,7 @@
 class Vogel extends Tier{
     int vRNr;
 
-    public int getvRNr()
+    protected int getvRNr()
     {
         return vRNr;
     }

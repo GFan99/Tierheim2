@@ -5,30 +5,30 @@
  * werden jedoch trotzdem als zu ihrem normalen "Wohnraum" gehörig betrachtet.)
  * @author becksusanna yeah!!!
  */
-public class PRaum extends Raum{
+protected class PRaum extends Raum{
     private String rArt;
     private int anzCom;
     
     // Konstruktor für Objekte der Klasse PRAUM
-    public PRaum(int nr, String art, int plaetze) {
+    protected PRaum(int nr, String art, int plaetze) {
         rNr=nr;
         rArt = art;
         anzPlaetze = plaetze;
         anzCom = 0;
     }
     
-    public void setArt(String art) {
+    protected void setArt(String art) {
         rArt = art;
     }
-    public void setCom(int com) {
+    protected void setCom(int com) {
         anzCom = com;
     }
     
     
-    public String getRArt() {
+    protected String getRArt() {
         return rArt;
     }
-    public int getComs() {
+    protected int getComs() {
         return anzCom;
     }
 }

@@ -11,14 +11,14 @@ abstract class Raum {
     protected int rNr;
     protected int anzPlaetze;
     
-    public void setplaetze(int plaetze) {
+    protected void setplaetze(int plaetze) {
         anzPlaetze = plaetze;
     }
     
-    public int getNr() {
+    protected int getNr() {
         return rNr;
     }
-    public int getPlaetze() {
+    protected int getPlaetze() {
         return anzPlaetze;
     }
 }

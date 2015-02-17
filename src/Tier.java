@@ -8,56 +8,56 @@
  *
  * @author becksusanna
  */
-public class Tier{
+protected class Tier{
     
-    public int tNr;
-    public float tGebuehr;
-    public int rNr;
-    public String tName;
-    public String tRasse;
-    public  String tGeschlecht;
-    public String gebDat;
-    public String tFarbe;
-    public String tFutterzeit;
+    protected int tNr;
+    protected float tGebuehr;
+    protected int rNr;
+    protected String tName;
+    protected String tRasse;
+    protected  String tGeschlecht;
+    protected String gebDat;
+    protected String tFarbe;
+    protected String tFutterzeit;
     
-    public String getName()
+    protected String getName()
     {
         return tName;
     }
-    public int gettNr()
+    protected int gettNr()
     {
         return tNr;
     }
-    public String gettRasse()
+    protected String gettRasse()
     {
         return tRasse;
     }
-    public int getrNr()
+    protected int getrNr()
     {
         return rNr;
     }
-    public String gettGeschlecht()
+    protected String gettGeschlecht()
     {
         return tGeschlecht;
     }
-    public String getgebDat()
+    protected String getgebDat()
     {
         return gebDat;
     }
-    public String gettFarbe()
+    protected String gettFarbe()
     {
         return tFarbe;
     }
 
-    public void setGebuehr(float gebuehr)
+    protected void setGebuehr(float gebuehr)
     {
         tGebuehr = gebuehr;
     }
-    public void setraumNr(int raumNr)
+    protected void setraumNr(int raumNr)
     {
         rNr=raumNr;
     }
-    public String gettFutterzeit()
+    protected String gettFutterzeit()
     {
         return tFutterzeit;
     }

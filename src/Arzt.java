@@ -11,11 +11,11 @@
 import Prog1Tools.IOTools;
 import java.util.*;
 
-public class Arzt extends Personal{
+protected class Arzt extends Personal{
     
-    public int rNr;
+    protected int rNr;
     
-    public Arzt(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
+    protected Arzt(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;
@@ -29,11 +29,11 @@ public class Arzt extends Personal{
         gehalt = gehAlt;
     }
     
-    public int getRNr() {
+    protected int getRNr() {
         return rNr;
     }
     
-    public void setRNr(){
+    protected void setRNr(){
         int neuerRaum;
         neuerRaum = IOTools.readInteger("Bitte geben Sie eine neue Raum-Nummer für diesen Arzt ein:  ");
         rNr = neuerRaum;

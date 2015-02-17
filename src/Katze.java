@@ -10,7 +10,7 @@
     class Katze extends Tier{
         String kMarke;
 //Hallo
-    public String getkMarke()
+    protected String getkMarke()
     {
         return kMarke;
     }

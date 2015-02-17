@@ -10,14 +10,14 @@
  */
 import java.util.*;
 
-public class Helfer extends Personal
+protected class Helfer extends Personal
 {
-    public ArrayList<String> aufgabe;
-    public ArrayList<String> tage;
-    public ArrayList<Tier> hTiere;
+    protected ArrayList<String> aufgabe;
+    protected ArrayList<String> tage;
+    protected ArrayList<Tier> hTiere;
 
     // Constructor for objects of class HELFER
-    public Helfer(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
+    protected Helfer(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
     {
         pNr = nr;
         pName = name;
@@ -31,7 +31,7 @@ public class Helfer extends Personal
         gehalt = 0f;
     }
     
-    public void gassi(Hund hund) {
+    protected void gassi(Hund hund) {
         if (hund.getGassi() == false)
         {
             hund.setGassi(true);
