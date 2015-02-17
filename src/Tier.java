@@ -8,7 +8,7 @@
  *
  * @author becksusanna
  */
-protected class Tier{
+class Tier{
     
     protected int tNr;
     protected float tGebuehr;

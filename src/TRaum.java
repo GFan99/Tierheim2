@@ -4,7 +4,7 @@
  */
 import java.util.*;
 
-protected class TRaum extends Raum{
+class TRaum extends Raum{
     private String tierart;
     private int groesseAuslauf;
     private ArrayList<Tier> tiere;

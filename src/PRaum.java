@@ -5,7 +5,7 @@
  * werden jedoch trotzdem als zu ihrem normalen "Wohnraum" gehörig betrachtet.)
  * @author becksusanna yeah!!!
  */
-protected class PRaum extends Raum{
+class PRaum extends Raum{
     private String rArt;
     private int anzCom;
     

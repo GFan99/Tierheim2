@@ -11,7 +11,7 @@
 
 import java.util.*;
 
-protected class Pfleger extends Personal{
+ class Pfleger extends Personal{
     
     protected ArrayList<Tier> pfTiere;
     

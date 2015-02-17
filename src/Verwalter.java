@@ -11,7 +11,7 @@
 
 import java.util.*;
 
-protected class Verwalter extends Personal{
+class Verwalter extends Personal{
     protected int rNr;
     protected String vBereich;
     
