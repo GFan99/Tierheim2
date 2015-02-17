@@ -10,17 +10,17 @@
  */
 import java.util.*;
 
-protected class Personal {
-    protected int pNr;
-    protected String pName;
-    protected String pVName;
-    protected String pStrNr;
-    protected int pPLZ;
-    protected String pOrt;
-    protected String pGebDat;
-    protected String pTel;
-    protected String pMail;
-    protected float gehalt;
+class Personal {
+    private int pNr;
+    private String pName;
+    private String pVName;
+    private String pStrNr;
+    private int pPLZ;
+    private String pOrt;
+    private String pGebDat;
+    private String pTel;
+    private String pMail;
+    private float gehalt;
     
     protected void setAdresse(String strNr, int plz, String ort) {
         pStrNr = strNr;
