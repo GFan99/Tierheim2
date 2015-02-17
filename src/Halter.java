@@ -9,14 +9,14 @@
  */
 import Prog1Tools.IOTools;
 import java.util.*;
-        
-class Halter {
+
+class Halter{
     private String haVorname;
     private String haNachname;
     private int haPLZ;
     private String haStrNr;
     private String haOrt;
-    private String haTel;
+    private final String haTel;
     private String haMail;
     private final String haGebDat;
     private boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
@@ -160,6 +160,8 @@ class Halter {
     protected void setHaNr(int neueNr){
         haNr = neueNr;
     }
+
+    
     
     
     

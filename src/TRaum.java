@@ -55,4 +55,10 @@ class TRaum extends Raum{
             tiere.get(i).setGassi(false);
         }
     }*/
+
+    /**
+     *
+     * @return
+     */
+    
 }

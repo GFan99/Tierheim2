@@ -8,7 +8,7 @@
  *
  * @author becksusanna yeah!!!
  */
-protected class TierheimMain {
+class TierheimMain {
     protected static void main(String[] args) {
 
     Pfleger pfleger1 = new Pfleger(1, "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);

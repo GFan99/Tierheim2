@@ -8,7 +8,7 @@
  *
  * @author becksusanna
  */
-protected class Hund extends Tier {
+class Hund extends Tier {
 //Hallo
     protected boolean heuteGassi;
     String hMarke;
