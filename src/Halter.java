@@ -16,7 +16,7 @@ class Halter{
     private int haPLZ;
     private String haStrNr;
     private String haOrt;
-    private final String haTel;
+    private String haTel;
     private String haMail;
     private final String haGebDat;
     private boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
@@ -42,15 +42,15 @@ class Halter{
     protected String getHaNachname(){
         return haNachname;
     }
-<<<<<<< Updated upstream
+
     protected void setKundenname(String Nachname, String Vorname) {
         haNachname = Nachname;
         haVorname = Vorname;
-=======
+    }
     protected void getKundenname(){
         System.out.println(getHaVorname());
         System.out.print(getHaNachname());
->>>>>>> Stashed changes
+
     }
     protected int getHaPLZ(){
         return haPLZ;
@@ -66,7 +66,7 @@ class Halter{
         System.out.println(getHaPLZ());
         System.out.print(getHaOrt());
     }
-    protected int getHaTel(){
+    protected String getHaTel(){
         return haTel;
     }
     protected  String getHaMail(){
@@ -86,7 +86,7 @@ class Halter{
             System.out.println("Dieser Halter betreut nur zeitweise");
         }
     }
-    protected  ArrayList<String> getHaTiere(){
+    protected  ArrayList<Tier> getHaTiere(){
         return haTiere;
     }
     protected  int getHaNr(){
@@ -152,11 +152,11 @@ class Halter{
     protected  int getHaNr(){
     return haNr;
     }
-=======
-    protected void setHaTiere(ArrayList <String> betreuendeTiere){
+
+    protected void setHaTiere(ArrayList <Tier> betreuendeTiere){
         haTiere = betreuendeTiere;
     }
->>>>>>> Stashed changes
+
     protected void setHaNr(int neueNr){
         haNr = neueNr;
     }
