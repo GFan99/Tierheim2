@@ -19,12 +19,12 @@ class TierheimMain {
     private void removefromraeume(TRaum raum) {
         traeume.remove(raum);
     }
-    private ArrayList<TRaum> getraeume() {
+    private ArrayList<TRaum> gettraeume() {
         return traeume;
     }
     
     private void neuerTag() {
-        for (int i = 0; i <= traeume.size(); i++) {
+        for(int i = 0; i <= traeume.size(); i++) {
             (traeume.get(i)).neuerTag();
         }
     }
@@ -47,6 +47,4 @@ class TierheimMain {
 
     
     }
-
 }
-
