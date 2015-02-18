@@ -27,17 +27,19 @@ class Hund extends Tier {
     this.hMarke=hMarke;
     }
     
-    protected boolean getGassi()
-    {
+    protected boolean getGassi() {
         return heuteGassi;
     }
-    protected void setGassi(boolean trueoderfalse)
-    {
+    protected void setGassi(boolean trueoderfalse) {
         heuteGassi = trueoderfalse;
     }
 
-    protected String gethMarke()
-    {
+    protected String gethMarke() {
         return hMarke;
+    }
+    
+    @Override
+    protected void neuerTag() {
+        setGassi(false);
     }
 }

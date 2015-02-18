@@ -23,9 +23,10 @@ class Vogel extends Tier{
     this.tFutterzeit=tFutterzeit;
     this.vRNr=vRNr;
     }
-    protected int getvRNr()
-    {
+    protected int getvRNr() {
         return vRNr;
     }
-//Hallo
+
+    @Override
+    protected void neuerTag() {}
 }

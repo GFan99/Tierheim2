@@ -23,9 +23,10 @@
     this.tFutterzeit=tFutterzeit;
     this.kMarke=kMarke;
     }
-    protected String getkMarke()
-    {
+    protected String getkMarke() {
         return kMarke;
     }
-        
+    
+    @Override
+    protected void neuerTag() {}
 }

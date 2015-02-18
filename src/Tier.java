@@ -8,7 +8,7 @@
  *
  * @author becksusanna
  */
-class Tier{
+abstract class Tier{
     
     protected int tNr;
     protected float tGebuehr;
@@ -20,46 +20,38 @@ class Tier{
     protected String tFarbe;
     protected String tFutterzeit;
     
-    protected String getName()
-    {
+    protected String getName() {
         return tName;
     }
-    protected int gettNr()
-    {
+    protected int gettNr() {
         return tNr;
     }
-    protected String gettRasse()
-    {
+    protected String gettRasse() {
         return tRasse;
     }
-    protected int getrNr()
-    {
+    protected int getrNr() {
         return rNr;
     }
-    protected String gettGeschlecht()
-    {
+    protected String gettGeschlecht() {
         return tGeschlecht;
     }
-    protected String getgebDat()
-    {
+    protected String getgebDat() {
         return gebDat;
     }
-    protected String gettFarbe()
-    {
+    protected String gettFarbe() {
         return tFarbe;
     }
-
-    protected void setGebuehr(float gebuehr)
-    {
+    
+    protected void setGebuehr(float gebuehr) {
         tGebuehr = gebuehr;
     }
-    protected void setraumNr(int raumNr)
-    {
+    protected void setraumNr(int raumNr) {
         rNr=raumNr;
     }
-    protected String gettFutterzeit()
-    {
+    protected String gettFutterzeit() {
         return tFutterzeit;
     }
+    
+    protected abstract void neuerTag();
 
 }

@@ -8,7 +8,27 @@
  *
  * @author becksusanna yeah!!!
  */
+import java.util.*;
+
 class TierheimMain {
+    
+    private ArrayList<TRaum> traeume;
+    private void add2raeume(TRaum raum) {
+        traeume.add(raum);
+    }
+    private void removefromraeume(TRaum raum) {
+        traeume.remove(raum);
+    }
+    private ArrayList<TRaum> getraeume() {
+        return traeume;
+    }
+    
+    private void neuerTag() {
+        for (int i = 0; i <= traeume.size(); i++) {
+            (traeume.get(i)).neuerTag();
+        }
+    }
+    
     protected static void main(String[] args) {
 
     Pfleger pfleger1 = new Pfleger(1, "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);

@@ -21,4 +21,7 @@ class Kleintier extends Tier{
     this.tFarbe=tFarbe;
     this.tFutterzeit=tFutterzeit;
     }
+    
+    @Override
+    protected void neuerTag() {}
 }

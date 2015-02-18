@@ -50,15 +50,10 @@ class TRaum extends Raum{
         return warteliste;
     }
     
-    /* protected void neuerTag() {
+    protected void neuerTag() {
         for(int i = 0; i <= tiere.size(); i++) {
-            tiere.get(i).setGassi(false);
+            (tiere.get(i)).neuerTag();
         }
-    }*/
-
-    /**
-     *
-     * @return
-     */
+    }
     
 }
