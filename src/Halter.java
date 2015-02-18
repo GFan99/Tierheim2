@@ -93,78 +93,49 @@ class Halter{
         return haNr;
     }
 
-
-
-
     protected void setName() {
         String name = IOTools.readString("Geben sie den neuen Nachnamen ein: ");
         haNachname = name;
     }
     // Es wird davon ausgegangen, dass man seinen Vornamen nicht ändert, auch wenn diese Möglichkeit in Realität besteht.
-    protected void setAdresse(String StraßeNummer, int PLZ, String Ort) {
-        haStrNr = StraßeNummer;
-        haPLZ = PLZ;
-        haOrt = Ort;
+    protected void setAdresse(String straßeNummer, int plz, String ort) {
+        haStrNr = straßeNummer;
+        haPLZ = plz;
+        haOrt = ort;
     }
-<<<<<<< Updated upstream
     protected void Adresse(Halter h){
     System.out.println(h.getHaStrNr());
     System.out.println(h.getHaPLZ());
     System.out.print(h.getHaOrt());
     }
-    protected String getHaTel(){
-    return haTel;
+    protected void setHaTel(String telefonnummer){
+        haTel = telefonnummer;
     }
-    protected void setHaTel(String Telefonnummer){
-=======
-    protected void setHaTel(int Telefonnummer){
->>>>>>> Stashed changes
-        haTel = Telefonnummer;
-    }
-    protected void setHaMail(String Mail){
-        haMail = Mail;
+    protected void setHaMail(String mail){
+        haMail = mail;
     }
     // Ein Halter kann sein GebDat nicht verändern.
     protected void setHaAufDauer(boolean dauerhaft){
         haAufDauer = dauerhaft;
     }
-<<<<<<< Updated upstream
     protected void haDauerhaft(Halter h){
-    if (h.getHaAufDauer() == true){
-        System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
+        if (h.getHaAufDauer() == true){
+            System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
-    else{
-        System.out.println("Dieser Halter betreut nur zeitweise");
+        else{
+            System.out.println("Dieser Halter betreut nur zeitweise");
         }
-    }
-    protected  ArrayList<Tier> getHaTiere(){
-    return haTiere;
     }
     protected void setHaTiere(ArrayList<Tier> betreuendeTiere){
         haTiere = betreuendeTiere;
     }
-    protected void addHaTiere(Tier tier){
+    protected void add2HaTiere(Tier tier){
         haTiere.add(tier);
     }
-    protected void remove(Tier tier){
+    protected void removefromTiere(Tier tier){
         haTiere.remove(tier);
     }
-    protected  int getHaNr(){
-    return haNr;
-    }
-
-    protected void setHaTiere(ArrayList <Tier> betreuendeTiere){
-        haTiere = betreuendeTiere;
-    }
-
     protected void setHaNr(int neueNr){
         haNr = neueNr;
     }
-
-    
-    
-    
-    
-    
-    
 }   
