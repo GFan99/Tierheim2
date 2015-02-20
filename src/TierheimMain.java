@@ -37,6 +37,14 @@ class TierheimMain {
     Halter halter2 = new Halter(2,"Marie", "Krüger", "Hauptstraße 34", 12643, "Berlin", "25/12/1977", "0306794548", "marie77@gmx.de", false);
     Arzt arzt1 = new Arzt(1, "Auge", "Hans", "Seestraße 5", 13056,"Ahrensfelde" ,"17/05/1975" , "014673298847", "TierarztAuge@yahoo.com", 2500.00f);
     Verwalter verwalter1 = new Verwalter(1, "Calussi", "Clemens", "Schulstraße 9", 18067, "Erkner", "15/09/1990", "0307889356", "Verwaltungsbüro@googlemail.com", 2100.00f);
+    Hund hund1 = new Hund(1, 1000, 1, "Bello", "Labrador", "weiblich", "13.02.2010", "beige", "abends", "132098");
+    Hund hund2 = new Hund(2, 1020, 1, "Waldi", "Labrador", "weiblich", "28.05.2011", "beige", "abends", "132098");
+    Katze katze1 = new Katze(3, 450, 2, "Mitze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
+    Kleintier kleintier1 = new Kleintier(4, 15, 3, "Puschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
+    Kleintier kleintier2 = new Kleintier(5, 15, 3, "Wuschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
+    Vogel vogel1 = new Vogel(6, 30, 4, "Hansi", "Wellensittich", "männlich", "23.04.2013", "blau", "morgens", 712982);
+    
+    
     
     System.out.println("Halter1 heißt"+halter1.getHaVorname()+halter1.getHaNachname()+".");
     
