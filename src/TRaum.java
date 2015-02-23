@@ -9,6 +9,9 @@ class TRaum extends Raum{
     private int groesseAuslauf;
     private ArrayList<Tier> tiere;
     private ArrayList<Tier> warteliste;
+    private boolean geputztWoche;
+    
+    public int tag;
 
     // Konstruktor für Objekte der Klasse TRaum
     protected TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
@@ -16,6 +19,7 @@ class TRaum extends Raum{
         anzPlaetze = anzKaefige;
         tierart = tierartx;
         groesseAuslauf = auslaufGr;
+        geputztWoche = false;
     }
 
     protected void setTierart(String nTierart) {
@@ -36,6 +40,9 @@ class TRaum extends Raum{
     protected void removeFromWartel(Tier tier) {
         warteliste.remove(tier);
     }
+    protected void setSauber(boolean trueoderfalse) {
+        geputztWoche = trueoderfalse;
+    }
     
     protected String getTierart() {
         return tierart;
@@ -49,8 +56,22 @@ class TRaum extends Raum{
     protected ArrayList<Tier> getWarteliste() {
         return warteliste;
     }
+    protected boolean getSauber() {
+        return geputztWoche;
+    }
+    private int getTag() {
+        return tag;
+    }
+
     
     protected void neuerTag() {
+        tag = tag + 1;
+        if (tag % 7 == 0) {
+            if (geputztWoche == false) {
+                System.out.println("Der Raum "+rNr+" wurde diese Woche noch nicht geputzt.");
+            }
+            else {geputztWoche = true;}
+        }
         for(int i = 0; i <= tiere.size(); i++) {
             (tiere.get(i)).neuerTag();
         }

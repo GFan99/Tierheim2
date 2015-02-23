@@ -11,8 +11,6 @@ abstract class Raum{
     protected int rNr;
     protected int anzPlaetze;
     
-
-    
     public void setplaetze(int plaetze) {
 
         anzPlaetze = plaetze;
