@@ -78,7 +78,7 @@ class TRaum extends Raum{
     }
     protected void nachrücken()
     {
-        Tier remove = warteliste.remove(1);
+        Tier remove = warteliste.remove(0);
     }
 
     

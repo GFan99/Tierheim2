@@ -8,7 +8,7 @@
  * @author schueler
  */
 import java.util.*;
-public class NewMain {
+public class main {
     private ArrayList<TRaum> traeume;
     private void add2raeume(TRaum raum) {
         traeume.add(raum);
