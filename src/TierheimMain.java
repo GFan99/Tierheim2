@@ -12,6 +12,8 @@ import java.util.*;
 
 class TierheimMain {
     
+    private static int tag;
+    
     private ArrayList<TRaum> traeume;    
     private void add2raeume(TRaum raum) {
         traeume.add(raum);
@@ -20,6 +22,9 @@ class TierheimMain {
         traeume.remove(raum);
     }
     
+    protected static int getTag() {
+        return tag;
+    }    
     private ArrayList<TRaum> gettraeume() {
         return traeume;
     }
@@ -31,7 +36,6 @@ class TierheimMain {
     }
     
     protected static void main(String[] args) {
-
     Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
     Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
     Halter halter1 = new Halter("B29W30O3","Peter", "Pan", "Bahnhofstraße 506", 12333, "Potsdam", "12/09/1988", "0306792748", "pp@web.de", true);
@@ -45,15 +49,10 @@ class TierheimMain {
     Kleintier kleintier2 = new Kleintier(5, 15, 3, "Wuschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
     Vogel vogel1 = new Vogel(6, 30, 4, "Hansi", "Wellensittich", "männlich", "23.04.2013", "blau", "morgens", 712982);
     
-    
-    
     System.out.println("Halter1 heißt"+halter1.getHaVorname()+halter1.getHaNachname()+".");
     
-
     System.out.println(pfleger2.getMail());
     pfleger2.setMail("anna313@web.de");
     System.out.println(pfleger2.getMail());
-
-    
     }
 }
