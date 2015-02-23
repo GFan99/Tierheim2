@@ -76,5 +76,10 @@ class TRaum extends Raum{
             (tiere.get(i)).neuerTag();
         }
     }
+    protected void nachrücken()
+    {
+        Tier remove = warteliste.remove(1);
+    }
+
     
 }
