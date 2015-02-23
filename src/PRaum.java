@@ -3,7 +3,7 @@
  * Arztzimmer, Wartezimmer, Büroräume. In ihnen "wohnen" keine Tiere. (Außer sie befinden sich über einen
  * längeren Zeitraum unter ärztlicher Beobachtung und müssen für längere Zeit im Arztzimmer veweilen. Sie
  * werden jedoch trotzdem als zu ihrem normalen "Wohnraum" gehörig betrachtet.)
- * @author becksusanna yeah!!!
+ * @author becksusanna
  */
 class PRaum extends Raum{
     private String rArt;

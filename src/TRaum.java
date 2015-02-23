@@ -1,6 +1,6 @@
 /**
  * TRäume  sind Räume(Unterklasse von Raum). In ihnen leben die Tiere in ihren Käfigen/Zwingern/... .
- * @author becksusanna yeah!!!
+ * @author becksusanna
  */
 import java.util.*;
 

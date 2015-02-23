@@ -5,7 +5,7 @@
  */
 
 /**
- * @author becksusanna yeah!!!
+ * @author becksusanna
  */
 abstract class Raum{
     protected int rNr;
