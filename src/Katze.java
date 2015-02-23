@@ -5,7 +5,7 @@
 
 /**
  *
- * @author schueler
+* @author Hanna
  */
     class Katze extends Tier{
         String kMarke;

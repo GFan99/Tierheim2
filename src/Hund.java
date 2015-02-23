@@ -10,6 +10,7 @@
  */
 class Hund extends Tier {
 
+
     protected boolean heuteGassi;
 
     String hMarke;

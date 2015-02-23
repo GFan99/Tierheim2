@@ -5,7 +5,7 @@
 
 /**
  *
- * @author schueler
+ * @author Hanna
  */
 class Kleintier extends Tier{
 
