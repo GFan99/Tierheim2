@@ -20,7 +20,7 @@ class Halter{
     private String haTel;
     private String haMail;
     private final String haGebDat;
-    private boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
+    private boolean haAufDauer;//haAufDauer == true:Tieraufnahme, haAufDauer == false:Tierabgabe
     private ArrayList<Tier> haTiere;
     
     protected Halter(String nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)

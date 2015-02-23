@@ -44,4 +44,15 @@ import java.util.*;
         return pfTiere;
     }
     
+    protected void gassi(Hund hund) {
+        if (hund.getGassi() == false)
+        {
+            hund.setGassi(true);
+        }
+        else
+        {
+            System.out.println("Dieser Hund wurde heute schon gassigeführt. Bitte wähle einen anderen.");
+        }
+    }
+    
 }
