@@ -10,8 +10,8 @@
  */
 import java.util.*;
 
-class Personal {
-    protected int pNr;
+abstract class Personal {
+    protected String pNr;
     protected String pName;
     protected String pVName;
     protected String pStrNr;
@@ -40,7 +40,7 @@ class Personal {
         gehalt = gehAlt;
     }
     
-    protected int getPNr() {
+    protected String getPNr() {
         return pNr;
     }
     protected String getName() {
@@ -57,8 +57,7 @@ class Personal {
         adresse.add(pOrt);
         adresse.
         return adresse;
-    }
-    */
+    } */
     protected void getAdresse() {
         System.out.println(pStrNr+", "+pPLZ+pOrt);
     }

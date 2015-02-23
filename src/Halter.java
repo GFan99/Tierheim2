@@ -11,6 +11,7 @@ import Prog1Tools.IOTools;
 import java.util.*;
 
 class Halter{
+    private String haNr;
     private String haVorname;
     private String haNachname;
     private int haPLZ;
@@ -21,9 +22,8 @@ class Halter{
     private final String haGebDat;
     private boolean haAufDauer;//haAufDauer true:Tieraufnahme, haAufDauer false:Tierabgabe
     private ArrayList<Tier> haTiere;
-    private int haNr;
- 
-    protected Halter(int nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
+    
+    protected Halter(String nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
     {
     haVorname = nhaVorname;
     haNachname = nhaNachname;
@@ -89,7 +89,7 @@ class Halter{
     protected  ArrayList<Tier> getHaTiere(){
         return haTiere;
     }
-    protected  int getHaNr(){
+    protected  String getHaNr(){
         return haNr;
     }
 
@@ -135,7 +135,7 @@ class Halter{
     protected void removefromTiere(Tier tier){
         haTiere.remove(tier);
     }
-    protected void setHaNr(int neueNr){
+    protected void setHaNr(String neueNr){
         haNr = neueNr;
     }
 }   

@@ -15,7 +15,7 @@ import java.util.*;
     
     protected ArrayList<Tier> pfTiere;
     
-    protected Pfleger(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
+    protected Pfleger(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;

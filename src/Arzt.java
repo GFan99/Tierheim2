@@ -15,7 +15,7 @@ class Arzt extends Personal{
     
     protected int rNr;
     
-    protected Arzt(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
+    protected Arzt(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
         pName = name;

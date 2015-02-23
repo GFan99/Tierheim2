@@ -17,7 +17,7 @@ class Helfer extends Personal
     protected ArrayList<Tier> hTiere;
 
     // Constructor for objects of class HELFER
-    protected Helfer(int nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
+    protected Helfer(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
     {
         pNr = nr;
         pName = name;
