@@ -11,9 +11,11 @@ abstract class Raum{
     protected int rNr;
     protected int anzPlaetze;
     
-    public void setplaetze(int plaetze) {
-
+    protected void setplaetze(int plaetze) {
         anzPlaetze = plaetze;
+    }
+    protected void setRNr(int rNr) {
+        this.rNr = rNr;
     }
     
     protected int getNr() {

@@ -6,12 +6,12 @@ import java.util.*;
 
 class TRaum extends Raum{
     private String tierart;
-    private int groesseAuslauf;
+    private double groesseAuslauf;
     private ArrayList<Tier> tiere;
     private ArrayList<Tier> warteliste;
     private boolean geputztWoche;
     
-    public int tag;
+    private int tag;
 
     // Konstruktor für Objekte der Klasse TRaum
     protected TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
@@ -25,7 +25,7 @@ class TRaum extends Raum{
     protected void setTierart(String nTierart) {
         tierart = nTierart;
     }
-    protected void setAuslaufGr(int auslaufNeu) {
+    protected void setAuslaufGr(double auslaufNeu) {
         groesseAuslauf = auslaufNeu;
     }
     protected void addTier(Tier tier) {
@@ -47,7 +47,7 @@ class TRaum extends Raum{
     protected String getTierart() {
         return tierart;
     }
-    protected int getAuslaufGr() {
+    protected double getAuslaufGr() {
         return groesseAuslauf;
     }
     protected ArrayList<Tier> getTiere() {
@@ -63,7 +63,6 @@ class TRaum extends Raum{
         return tag;
     }
 
-    
     protected void neuerTag() {
         tag = tag + 1;
         if (TierheimMain.getTag() % 7 == 0) {
@@ -76,9 +75,8 @@ class TRaum extends Raum{
             (tiere.get(i)).neuerTag();
         }
     }
-    protected void nachrücken()
-    {
-        Tier remove = warteliste.remove(0);
+    protected void nachrücken() {
+        tiere.add(warteliste.remove(0));
     }
 
     
