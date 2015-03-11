@@ -9,6 +9,7 @@
             <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/PRaum.java</file>
             <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Raum.java</file>
             <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/main.java</file>
+<<<<<<< HEAD
 =======
             <file>file:/Users/schueler/Desktop/Tierheim/src/TierheimMain.java</file>
             <file>file:/Users/schueler/Desktop/Tierheim/src/Arzt.java</file>
@@ -27,6 +28,9 @@
             <file>file:/Users/schueler/Desktop/Tierheim/src/Kleintier.java</file>
             <file>file:/Users/schueler/Desktop/Tierheim/src/Hund.java</file>
 >>>>>>> Stashed changes
+=======
+            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/MyFrame.java</file>
+>>>>>>> FETCH_HEAD
         </group>
     </open-files>
 </project-private>
