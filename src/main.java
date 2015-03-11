@@ -45,6 +45,6 @@ public class main {
      * System.out.println(pfleger2.getMail());
      */
         
-    new LogInFenster();
+    new LgInFenster();
     }
 }

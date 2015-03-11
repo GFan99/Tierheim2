@@ -1,8 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
 
-class LogInFenster extends JFrame{
-    public LogInFenster(){
+class LgInFenster extends JFrame{
+    public LgInFenster(){
 	super("LogIn");
     	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
