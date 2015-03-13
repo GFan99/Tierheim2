@@ -27,6 +27,7 @@ class Arzt extends Personal{
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
+        art = "Arzt";
     }
     
     protected int getRNr() {

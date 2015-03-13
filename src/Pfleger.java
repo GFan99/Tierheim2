@@ -27,6 +27,7 @@ import java.util.*;
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
+        art = "Pfleger";
     }
     
     //protected void addTier () {

@@ -29,6 +29,7 @@ class Helfer extends Personal
         pTel = tel;
         pMail = mail;
         gehalt = 0f;
+        art = "Helfer";
     }
     
     protected void gassi(Hund hund) {

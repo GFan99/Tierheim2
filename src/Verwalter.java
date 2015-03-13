@@ -27,6 +27,7 @@ class Verwalter extends Personal{
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
+        art = "Verwalter";
     }
     
     protected void setRNr(int nr) {
