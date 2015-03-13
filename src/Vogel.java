@@ -34,7 +34,7 @@ class Vogel extends Tier{
     protected void neuerTag() {}
     
     @Override
-    protected void sortiertEinfügenTier(ArrayList<Tier> liste, Tier element) {
+    protected void sortiertEinfügen(ArrayList<Tier> liste, Tier element) {
         String a = element.gettRasse();
         for (int i=0;i<liste.size();i++)
        { String vergleich = (liste.get(i)).gettRasse();

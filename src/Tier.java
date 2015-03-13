@@ -57,6 +57,6 @@ abstract class Tier{
     
     protected abstract void neuerTag();
     
-    protected abstract void sortiertEinfügenTier(ArrayList<Tier> liste, Tier tier);
+    protected abstract void sortiertEinfügen(ArrayList<Tier> liste, Tier tier);
 
 }
