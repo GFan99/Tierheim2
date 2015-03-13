@@ -82,4 +82,7 @@ abstract class Personal {
     protected float getGehalt() {
         return gehalt;
     }
+    
+    
+    
 }
