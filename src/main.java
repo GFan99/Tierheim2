@@ -20,7 +20,15 @@ public class main {
         }
     }
 
-    
+    public void sortiertEinfügenTier(ArrayList<String> Tiere, String Rasse)
+    {
+       for (int i=0;i<Tiere.size();i++)
+       { String vergleich = Tiere.get(i);
+        if (Rasse.charAt(0) < vergleich.charAt(0)){
+           Tiere.add(i,Rasse);
+        }
+       }
+    }
     public static void main(String[] args) {
     /* Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
      * Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
