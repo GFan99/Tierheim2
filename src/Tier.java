@@ -8,6 +8,9 @@
  *
  * @author becksusanna
  */
+
+import java.util.*;
+        
 abstract class Tier{
     
     protected int tNr;
@@ -53,5 +56,7 @@ abstract class Tier{
     }
     
     protected abstract void neuerTag();
+    
+    protected abstract void sortiertEinfügenTier(ArrayList<Tier> liste, Tier tier);
 
 }

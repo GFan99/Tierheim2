@@ -1,3 +1,6 @@
+
+import java.util.*;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -24,4 +27,15 @@ class Kleintier extends Tier{
     
     @Override
     protected void neuerTag() {}
+    
+    @Override
+    protected void sortiertEinfügenTier(ArrayList<Tier> liste, Tier element) {
+        String a = element.gettRasse();
+        for (int i=0;i<liste.size();i++)
+       { String vergleich = (liste.get(i)).gettRasse();
+        if (a.charAt(0) < vergleich.charAt(0)){
+           liste.add(i,element);
+        }
+       }
+    }
 }

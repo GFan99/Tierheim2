@@ -8,6 +8,7 @@
  *
  * @author becksusanna
  */
+import java.util.*;
 class Hund extends Tier {
 
 
@@ -43,4 +44,16 @@ class Hund extends Tier {
     protected void neuerTag() {
         setGassi(false);
     }
+
+    @Override
+    protected void sortiertEinfügenTier(ArrayList<Tier> liste, Tier element) {
+        String a = element.gettRasse();
+        for (int i=0;i<liste.size();i++)
+       { String vergleich = (liste.get(i)).gettRasse();
+        if (a.charAt(0) < vergleich.charAt(0)){
+           liste.add(i,element);
+        }
+       }
+    }
+    
 }
