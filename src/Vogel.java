@@ -40,6 +40,7 @@ class Vogel extends Tier{
        { String vergleich = (liste.get(i)).gettRasse();
         if (a.charAt(0) < vergleich.charAt(0)){
            liste.add(i,element);
+           
         }
        }
     }
