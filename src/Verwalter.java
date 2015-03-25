@@ -27,7 +27,6 @@ class Verwalter extends Personal{
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
-        art = "Verwalter";
     }
     
     protected void setRNr(int nr) {
@@ -42,5 +41,9 @@ class Verwalter extends Personal{
     }
     protected String getBereich() {
         return vBereich;
+    }
+    @Override
+    protected String getArt() {
+        return "Verwalter";
     }
 }

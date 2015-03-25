@@ -12,6 +12,8 @@ import java.util.*;
  */
 class Kleintier extends Tier{
 
+    //Konstruktor, um ein Objekt der Klasse Kleintier mit Tiernummer, Gebühr, Raumnummer, Name,
+    //Rasse, Geschlecht, Geburtstag, Farbe und Futterzeit zu erstellen
     protected Kleintier(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit)
     {
     this.tNr=tNr;

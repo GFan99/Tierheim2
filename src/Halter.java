@@ -23,6 +23,8 @@ class Halter{
     private boolean haAufDauer;//haAufDauer == true:Tieraufnahme, haAufDauer == false:Tierabgabe
     private ArrayList<Tier> haTiere;
     
+    //Konstruktor, um ein Objekt der Klasse Halter mit ID, Name, Vorname, Straße und Nummer,
+    //PLZ, Ort, Geburtstag,Telefonnummer, EMail und Gehalt zu erstellen
     protected Halter(String nhaNr,String nhaVorname, String nhaNachname, String nhaStrNr, int nhaPLZ, String nhaOrt, String nhaGebDat, String nhaTel, String nhaMail, boolean nhaAufDauer)
     {
     haVorname = nhaVorname;
@@ -78,7 +80,9 @@ class Halter{
     protected  boolean getHaAufDauer(){
         return haAufDauer;
     }
-    protected void getHaDauerhaft(){
+    
+    // Methode, die ausgibt
+    protected void haDauerhaft(){
         if (getHaAufDauer() == true){
             System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
         }
@@ -92,7 +96,8 @@ class Halter{
     protected  String getHaNr(){
         return haNr;
     }
-
+    
+    // Methode, die den Nachnamen auf den eingegebenen Wert setzt.
     protected void setName() {
         String name = IOTools.readString("Geben sie den neuen Nachnamen ein: ");
         haNachname = name;
@@ -103,7 +108,8 @@ class Halter{
         haPLZ = plz;
         haOrt = ort;
     }
-    protected void Adresse(Halter h){
+    // Gibt die Adresse eines Halters aus
+    protected void adresse(Halter h){
     System.out.println(h.getHaStrNr());
     System.out.println(h.getHaPLZ());
     System.out.print(h.getHaOrt());
@@ -117,14 +123,6 @@ class Halter{
     // Ein Halter kann sein GebDat nicht verändern.
     protected void setHaAufDauer(boolean dauerhaft){
         haAufDauer = dauerhaft;
-    }
-    protected void haDauerhaft(Halter h){
-        if (h.getHaAufDauer() == true){
-            System.out.println("Dieser Halter betreut dauerhaft unsere Tiere.");
-        }
-        else{
-            System.out.println("Dieser Halter betreut nur zeitweise");
-        }
     }
     protected void setHaTiere(ArrayList<Tier> betreuendeTiere){
         haTiere = betreuendeTiere;

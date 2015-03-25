@@ -9,7 +9,8 @@ class PRaum extends Raum{
     private String rArt;
     private int anzCom;
     
-    // Konstruktor für Objekte der Klasse PRAUM
+    //Konstruktor, um ein Objekt der Klasse Personalraum mit Nummer, Art, Anzahl der Plätze,
+    //und Anzahl der Computer zu erstellen
     protected PRaum(int nr, String art, int plaetze) {
         rNr=nr;
         rArt = art;

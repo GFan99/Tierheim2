@@ -21,7 +21,6 @@ abstract class Personal {
     protected String pTel;
     protected String pMail;
     protected float gehalt;
-    protected String art;
         
     protected void setAdresse(String strNr, int plz, String ort) {
         pStrNr = strNr;
@@ -83,9 +82,8 @@ abstract class Personal {
     protected float getGehalt() {
         return gehalt;
     }
-    protected String getArt() {
-        return art;
-    }
+    
+    protected abstract String getArt();
     
     
 }

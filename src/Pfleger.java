@@ -15,6 +15,8 @@ import java.util.*;
     
     protected ArrayList<Tier> pfTiere;
     
+    //Konstruktor, um ein Objekt der Klasse Pfleger mit ID, Name, Vorname, Straße und Nummer,
+    //PLZ, Ort, Geburtstag,Telefonnummer, EMail und Gehalt zu erstellen
     protected Pfleger(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
@@ -27,7 +29,6 @@ import java.util.*;
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
-        art = "Pfleger";
     }
     
     //protected void addTier () {
@@ -45,6 +46,8 @@ import java.util.*;
         return pfTiere;
     }
     
+    //Bei Aufruf der Methode gassi wird, wenn ein Hund noch nicht Gassi geführt wurde, die Variable "heuteGassi"
+    //auf true gesetzt. Wurde der Hund schon Gassi geführt, wird eine Meldung ausgegeben.
     protected void gassi(Hund hund) {
         if (hund.getGassi() == false)
         {
@@ -54,6 +57,11 @@ import java.util.*;
         {
             System.out.println("Dieser Hund wurde heute schon gassigeführt. Bitte wähle einen anderen.");
         }
+    }
+    
+    @Override
+    protected String getArt() {
+        return "Pfleger";
     }
     
 }

@@ -12,7 +12,9 @@ import java.util.*;
  */
     class Katze extends Tier{
         String kMarke;
-
+        
+    //Konstruktor, um ein Objekt der Klasse Katze mit Tiernummer, Gebühr, Raumnummer, Name,
+    //Rasse, Geschlecht, Geburtstag,Farbe, Futterzeit und Katzenmarke zu erstellen
     protected Katze(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String kMarke)
     {
     this.tNr=tNr;
@@ -33,6 +35,11 @@ import java.util.*;
     @Override
     protected void neuerTag() {}
     
+    
+    /** Die Methode sortiertEinfügen von der Superklasse Tier wird überschrieben.
+    * In einer Liste werden Tiere als erstes Kriterium nach Rasse und als zweites
+    *Kriterium nach Alter sortiert.
+    */
     @Override
     protected void sortiertEinfügen(ArrayList<Tier> liste, Tier element) {
         String a = element.gettRasse();

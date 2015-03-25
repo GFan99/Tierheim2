@@ -15,6 +15,9 @@ class Hund extends Tier {
     protected boolean heuteGassi;
 
     String hMarke;
+    
+    //Konstruktor, um ein Objekt der Klasse Hund mit Tiernummer, Gebühr, Raumnummer, Name,
+    //Rasse, Geschlecht, Geburtstag,Farbe, Futterzeit und Hundemarke zu erstellen
     protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke)
     {
     this.tNr=tNr;
@@ -27,6 +30,7 @@ class Hund extends Tier {
     this.tFarbe=tFarbe;
     this.tFutterzeit=tFutterzeit;
     this.hMarke=hMarke;
+    heuteGassi = false;
     }
     
     protected boolean getGassi() {
@@ -45,6 +49,11 @@ class Hund extends Tier {
         setGassi(false);
     }
 
+    /** Die Methode sortiertEinfügen von der Superklasse Tier wird überschrieben.
+    * In einer Liste werden Tiere als erstes Kriterium nach Rasse und als zweites
+    *Kriterium nach Alter sortiert.
+    */
+    
     @Override
     protected void sortiertEinfügen(ArrayList<Tier> liste, Tier element) {
         String a = element.gettRasse();

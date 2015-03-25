@@ -13,7 +13,8 @@ class TRaum extends Raum{
     
     private int tag;
 
-    // Konstruktor für Objekte der Klasse TRaum
+    //Konstruktor, um ein Objekt der Klasse Tierraum mit Nummer, Art, Anzahl der
+    //Plätze zu erstellen, geputztWoche erzeugt und automatisch auf false gesetzt
     protected TRaum(int nr, int anzKaefige, String tierartx, int auslaufGr) {
         rNr = nr;
         anzPlaetze = anzKaefige;

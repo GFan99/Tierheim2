@@ -11,9 +11,11 @@ import java.util.*;
  * @author schueler
  */
 class Vogel extends Tier{
-    int vRNr;
+    int vRingNr;
 
-    protected Vogel(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, int vRNr)
+    //Konstruktor, um ein Objekt der Klasse Vogel mit Tiernummer, Gebühr, Raumnummer, Name,
+    //Rasse, Geschlecht, Geburtstag, Farbe, Futterzeit und Vogelringnummer zu erstellen
+    protected Vogel(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, int vRingNr)
     {
     this.tNr=tNr;
     this.tGebuehr=tGebuehr;
@@ -24,10 +26,10 @@ class Vogel extends Tier{
     this.gebDat=gebDat;
     this.tFarbe=tFarbe;
     this.tFutterzeit=tFutterzeit;
-    this.vRNr=vRNr;
+    this.vRingNr=vRingNr;
     }
     protected int getvRNr() {
-        return vRNr;
+        return vRingNr;
     }
 
     @Override

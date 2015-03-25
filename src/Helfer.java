@@ -16,7 +16,8 @@ class Helfer extends Personal
     protected ArrayList<String> tage;
     protected ArrayList<Tier> hTiere;
 
-    // Constructor for objects of class HELFER
+    //Konstruktor, um ein Objekt der Klasse Halter mit ID, Name, Vorname, Straße und Nummer,
+    //PLZ, Ort, Geburtstag,Telefonnummer, EMail und Gehalt zu erstellen
     protected Helfer(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
     {
         pNr = nr;
@@ -29,9 +30,10 @@ class Helfer extends Personal
         pTel = tel;
         pMail = mail;
         gehalt = 0f;
-        art = "Helfer";
     }
     
+    //Bei Aufruf der Methode gassi wird, wenn ein Hund noch nicht Gassi geführt wurde, die Variable "heuteGassi"
+    //auf true gesetzt. Wurde der Hund schon Gassi geführt, wird eine Meldung ausgegeben.
     protected void gassi(Hund hund) {
         if (hund.getGassi() == false)
         {
@@ -41,5 +43,9 @@ class Helfer extends Personal
         {
             System.out.println("Dieser Hund wurde heute schon gassigeführt. Bitte wähle einen anderen.");
         }
+    }
+    @Override
+    protected String getArt() {
+        return "Helfer";
     }
 }

@@ -15,6 +15,8 @@ class Arzt extends Personal{
     
     protected int rNr;
     
+    //Konstruktor, um ein Objekt der Klasse Arzt mit ID, Name, Vorname, Straße und Nummer,
+    //PLZ, Ort, Geburtstag,Telefonnummer, EMail und Gehalt zu erstellen
     protected Arzt(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt)
     {
         pNr = nr;
@@ -27,7 +29,6 @@ class Arzt extends Personal{
         pTel = tel;
         pMail = mail;
         gehalt = gehAlt;
-        art = "Arzt";
     }
     
     protected int getRNr() {
@@ -38,5 +39,10 @@ class Arzt extends Personal{
         int neuerRaum;
         neuerRaum = IOTools.readInteger("Bitte geben Sie eine neue Raum-Nummer für diesen Arzt ein:  ");
         rNr = neuerRaum;
+    }
+    //überschreibt die Methode getArt der Superklasse, "Arzt" wird dabei ausgegeben
+    @Override
+    protected String getArt() {
+        return "Arzt";
     }
 }
