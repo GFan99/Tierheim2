@@ -5,7 +5,7 @@
  */
 
 /**
- * @author becksusanna yeah!!!
+ * @author becksusanna
  */
 
 import Prog1Tools.IOTools;
@@ -34,7 +34,7 @@ class Arzt extends Personal{
     protected int getRNr() {
         return rNr;
     }
-    
+        
     protected void setRNr(){
         int neuerRaum;
         neuerRaum = IOTools.readInteger("Bitte geben Sie eine neue Raum-Nummer für diesen Arzt ein:  ");
