@@ -18,7 +18,7 @@ abstract class Tier{
     protected int rNr;
     protected String tName;
     protected String tRasse;
-    protected  String tGeschlecht;
+    protected String tGeschlecht;
     protected String gebDat;
     protected String tFarbe;
     protected String tFutterzeit;
