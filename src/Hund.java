@@ -46,7 +46,12 @@ class Hund extends Tier {
     
     @Override
     protected void neuerTag() {
-        setGassi(false);
+        if (heuteGassi == false) {
+            System.out.println("Der Hund " + getName() + " mit der Marke " + gethMarke() + "wurde gestern nicht ausgeführt.");
+        }
+        else {
+            setGassi(false);
+        }
     }
 
     /** Die Methode sortiertEinfügen von der Superklasse Tier wird überschrieben.

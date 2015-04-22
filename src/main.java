@@ -1,7 +1,7 @@
 /*
  * @author becksusanna
  */
-import java.util.*;
+import java.util.ArrayList;
 public class main {
     private ArrayList<TRaum> traeume;
     private void add2raeume(TRaum raum) {
@@ -19,65 +19,73 @@ public class main {
             (traeume.get(i)).neuerTag();
         }
     }
-    private static ArrayList<Personal> personal;
+    private static ArrayList<Personal> personalListe;
     
     private static void sortiertEinfuegen(ArrayList<Personal> liste, Personal element) {
-                String vname = element.getName();
-        String nname = element.getVName();
+        if (liste.isEmpty()) {
+            liste.add(element);
+        }
+        else{
+            String vname = element.getName();
+            String nname = element.getVName();
         
-        for (int i = 0; i<liste.size(); i++) {
-            String lauf = (liste.get(i)).getName();
-            if (lauf.charAt(0)>nname.charAt(0)) {
-                liste.add(i,element);
-                break;
-            }
-            else {
-                if (lauf.charAt(0) == nname.charAt(0)) {
-                    for (int a = 1; a>lauf.length(); a++) {
-                        if (lauf.charAt(a) > nname.charAt(a)) {
-                            liste.add(i,element);
+            for (int i = 0; i<liste.size(); i++) {
+                String lauf = (liste.get(i)).getName();
+                if (lauf.charAt(0)>nname.charAt(0)) {
+                    liste.add(i,element);
+                    break;
+                }
+                else {
+                    if (lauf.charAt(0) == nname.charAt(0)) {
+                        for (int a = 1; a>lauf.length(); a++) {
+                            if (lauf.charAt(a) > nname.charAt(a)) {
+                                liste.add(i,element);
+                            }
+                            else {
+                                if (lauf.charAt(a) < nname.charAt(a)) {
+                                    break;
+                                }
+                                else {} 
+                            }
                         }
-                        else {
-                            if (lauf.charAt(a) < nname.charAt(a)) {
+                        for (int j = 0;j<liste.size(); j++) {
+                            String lauf2 = (liste.get(j)).getName();
+                            if (lauf2.charAt(0)>nname.charAt(0)) {
+                                liste.add(j,element);
                                 break;
                             }
-                            else {}
                         }
-                    for (int j = 0;j<liste.size(); j++) {
-                        String lauf2 = (liste.get(j)).getName();
-                        if (lauf2.charAt(0)>nname.charAt(0)) {
-                            liste.add(j,element);
-                            break;
-                        }
+                    }        
                     else {
-                            if (lauf.charAt(0) == nname.charAt(0)) {
-                                for (int b = 1; b>lauf.length(); b++) {
-                                    if (lauf2.charAt(b) > nname.charAt(b)) {
-                                        liste.add(j,element);
-                                    }
-                                    else {
-                                        if (lauf.charAt(b) < nname.charAt(b)) {
-                                            break;
+                                if (lauf.charAt(0) == nname.charAt(0)) {
+                                    for (int j = 0;j<liste.size(); j++) {
+                                        String lauf2 = (liste.get(j)).getName();
+                                        for (int b = 1; b>lauf.length(); b++) {
+                                            if (lauf2.charAt(b) > nname.charAt(b)) {
+                                                liste.add(j,element);
+                                            }
+                                            else {
+                                                if (lauf.charAt(b) < nname.charAt(b)) {
+                                                    break;
+                                                }
+                                                else {System.out.println("Die Person kann nicht einsortiert werden.");}
+                                            }
                                         }
-                                        else {System.out.println("Die Person kann nicht einsortiert werden.");}
+                                    }
+                                }
+                        }
                 }
             }
         }
     }
-                    }
-                    }
-                }
-            }
-        }
-    }
-
+    
     private static void personalListeAusgeben() {
         Personal person;
         int i = 0;
         System.out.println("Im Moment sind folgende Personen eingestellt:");
-        while (i < personal.size()) {
-            person = personal.get(i);
-            System.out.println(person.getName() + " " + person.getVName() + " " + person.getArt()); 
+        while (i < personalListe.size()) {
+            person = personalListe.get(i);
+            System.out.println(person.getName() + ", " + person.getVName() + " " + person.getArt());
             i++;
             }
     }
@@ -91,7 +99,7 @@ public class main {
     Verwalter verwalter1 = new Verwalter("H38W04L6", "Calussi", "Clemens", "Schulstraße 9", 18067, "Erkner", "15/09/1990", "0307889356", "Verwaltungsbüro@googlemail.com", 2100.00f);
     Hund hund1 = new Hund(1, 1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
     Hund hund2 = new Hund(2, 1020, 1, "Waldi", "Labrador", "weiblich", "28.05.2011", "beige", "abends", "132098");
-    Katze katze1 = new Katze(3, 450, 2, "Mitze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
+    Katze katze1 = new Katze(3, 450, 2, "Mietze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
     Kleintier kleintier1 = new Kleintier(4, 15, 3, "Puschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
     Kleintier kleintier2 = new Kleintier(5, 15, 3, "Wuschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
     Vogel vogel1 = new Vogel(6, 30, 4, "Hansi", "Wellensittich", "männlich", "23.04.2013", "blau", "morgens", 712982);
@@ -105,13 +113,16 @@ public class main {
     pfleger2.setMail("anna313@web.de");
     System.out.println(pfleger2.getMail());
     
-    personal.add(pfleger1);
-    sortiertEinfuegen(personal, pfleger2);
-    sortiertEinfuegen(personal, arzt1);
-    sortiertEinfuegen(personal, verwalter1);    
     
-    personalListeAusgeben();
+    sortiertEinfuegen(personalListe, pfleger2);
+    //sortiertEinfuegen(personalListe, arzt1);
+    //sortiertEinfuegen(personalListe, verwalter1);    
     
-    new LogInFenster();
+    System.out.println((personalListe.get(0)).getName());
+    //System.out.println(personalListe.get(2));
+        
+    //personalListeAusgeben();
+    
+    // new LogInFenster();
     }
 }
