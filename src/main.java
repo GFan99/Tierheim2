@@ -19,15 +19,18 @@ public class main {
             (traeume.get(i)).neuerTag();
         }
     }
-    private static ArrayList<Personal> personalListe;
     
-    private static void sortiertEinfuegen(ArrayList<Personal> liste, Personal element) {
-        if (liste.isEmpty()) {
+    private static ArrayList<Pfleger> pfleger;
+    private static ArrayList<Arzt> aerzte;
+    private static ArrayList<Verwalter> verwalter;
+    
+    private static void sortiertEinfuegen(ArrayList<Pfleger> liste, Pfleger element) {
+        if(liste.size()==0) {
             liste.add(element);
         }
         else{
-            String vname = element.getName();
-            String nname = element.getVName();
+            String nname = element.getName();
+            String vname = element.getVName();
         
             for (int i = 0; i<liste.size(); i++) {
                 String lauf = (liste.get(i)).getName();
@@ -42,15 +45,12 @@ public class main {
                                 liste.add(i,element);
                             }
                             else {
-                                if (lauf.charAt(a) < nname.charAt(a)) {
-                                    break;
-                                }
-                                else {} 
+                                if (lauf.charAt(a) < nname.charAt(a)) { } 
                             }
                         }
                         for (int j = 0;j<liste.size(); j++) {
-                            String lauf2 = (liste.get(j)).getName();
-                            if (lauf2.charAt(0)>nname.charAt(0)) {
+                            String lauf2 = (liste.get(j)).getVName();
+                            if (lauf2.charAt(0)>vname.charAt(0)) {
                                 liste.add(j,element);
                                 break;
                             }
@@ -81,13 +81,22 @@ public class main {
     
     private static void personalListeAusgeben() {
         Personal person;
-        int i = 0;
         System.out.println("Im Moment sind folgende Personen eingestellt:");
-        while (i < personalListe.size()) {
-            person = personalListe.get(i);
-            System.out.println(person.getName() + ", " + person.getVName() + " " + person.getArt());
-            i++;
-            }
+        System.out.println("Pfleger:");
+        for (int i = 0;i < pfleger.size(); i++) {
+            person = pfleger.get(i);
+            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
+        }
+        System.out.println("Ärzte:");
+        for (int i = 0;i < aerzte.size(); i++) {
+            person = aerzte.get(i);
+            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
+        }
+        System.out.println("Verwalter:");
+        for (int i = 0;i < verwalter.size(); i++) {
+            person = verwalter.get(i);
+            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
+        }
     }
     
     public static void main(String[] args) {
@@ -114,15 +123,16 @@ public class main {
     System.out.println(pfleger2.getMail());
     
     
-    sortiertEinfuegen(personalListe, pfleger2);
-    //sortiertEinfuegen(personalListe, arzt1);
-    //sortiertEinfuegen(personalListe, verwalter1);    
+    pfleger.add(pfleger1);
+    pfleger.add(pfleger2);
+    aerzte.add(arzt1);
+    verwalter.add(verwalter1);
     
-    System.out.println((personalListe.get(0)).getName());
+    //System.out.println((personalListe.get(0)).getName());
     //System.out.println(personalListe.get(2));
         
-    //personalListeAusgeben();
+    personalListeAusgeben();
     
-    // new LogInFenster();
+    //new LogInFenster();
     }
 }
