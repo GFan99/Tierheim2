@@ -13,6 +13,9 @@ import java.util.*;
 class Vogel extends Tier{
     int vRingNr;
 
+    protected int vRNr;
+
+
     //Konstruktor, um ein Objekt der Klasse Vogel mit Tiernummer, Gebühr, Raumnummer, Name,
     //Rasse, Geschlecht, Geburtstag, Farbe, Futterzeit und Vogelringnummer zu erstellen
     protected Vogel(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, int vRingNr)
