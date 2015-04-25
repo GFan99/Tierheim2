@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 
-/**
- *
+/*
  * @author becksusanna
  */
 
@@ -22,6 +21,7 @@ abstract class Tier{
     protected String gebDat;
     protected String tFarbe;
     protected String tFutterzeit;
+    protected Vorbesitzer vorbesitzer;
     
     protected String getName() {
         return tName;

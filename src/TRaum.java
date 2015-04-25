@@ -66,7 +66,7 @@ class TRaum extends Raum{
 
     protected void neuerTag() {
         tag++;
-        if (TierheimMain.getTag() % 7 == 0) {
+        if (tag % 7 == 0) {
             if (geputztWoche == false) {
                 System.out.println("Der Raum "+rNr+" wurde diese Woche noch nicht geputzt.");
             }

@@ -8,10 +8,7 @@
  *
  * @author becksusanna
  */
-import java.util.*;
-
-abstract class Personal {
-    protected String pNr;
+public class Person {
     protected String pName;
     protected String pVName;
     protected String pStrNr;
@@ -20,8 +17,7 @@ abstract class Personal {
     protected String pGebDat;
     protected String pTel;
     protected String pMail;
-    protected float gehalt;
-        
+    
     protected void setAdresse(String strNr, int plz, String ort) {
         pStrNr = strNr;
         pPLZ = plz;
@@ -36,28 +32,19 @@ abstract class Personal {
     protected void setMail(String mail) {
         pMail = mail;
     }
-    protected void setGehalt(float gehAlt) {
-        gehalt = gehAlt;
-    }
     
-    protected String getPNr() {
-        return pNr;
-    }
     protected String getName() {
         return pName;
     }
     protected String getVName() {
         return pVName;
     }
-    /*protected String getAdresse() {
-        ArrayList adresse;
-        adresse.add(pStrNr);
-        adresse.add(", ");        
-        adresse.add(pPLZ);
-        adresse.add(pOrt);
-        adresse.
-        return adresse;
-    } */
+    protected void printAdresse() {
+        System.out.println("Die Adresse von"+getName()+"ist:");
+        System.out.println(getStrNr());
+        System.out.println(getPLZ());
+        System.out.println(getOrt());    
+    }
     protected void getAdresse() {
         System.out.println(pStrNr+", "+pPLZ+pOrt);
     }
@@ -79,11 +66,4 @@ abstract class Personal {
     protected String getMail() {
         return pMail;
     }
-    protected float getGehalt() {
-        return gehalt;
-    }
-    
-    protected abstract String getArt();
-    
-    
 }

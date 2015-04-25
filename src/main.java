@@ -2,111 +2,9 @@
  * @author becksusanna
  */
 import java.util.ArrayList;
+
 public class main {
-    private ArrayList<TRaum> traeume;
-    private void add2raeume(TRaum raum) {
-        traeume.add(raum);
-    }
-    private void removefromraeume(TRaum raum) {
-        traeume.remove(raum);
-    }
-    private ArrayList<TRaum> gettraeume() {
-        return traeume;
-    }
-
-    private void neuerTag() {
-        for(int i = 0; i <= traeume.size(); i++) {
-            (traeume.get(i)).neuerTag();
-        }
-    }
-
-
-    private static ArrayList<Personal> personalListe;
-
-    
-    private static ArrayList<Pfleger> pfleger;
-    private static ArrayList<Arzt> aerzte;
-    private static ArrayList<Verwalter> verwalter;
-    
-    private static void sortiertEinfuegen(ArrayList<Pfleger> liste, Pfleger element) {
-        if(liste.size()==0) {
-            liste.add(element);
-        }
-        else{
-            String nname = element.getName();
-            String vname = element.getVName();
         
-            for (int i = 0; i<liste.size(); i++) {
-                String lauf = (liste.get(i)).getName();
-                if (lauf.charAt(0)>nname.charAt(0)) {
-                    liste.add(i,element);
-                    break;
-                }
-                else {
-                    if (lauf.charAt(0) == nname.charAt(0)) {
-                        for (int a = 1; a>lauf.length(); a++) {
-                            if (lauf.charAt(a) > nname.charAt(a)) {
-                                liste.add(i,element);
-                            }
-                            else {
-                                if (lauf.charAt(a) < nname.charAt(a)) { } 
-                            }
-                        }
-                        for (int j = 0;j<liste.size(); j++) {
-                            String lauf2 = (liste.get(j)).getVName();
-                            if (lauf2.charAt(0)>vname.charAt(0)) {
-                                liste.add(j,element);
-                                break;
-                            }
-                        }
-                    }        
-                    else {
-                                if (lauf.charAt(0) == nname.charAt(0)) {
-                                    for (int j = 0;j<liste.size(); j++) {
-                                        String lauf2 = (liste.get(j)).getName();
-                                        for (int b = 1; b>lauf.length(); b++) {
-                                            if (lauf2.charAt(b) > nname.charAt(b)) {
-                                                liste.add(j,element);
-                                            }
-                                            else {
-                                                if (lauf.charAt(b) < nname.charAt(b)) {
-                                                    break;
-                                                }
-                                                else {System.out.println("Die Person kann nicht einsortiert werden.");}
-                                            }
-                                        }
-                                    }
-                                }
-                        }
-                }
-            }
-        }
-    }
-    
-    private static void personalListeAusgeben() {
-        Personal person;
-        System.out.println("Im Moment sind folgende Personen eingestellt:");
-        System.out.println("Pfleger:");
-        for (int i = 0;i < pfleger.size(); i++) {
-            person = pfleger.get(i);
-            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
-        }
-        System.out.println("Ärzte:");
-        for (int i = 0;i < aerzte.size(); i++) {
-            person = aerzte.get(i);
-            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
-        }
-        System.out.println("Verwalter:");
-        for (int i = 0;i < verwalter.size(); i++) {
-            person = verwalter.get(i);
-            System.out.println(person.getName() + ", " + person.getVName() + "   geboren am " + person.getGebDat());
-        }
-    }
-    
-=======
-
-
->>>>>>> Stashed changes
     public static void main(String[] args) {
     Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
     Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
@@ -130,16 +28,17 @@ public class main {
     pfleger2.setMail("anna313@web.de");
     System.out.println(pfleger2.getMail());
     
+    Tierheim th = new Tierheim();
     
-    pfleger.add(pfleger1);
-    pfleger.add(pfleger2);
-    aerzte.add(arzt1);
-    verwalter.add(verwalter1);
+    //th.add2pfleger(pfleger1);
+    //th.add2pfleger(pfleger2);
+    th.add2aerzte(arzt1);
+    th.add2verwalter(verwalter1);
     
     //System.out.println((personalListe.get(0)).getName());
     //System.out.println(personalListe.get(2));
         
-    personalListeAusgeben();
+    th.personalListeAusgeben();
     
     //new LogInFenster();
     }
