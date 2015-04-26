@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Personal.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/TRaum.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Vorbesitzer.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Tier.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Person.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Pfleger.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Verwalter.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Tierheim.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Katze.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Raum.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Arzt.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Hund.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/PRaum.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Kleintier.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/LogInFenster.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/Helfer.java</file>
-            <file>file:/Users/becksusanna/Documents/Schule/InfoLK/Q2/Netbeans/Tierheim/src/main.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Arzt.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Vogel.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/PRaum.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Raum.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Helfer.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/TRaum.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Verwalter.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Tier.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Katze.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/main.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Halter.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Pfleger.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/LogInFenster.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Kleintier.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Person.java</file>
+            <file>file:/Users/schueler/Desktop/Tierheim/src/Hund.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,7 +6,10 @@ import java.util.ArrayList;
 public class main {
         
     public static void main(String[] args) {
-    Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
+        
+    new Login();
+    
+    /*Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
     Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
     Halter halter1 = new Halter("B29W30O3","Peter", "Pan", "Bahnhofstraße 506", 12333, "Potsdam", "12/09/1988", "0306792748", "pp@web.de", true);
     Halter halter2 = new Halter("D28H38W1","Krüger", "Marie", "Hauptstraße 34", 12643, "Berlin", "25/12/1977", "0306794548", "marie77@gmx.de", false);
@@ -37,9 +40,10 @@ public class main {
     
     //System.out.println((personalListe.get(0)).getName());
     //System.out.println(personalListe.get(2));
-        
-    th.personalListeAusgeben();
+    //th.personalListeAusgeben();  
+    */
     
-    //new LogInFenster();
+    
+    
     }
 }
