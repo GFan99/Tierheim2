@@ -19,10 +19,12 @@ class Tierheim {
     private ArrayList<Verwalter> verwalter;
     
     private ArrayList<TRaum> traeume;
-    protected void add2raeume(TRaum raum) {
+    
+    
+    protected void add2traeume(TRaum raum) {
         traeume.add(raum);
     }
-    protected void removefromraeume(TRaum raum) {
+    protected void removefromtraeume(TRaum raum) {
         traeume.remove(raum);
     }
     protected ArrayList<TRaum> gettraeume() {

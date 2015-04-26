@@ -39,14 +39,11 @@ public class Person {
     protected String getVName() {
         return pVName;
     }
-    protected void printAdresse() {
+    protected void getAdresse() {
         System.out.println("Die Adresse von"+getName()+"ist:");
         System.out.println(getStrNr());
         System.out.println(getPLZ());
         System.out.println(getOrt());    
-    }
-    protected void getAdresse() {
-        System.out.println(pStrNr+", "+pPLZ+pOrt);
     }
     protected String getStrNr() {
         return pStrNr;

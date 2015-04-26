@@ -1,4 +1,4 @@
-rr/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -11,26 +11,24 @@ rr/*
 import java.util.*;
 class Hund extends Tier {
 
-
     protected boolean heuteGassi;
 
     String hMarke;
     
     //Konstruktor, um ein Objekt der Klasse Hund mit Tiernummer, Gebühr, Raumnummer, Name,
     //Rasse, Geschlecht, Geburtstag,Farbe, Futterzeit und Hundemarke zu erstellen
-    protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke)
-    {
-    this.tNr=tNr;
-    this.tGebuehr=tGebuehr;
-    this.rNr=rNr;
-    this.tName=tName;
-    this.tRasse=tRasse;
-    this.tGeschlecht=tGeschlecht;
-    this.gebDat=gebDat;
-    this.tFarbe=tFarbe;
-    this.tFutterzeit=tFutterzeit;
-    this.hMarke=hMarke;
-    heuteGassi = false;
+    protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke) {
+        this.tNr=tNr;
+        this.tGebuehr=tGebuehr;
+        this.rNr=rNr;
+        this.tName=tName;
+        this.tRasse=tRasse;
+        this.tGeschlecht=tGeschlecht;
+        this.gebDat=gebDat;
+        this.tFarbe=tFarbe;
+        this.tFutterzeit=tFutterzeit;
+        this.hMarke=hMarke;
+        heuteGassi = false;
     }
     
     protected boolean getGassi() {
