@@ -61,6 +61,7 @@ public class Fenster {
                 final JTextField antwortHinzuH;
                 final JTextField antwortHinzuI;
                 final JTextField antwortHinzuJ;
+                final JButton okHinzu;
                 
                 
                 
@@ -172,6 +173,8 @@ public class Fenster {
                 antwortHinzuI.setBounds(150,390,100,20);
                 antwortHinzuJ = new JTextField();
                 antwortHinzuJ.setBounds(150,430,100,20);
+                okHinzu = new JButton("Ok");
+                okHinzu.setBounds(300,430,50,20);
             
             //Menu
             menuezeile = new JMenuBar();
@@ -1300,10 +1303,49 @@ public class Fenster {
                                         
                             }
                 });
+                
+                //Ok Button (der 2. bei Hinzufügen)
+                okHinzu.addActionListener(new ActionListener (){
+                    @Override
+                        public void actionPerformed(ActionEvent e){
+                            
+                                String a = antwortHinzuA.getText();
+                                String b = antwortHinzuB.getText();
+                                String c = antwortHinzuC.getText();
+                                String d = antwortHinzuD.getText();
+                                String ea = antwortHinzuE.getText();
+                                int eb = Integer.parseInt(ea);
+                                String f = antwortHinzuF.getText();
+                                String g = antwortHinzuG.getText();
+                                String h = antwortHinzuH.getText();
+                                String i = antwortHinzuI.getText();
+                                String ja = antwortHinzuJ.getText();
+                                float jb = Float.parseFloat(ja);
+                                if (ueberschriftHinzu.getText() == "Arzt"){
                                     
+                                    Arzt arzt1 = new Arzt (a,b,c,d,eb,f,g,h,i,jb);
+                                    TierheimMain.aerzte.add(arzt1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Pfleger"){
+                                    
+                                    Pfleger pfleger1 = new Pfleger (a,b,c,d,eb,f,g,h,i,jb);
+                                    TierheimMain.pfleger.add(pfleger1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Verwalter"){
+                                    
+                                    Verwalter verwalter1 = new Verwalter (a,b,c,d,eb,f,g,h,i,jb);
+                                    TierheimMain.verwalter.add(verwalter1);
+                                }
+                                
+                                //String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt        
+                            }
+                        
+                    });
                                       
                            
                     
+                    
+                
                     
         
         //Zusammenfügen
@@ -1359,6 +1401,7 @@ public class Fenster {
                 grundHinzu.add(antwortHinzuH);
                 grundHinzu.add(antwortHinzuI);
                 grundHinzu.add(antwortHinzuJ);
+                grundHinzu.add(okHinzu);
                 
                 
                 
