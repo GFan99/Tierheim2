@@ -24,8 +24,8 @@ public class Fenster {
                 //Über uns
                 final JPanel grundHomeUeber;
                 final JLabel uberschriftHome;
-                JLabel logo;
-                JButton speichernbeenden;
+                final JLabel logo;
+                final JButton speichernbeenden;
                 
             //suchen und löschen für Tiere,Personal,Helfer,Raum
                 final JPanel grundSuchen;
@@ -66,25 +66,25 @@ public class Fenster {
                 
             
             //Menu
-            JMenuBar menuezeile;
-            JMenu menuHome;
-            JMenu menuTiere;
-            JMenu menuPersonal;
-            JMenu menuRaum;
-            JMenu menuHelfer;
-            JMenuItem uberUnsHome;
-            JMenuItem suchenT;
-            JMenuItem hinzufuegenT;
-            JMenuItem loeschenT;
-            JMenuItem suchenP;
-            JMenuItem hinzufuegenP;
-            JMenuItem loeschenP;
-            JMenuItem suchenR;
-            JMenuItem hinzufuegenR;
-            JMenuItem loeschenR;
-            JMenuItem suchenH;
-            JMenuItem hinzufuegenH;
-            JMenuItem loeschenH;
+            final JMenuBar menuezeile;
+            final JMenu menuHome;
+            final JMenu menuTiere;
+            final JMenu menuPersonal;
+            final JMenu menuRaum;
+            final JMenu menuHelfer;
+            final JMenuItem uberUnsHome;
+            final JMenuItem suchenT;
+            final JMenuItem hinzufuegenT;
+            final JMenuItem loeschenT;
+            final JMenuItem suchenP;
+            final JMenuItem hinzufuegenP;
+            final JMenuItem loeschenP;
+            final JMenuItem suchenR;
+            final JMenuItem hinzufuegenR;
+            final JMenuItem loeschenR;
+            final JMenuItem suchenH;
+            final JMenuItem hinzufuegenH;
+            final JMenuItem loeschenH;
 
             
         //Initialisierung
@@ -553,7 +553,7 @@ public class Fenster {
                                         gebdat.setFont(new Font("Arial", Font.BOLD, 17));
                                         gebdat.setBounds(900,0,149,19);
                                         
-                                        JLabel nummer2
+                                        JLabel nummer2;
                                         JLabel name2;
                                         JLabel tierart2;
                                         JLabel rasse2;
@@ -1278,8 +1278,8 @@ public class Fenster {
                                             //}
                                     
                                       
-                            }
-                    });
+                           
+                    
                     
         
         //Zusammenfügen
@@ -1357,4 +1357,7 @@ public class Fenster {
         }
     }
     */
+}
+                        });
+}
 }
