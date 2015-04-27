@@ -36,6 +36,7 @@ public class Fenster {
                 final JButton bestaetigen;
                 final JLabel meldung;
                 JLabel ausgabe;
+                final JFrame suchergebnis;
                 
             
             //hinzufügen für Tiere, Personal, Helfer, Raum
@@ -126,6 +127,7 @@ public class Fenster {
                 meldung = new JLabel();
                 meldung.setBounds(20,100,215,20);
                 ausgabe = new JLabel();
+                suchergebnis = new JFrame();
                 
                 //hinzufügen
                 grundHinzu = new JPanel();
@@ -532,7 +534,6 @@ public class Fenster {
                                 //Tiere
                                     //suchen
                                         ArrayList<Tier> suchergebnisse;
-                                        JFrame suchergebnis = new JFrame("Suchergebnisse");
                                         
                                         JLabel nummer = new JLabel("Nummer");
                                         nummer.setFont(new Font("Arial", Font.BOLD, 17));
