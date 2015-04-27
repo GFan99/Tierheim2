@@ -253,8 +253,17 @@ public class TierheimMain {
                     }
                 }
             break;
+            case 'a':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    for (int j = 0; j<raum.getTiere().size();j++) {
+                        Tier tier = raum.getTiere().get(j);
+                        ausgabe.add(tier);
+                    }
+                }
+                break;
             default:
-                System.out.println("Falscher char eingegeben");
+                System.out.println("Falscher char-Wert eingegeben");
         }
         return ausgabe;
     }
@@ -281,7 +290,9 @@ public class TierheimMain {
                     if (raum.getTierart() == "Katze") {
                         for (int j = 0; j<raum.getTiere().size();j++) {
                             Tier tier = raum.getTiere().get(j);
-                            ausgabe.add(tier);
+                            if (tier.gettNr() == nr) {
+                                ausgabe.add(tier);
+                            }
                         }
                     }
                 }
@@ -292,7 +303,9 @@ public class TierheimMain {
                     if (raum.getTierart()=="Vogel") {
                         for (int j = 0; j<raum.getTiere().size();j++) {
                             Tier tier = raum.getTiere().get(j);
-                            ausgabe.add(tier);
+                            if (tier.gettNr() == nr) {
+                                ausgabe.add(tier);
+                            }
                         }
                     }
                 }
@@ -303,13 +316,316 @@ public class TierheimMain {
                     if (raum.getTierart()=="Kleintier") {
                         for (int j = 0; j<raum.getTiere().size();j++) {
                             Tier tier = raum.getTiere().get(j);
-                            ausgabe.add(tier);
+                            if (tier.gettNr() == nr) {
+                                ausgabe.add(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                ausgabe.add(tier);
+                            }
+                        
+                    }
+                }
+            default:
+                System.out.println("Falscher char eingegeben");
+        }
+        return ausgabe;
+    }
+    
+    /** Die Methode loeschen(char tierart) löscht alle Tiere einer Tierart. Bei den char-Werten steht
+     * "h" für Hunde, "k" für Katzen, "m" für Kleintiere (wie Meerschweinchen) und
+     * "v" für Vögel.
+     */
+    protected static boolean loeschen(char tierart) {
+        TRaum raum;
+        switch (tierart) {
+            case 'h':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'k':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
                         }
                     }
                 }
             break;
+            case 'a':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    for (int j = 0; j<raum.getTiere().size();j++) {
+                        raum.getTiere().remove(0);
+                    }
+                }
+                break;
             default:
-                System.out.println("Falscher char eingegeben");
+                return false;
+        }
+        return true;
+    }
+    protected static boolean loeschen(char tierart, String nr) {
+        TRaum raum;
+        switch (tierart) {
+            case 'h':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'k':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < traeume.size(); i++) {
+                    raum = traeume.get(i);
+                    
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        
+                    }
+                }
+            default:
+                return false;
+        }
+        return true;
+    }
+    
+    protected static ArrayList personalSuchen(char art) {
+        ArrayList<Personal> ausgabe = new ArrayList<Personal>();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    ausgabe.add(pfleger.get(i));
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    ausgabe.add(verwalter.get(i));
+                }
+                break;
+            case 'ä':
+                for (int i = 0; i < aerzte.size(); i++) {
+                    ausgabe.add(aerzte.get(i));
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    ausgabe.add(pfleger.get(i));
+                }
+                for (int i = 0; i < aerzte.size(); i++) {
+                    ausgabe.add(aerzte.get(i));
+                }
+                for (int i = 0; i < verwalter.size(); i++) {
+                    ausgabe.add(verwalter.get(i));
+                }
+                break;
+            default:
+        }
+        return ausgabe;
+    }
+    protected static ArrayList personalSuchen(char art, String nr) {
+        ArrayList<Personal> ausgabe = new ArrayList<Personal>();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    if (pfleger.get(i).getPNr() == nr) {
+                        ausgabe.add(pfleger.get(i));
+                    }
+                }
+                break;
+            case 'ä':
+                for (int i = 0; i < aerzte.size(); i++) {
+                    if (aerzte.get(i).getPNr() == nr) {
+                        ausgabe.add(aerzte.get(i));
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    if (verwalter.get(i).getPNr() == nr) {
+                        ausgabe.add(verwalter.get(i));
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    if (verwalter.get(i).getPNr() == nr) {
+                        ausgabe.add(verwalter.get(i));
+                    }
+                }
+                for (int i = 0; i < aerzte.size(); i++) {
+                    if (aerzte.get(i).getPNr() == nr) {
+                        ausgabe.add(aerzte.get(i));
+                    }
+                }
+                for (int i = 0; i < pfleger.size(); i++) {
+                    if (pfleger.get(i).getPNr() == nr) {
+                        ausgabe.add(pfleger.get(i));
+                    }
+                }
+            default:
+        }
+        return ausgabe;
+    }
+    
+    protected static boolean personalLoeschen(char art) {
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    pfleger.remove(i);
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    verwalter.remove(i);
+                }
+                break;
+            case 'ä':
+                for (int i = 0; i < aerzte.size(); i++) {
+                    aerzte.remove(i);
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    pfleger.remove(i);
+                }
+                for (int i = 0; i < aerzte.size(); i++) {
+                    aerzte.remove(i);
+                }
+                for (int i = 0; i < verwalter.size(); i++) {
+                    verwalter.remove(i);
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+    protected static ArrayList personalLoeschen(char art, String nr) {
+        ArrayList<Personal> ausgabe = new ArrayList<Personal>();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < pfleger.size(); i++) {
+                    if (pfleger.get(i).getPNr() == nr) {
+                        pfleger.remove(i);
+                    }
+                }
+                break;
+            case 'ä':
+                for (int i = 0; i < aerzte.size(); i++) {
+                    if (aerzte.get(i).getPNr() == nr) {
+                        aerzte.remove(i);
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    if (verwalter.get(i).getPNr() == nr) {
+                        verwalter.remove(i);
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < verwalter.size(); i++) {
+                    if (verwalter.get(i).getPNr() == nr) {
+                        verwalter.remove(i);
+                    }
+                }
+                for (int i = 0; i < aerzte.size(); i++) {
+                    if (aerzte.get(i).getPNr() == nr) {
+                        aerzte.remove(i);
+                    }
+                }
+                for (int i = 0; i < pfleger.size(); i++) {
+                    if (pfleger.get(i).getPNr() == nr) {
+                        pfleger.remove(i);
+                    }
+                }
+            default:
         }
         return ausgabe;
     }
@@ -325,22 +641,24 @@ public class TierheimMain {
             raum.setWarteliste(lesen("wlRaum"+raum.getNr()));
         }
 
+        
+    
+        Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
+        Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
+        Halter halter1 = new Halter("B29W30O3","Peter", "Pan", "Bahnhofstraße 506", 12333, "Potsdam", "12/09/1988", "0306792748", "pp@web.de", true);
+        Halter halter2 = new Halter("D28H38W1","Krüger", "Marie", "Hauptstraße 34", 12643, "Berlin", "25/12/1977", "0306794548", "marie77@gmx.de", false);
+        Arzt arzt1 = new Arzt("Q75U48C2", "Auge", "Hans", "Seestraße 5", 13056,"Ahrensfelde" ,"17/05/1975" , "014673298847", "TierarztAuge@yahoo.com", 2500.00f);
+        Verwalter verwalter1 = new Verwalter("H38W04L6", "Calussi", "Clemens", "Schulstraße 9", 18067, "Erkner", "15/09/1990", "0307889356", "Verwaltungsbüro@googlemail.com", 2100.00f);
+        Hund hund1 = new Hund(1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
+        Hund hund2 = new Hund(1020, 1, "Waldi", "Labrador", "weiblich", "28.05.2011", "beige", "abends", "132098");
+        Katze katze1 = new Katze(450, 2, "Mietze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
+        Kleintier kleintier1 = new Kleintier("15H75", 15, 3, "Puschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
+        Kleintier kleintier2 = new Kleintier("35A67", 15, 3, "Wuschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
+        Vogel vogel1 = new Vogel(30, 4, "Hansi", "Wellensittich", "männlich", "23.04.2013", "blau", "morgens", "712982");
+    
+        
         new Login();
-    
-    /*Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
-    Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
-    Halter halter1 = new Halter("B29W30O3","Peter", "Pan", "Bahnhofstraße 506", 12333, "Potsdam", "12/09/1988", "0306792748", "pp@web.de", true);
-    Halter halter2 = new Halter("D28H38W1","Krüger", "Marie", "Hauptstraße 34", 12643, "Berlin", "25/12/1977", "0306794548", "marie77@gmx.de", false);
-    Arzt arzt1 = new Arzt("Q75U48C2", "Auge", "Hans", "Seestraße 5", 13056,"Ahrensfelde" ,"17/05/1975" , "014673298847", "TierarztAuge@yahoo.com", 2500.00f);
-    Verwalter verwalter1 = new Verwalter("H38W04L6", "Calussi", "Clemens", "Schulstraße 9", 18067, "Erkner", "15/09/1990", "0307889356", "Verwaltungsbüro@googlemail.com", 2100.00f);
-    Hund hund1 = new Hund(1, 1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
-    Hund hund2 = new Hund(2, 1020, 1, "Waldi", "Labrador", "weiblich", "28.05.2011", "beige", "abends", "132098");
-    Katze katze1 = new Katze(3, 450, 2, "Mietze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
-    Kleintier kleintier1 = new Kleintier(4, 15, 3, "Puschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
-    Kleintier kleintier2 = new Kleintier(5, 15, 3, "Wuschel", "Hamster", "männlich", "23.11.2014", "braun", "morgens");
-    Vogel vogel1 = new Vogel(6, 30, 4, "Hansi", "Wellensittich", "männlich", "23.04.2013", "blau", "morgens", 712982);
-    
-    System.out.println("Test");
+    /*System.out.println("Test");
     
     System.out.println("Halter1 heißt "+halter1.getHaVorname()+" "+halter1.getHaNachname()+".");
     
@@ -349,7 +667,7 @@ public class TierheimMain {
     pfleger2.setMail("anna313@web.de");
     System.out.println(pfleger2.getMail());
     
-    Tierheim th = new Tierheim();
+    
     
     //th.add2pfleger(pfleger1);
     //th.add2pfleger(pfleger2);

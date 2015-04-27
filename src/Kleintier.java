@@ -12,12 +12,12 @@ import java.util.*;
  */
 class Kleintier extends Tier{
 
-    String chipnr;
+    String chipnr = tNr;
     //Konstruktor, um ein Objekt der Klasse Kleintier mit Tiernummer, Gebühr, Raumnummer, Name,
     //Rasse, Geschlecht, Geburtstag, Farbe und Futterzeit zu erstellen
-    protected Kleintier(String chipnr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit)
+    protected Kleintier(String tnr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit)
     {
-    this.chipnr=chipnr;
+    this.tNr=tNr;
     this.tGebuehr=tGebuehr;
     this.rNr=rNr;
     this.tName=tName;
