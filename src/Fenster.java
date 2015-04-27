@@ -568,6 +568,7 @@ public class Fenster {
                                         keinergebnis.setBounds(300,100,0,0);
                                         
                                         //alle
+                                        if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==0){    
                                             if (kriterium.getText() == "") {
                                                     suchergebnisse = TierheimMain.suchen('a');
                                                     if (suchergebnisse != null) {
@@ -584,17 +585,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -625,17 +626,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -652,43 +653,43 @@ public class Fenster {
                                                 }
                                                 suchergebnis.setLocation(50,50);
                                                 suchergebnis.setVisible(true);
-                           
+                                        }
                                         //Hund
                                             if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1){
                                                 if (kriterium.getText() == "") {
                                                     suchergebnisse = TierheimMain.suchen('h');
                                                     if (suchergebnisse != null) {
                                                         suchergebnis.setBounds(501, 0, 1050, suchergebnisse.size()*20+20);
-                                                        suchergebnis.getContentPane().add(nummer);
-                                                        suchergebnis.getContentPane().add(name);
-                                                        suchergebnis.getContentPane().add(tierart);
-                                                        suchergebnis.getContentPane().add(rasse);
-                                                        suchergebnis.getContentPane().add(farbe);
-                                                        suchergebnis.getContentPane().add(geschlecht);
-                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        suchergebnis.add(nummer);
+                                                        suchergebnis.add(name);
+                                                        suchergebnis.add(tierart);
+                                                        suchergebnis.add(rasse);
+                                                        suchergebnis.add(farbe);
+                                                        suchergebnis.add(geschlecht);
+                                                        suchergebnis.add(gebdat);
                                                         for(int i =0; i<suchergebnisse.size();i++) {
                                                             Tier tier = suchergebnisse.get(i);
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
-                                                            suchergebnis.getContentPane().add(nummer2);
-                                                            suchergebnis.getContentPane().add(name2);
-                                                            suchergebnis.getContentPane().add(tierart2);
-                                                            suchergebnis.getContentPane().add(rasse2);
-                                                            suchergebnis.getContentPane().add(farbe2);
-                                                            suchergebnis.getContentPane().add(geschlecht2);
-                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
+                                                            suchergebnis.add(nummer2);
+                                                            suchergebnis.add(name2);
+                                                            suchergebnis.add(tierart2);
+                                                            suchergebnis.add(rasse2);
+                                                            suchergebnis.add(farbe2);
+                                                            suchergebnis.add(geschlecht2);
+                                                            suchergebnis.add(gebdat2);
                                                         }
                                                     }
                                                     else {
@@ -712,17 +713,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -758,17 +759,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -796,20 +797,21 @@ public class Fenster {
                                                         suchergebnis.getContentPane().add(gebdat);
                                                         for(int i =0; i<suchergebnisse.size();i++) {
                                                             Tier tier = suchergebnisse.get(i);
+                                               
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -845,17 +847,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -886,17 +888,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -932,17 +934,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -973,17 +975,17 @@ public class Fenster {
                                                             nummer2 = new JLabel(tier.gettNr());
                                                             nummer2.setBounds(0,(i+1)*20,149,19);
                                                             name2 = new JLabel(tier.getName());
-                                                            name2.setBounds(150,(i+1)*20,149,19);
+                                                            name2.setBounds(0,(i+1)*20,149,19);
                                                             tierart2 = new JLabel(tier.getClass().toString());
-                                                            tierart2.setBounds(300,(i+1)*20,149,19);
+                                                            tierart2.setBounds(0,(i+1)*20,149,19);
                                                             rasse2 = new JLabel(tier.gettRasse());
-                                                            rasse2.setBounds(450,(i+1)*20,149,19);
+                                                            rasse2.setBounds(0,(i+1)*20,149,19);
                                                             farbe2 = new JLabel(tier.gettFarbe());
-                                                            farbe2.setBounds(600,(i+1)*20,149,19);
+                                                            farbe2.setBounds(0,(i+1)*20,149,19);
                                                             geschlecht2 = new JLabel(tier.gettGeschlecht());
-                                                            geschlecht2.setBounds(750,(i+1)*20,149,19);
+                                                            geschlecht2.setBounds(0,(i+1)*20,149,19);
                                                             gebdat2 = new JLabel(tier.getgebDat());
-                                                            gebdat2.setBounds(900,(i+1)*20,149,19);
+                                                            gebdat2.setBounds(0,(i+1)*20,149,19);
                                                             suchergebnis.getContentPane().add(nummer2);
                                                             suchergebnis.getContentPane().add(name2);
                                                             suchergebnis.getContentPane().add(tierart2);
@@ -1193,6 +1195,7 @@ public class Fenster {
                                         fenster.add(grundHinzu);
                                         ueberschriftHinzu.setText("Arzt");
                                         fenster.repaint();
+                                        
                                         }
                                     // hinzufügen Pfleger
                                         if (frageA.getText()=="Personalart hinzufügen" && auswahl.getSelectedIndex() == 1){
