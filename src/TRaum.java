@@ -35,11 +35,17 @@ class TRaum extends Raum{
     protected void removeFromTiere(Tier tier) {
         tiere.remove(tier);
     }
+    protected void setTiere (ArrayList<Tier> tiere) {
+        this.tiere = tiere;
+    }
     protected void add2Warteliste(Tier tier) {
         warteliste.add(tier);
     }
     protected void removeFromWartel(Tier tier) {
         warteliste.remove(tier);
+    }
+    protected void setWarteliste (ArrayList<Tier> wl) {
+        warteliste = wl;
     }
     protected void setSauber(boolean trueoderfalse) {
         geputztWoche = trueoderfalse;

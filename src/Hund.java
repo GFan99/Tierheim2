@@ -13,12 +13,11 @@ class Hund extends Tier {
 
     protected boolean heuteGassi;
 
-    String hMarke;
+    String hMarke = tNr;
     
     //Konstruktor, um ein Objekt der Klasse Hund mit Tiernummer, Gebühr, Raumnummer, Name,
     //Rasse, Geschlecht, Geburtstag,Farbe, Futterzeit und Hundemarke zu erstellen
-    protected Hund(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String hMarke) {
-        this.tNr=tNr;
+    protected Hund(float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String tNr) {
         this.tGebuehr=tGebuehr;
         this.rNr=rNr;
         this.tName=tName;
@@ -27,7 +26,7 @@ class Hund extends Tier {
         this.gebDat=gebDat;
         this.tFarbe=tFarbe;
         this.tFutterzeit=tFutterzeit;
-        this.hMarke=hMarke;
+        this.tNr=tNr;
         heuteGassi = false;
     }
     

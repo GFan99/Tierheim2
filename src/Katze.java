@@ -7,12 +7,12 @@ import java.util.*;
  */
 
 class Katze extends Tier{
+    
     private String kMarke;
 
     //Konstruktor, um ein Objekt der Klasse Katze mit Tiernummer, Gebühr, Raumnummer, Name,
     //Rasse, Geschlecht, Geburtstag,Farbe, Futterzeit und Katzenmarke zu erstellen
-    protected Katze(int tNr, float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String kMarke) {
-        this.tNr=tNr;
+    protected Katze(float tGebuehr, int rNr, String tName, String tRasse, String tGeschlecht, String gebDat, String tFarbe, String tFutterzeit, String kMarke) {
         this.tGebuehr=tGebuehr;
         this.rNr=rNr;
         this.tName=tName;

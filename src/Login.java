@@ -40,7 +40,7 @@ public class Login {
                       
                   } 
                   else{
-                      rueckmeldung.setText("falsche Eingabe");
+                      rueckmeldung.setText("Falsche Eingabe");
                   }
                   untergrund.repaint();
                }
@@ -64,7 +64,7 @@ public class Login {
                       
                   } 
                   else{
-                      rueckmeldung.setText("No accsess");
+                      rueckmeldung.setText("Falsche Eingabe");
                   }
                   untergrund.repaint();
                

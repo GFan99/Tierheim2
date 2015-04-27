@@ -12,7 +12,6 @@ import java.util.*;
         
 abstract class Tier{
     
-    protected int tNr;
     protected float tGebuehr;
     protected int rNr;
     protected String tName;
@@ -22,12 +21,10 @@ abstract class Tier{
     protected String tFarbe;
     protected String tFutterzeit;
     protected Vorbesitzer vorbesitzer;
+    protected String tNr;
     
     protected String getName() {
         return tName;
-    }
-    protected int gettNr() {
-        return tNr;
     }
     protected String gettRasse() {
         return tRasse;
@@ -53,6 +50,9 @@ abstract class Tier{
     }
     protected String gettFutterzeit() {
         return tFutterzeit;
+    }
+    protected String gettNr() {
+        return tNr;
     }
     
     protected abstract void neuerTag();

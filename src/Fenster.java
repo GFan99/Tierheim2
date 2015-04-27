@@ -6,7 +6,6 @@
 * Object getSelectedItem() 
 * Hier wird das in der JComboBox ausgewählte Objekt zurückgegeben.
 * Um mit dem Objekt weiter zu arbeiten, ist eine Typumwandlung zu der jeweiligen Klasse nötig.
-*
 */
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,21 +14,18 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 
-
-
 public class Fenster {
-    public Fenster(){
-        
+    public Fenster() {        
         //Deklaration
-        
         final JFrame fenster;
         Color hellblau;
-        
+
             //Home
                 //Über uns
                 final JPanel grundHomeUeber;
                 final JLabel uberschriftHome;
                 JLabel logo;
+                JButton speichernbeenden;
                 
             //suchen und löschen für Tiere,Personal,Helfer,Raum
                 final JPanel grundSuchen;
@@ -40,6 +36,8 @@ public class Fenster {
                 final JButton bestaetigen;
                 final JLabel meldung;
                 JLabel ausgabe;
+                
+            
             //hinzufügen für Tiere, Personal, Helfer, Raum
                 final JPanel grundHinzu;
                 final JLabel ueberschriftHinzu;
@@ -95,6 +93,7 @@ public class Fenster {
         
         
             //Home
+        
                 //Startseite
                 grundHomeUeber = new JPanel();
                 grundHomeUeber.setLayout(null);
@@ -102,9 +101,12 @@ public class Fenster {
                 grundHomeUeber.setBackground(new Color(182,236,255));
                 uberschriftHome = new JLabel("Tierheim Berlin");
                 uberschriftHome.setBounds(20,30,300,30);
-                uberschriftHome.setFont( new Font("Arial", Font.BOLD, 30));
+                uberschriftHome.setFont(new Font("Arial", Font.BOLD, 30));
                 logo = new JLabel(new ImageIcon("tierheimgruen.tiff"));
                 logo.setBounds(20,200,100,100);
+                speichernbeenden = new JButton("Speichern und beenden");
+                speichernbeenden.setBounds(50,100,250,50);
+                
                 //suchen und löschen für Tiere, Personal, Helfer, Raum
                 grundSuchen = new JPanel();
                 grundSuchen.setLayout(null);
@@ -113,7 +115,7 @@ public class Fenster {
                 frageA.setBounds(20,20,215,20);
                 frageB = new JLabel();
                 frageB.setBounds(20,60,215,20);
-                final String comboBoxListe[] = {"Katze", "Hund", "Vogel","alles"};
+                final String comboBoxListe[] = {"Katze", "Hund", "Vogel","ASlles"};
                 auswahl = new JComboBox(comboBoxListe);
                 auswahl.setBounds(250,20,150,20);
                 kriterium = new JTextField();
@@ -123,6 +125,7 @@ public class Fenster {
                 meldung = new JLabel();
                 meldung.setBounds(20,100,215,20);
                 ausgabe = new JLabel();
+                
                 //hinzufügen
                 grundHinzu = new JPanel();
                 grundHinzu.setLayout(null);
@@ -169,13 +172,10 @@ public class Fenster {
                 antwortHinzuI.setBounds(150,390,100,20);
                 antwortHinzuJ = new JTextField();
                 antwortHinzuJ.setBounds(150,430,100,20);
-                
-                
-                
-                
             
             //Menu
             menuezeile = new JMenuBar();
+            
                 //Home
                 menuHome = new JMenu("Home");
                     //Startseite
@@ -190,6 +190,13 @@ public class Fenster {
                                 
                             }
                     });
+                    //Speichern und beenden
+                    speichernbeenden.addActionListener(new ActionListener (){
+                        @Override
+                        public void actionPerformed(ActionEvent e){
+                            TierheimMain.speichernbeenden();
+                        }
+                    });
                 
                 //Suchen, löschen für Tiere/Personal/Helfer/Raum
                 menuTiere = new JMenu("Tiere");
@@ -197,7 +204,7 @@ public class Fenster {
                     suchenT = new JMenuItem("Suchen");
                     suchenT.addActionListener(new ActionListener (){
                         @Override
-                          public void actionPerformed(ActionEvent e){
+                            public void actionPerformed(ActionEvent e){
                                 fenster.remove(grundHomeUeber);
                                 fenster.remove(grundHinzu);
                                 fenster.add(grundSuchen);
@@ -518,33 +525,159 @@ public class Fenster {
                 //Ok Button
                 bestaetigen.addActionListener(new ActionListener (){
                         @Override
-                          public void actionPerformed(ActionEvent e){
+                            public void actionPerformed(ActionEvent e){
                                 //Tiere
                                     //suchen
+                                        ArrayList<Tier> suchergebnisse;
+                                        JFrame suchergebnis = new JFrame("Suchergebnisse");
+                                        JLabel name = new JLabel("Name");
+                                        name.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel tierart = new JLabel("Tierart");
+                                        tierart.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel rasse = new JLabel("Rasse");
+                                        rasse.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel farbe = new JLabel("Farbe");
+                                        farbe.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel geschlecht = new JLabel("Geschlecht");
+                                        geschlecht.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel gebdat = new JLabel("Geburtsdatum");
+                                        gebdat.setFont(new Font("Arial", Font.BOLD, 17));
+                                        JLabel name2;
+                                        JLabel tierart2;
+                                        JLabel rasse2;
+                                        JLabel farbe2;
+                                        JLabel geschlecht2;
+                                        JLabel gebdat2;
                                         //alle, keine Angabe
                                             //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
-                                            //Hier Methode, die alle Tiere ausgibt.
+                                            //suchen(
                                             //}
-                                        //Hund, keine Angabe
-                                            //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Hunde ausgibt.
-                                            //}
+                                        //Hund
+                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1){
+                                                suchergebnisse = TierheimMain.suchen('h');
+                                                if (suchergebnisse != null) {
+                                                    suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                    suchergebnis.getContentPane().add(name);
+                                                    suchergebnis.getContentPane().add(tierart);
+                                                    suchergebnis.getContentPane().add(rasse);
+                                                    suchergebnis.getContentPane().add(farbe);
+                                                    suchergebnis.getContentPane().add(geschlecht);
+                                                    suchergebnis.getContentPane().add(gebdat);
+                                                    for(int i =0; i<suchergebnisse.size();i++) {
+                                                        Tier tier = suchergebnisse.get(i);
+                                                        name2 = new JLabel(tier.getName());
+                                                        tierart2 = new JLabel("Hund");
+                                                        rasse2 = new JLabel(tier.gettRasse());
+                                                        farbe2 = new JLabel(tier.gettFarbe());
+                                                        geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                        gebdat2 = new JLabel(tier.getgebDat());
+                                                        suchergebnis.getContentPane().add(name2);
+                                                        suchergebnis.getContentPane().add(tierart2);
+                                                        suchergebnis.getContentPane().add(rasse2);
+                                                        suchergebnis.getContentPane().add(farbe2);
+                                                        suchergebnis.getContentPane().add(geschlecht2);
+                                                        suchergebnis.getContentPane().add(gebdat2);
+                                                    }
+                                                }
+                                            }
                                         //Katze, keine Angabe
-                                            //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Katzen ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisse = TierheimMain.suchen('k');
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel("Katze");
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                }
+                                                else {
+                                                    
+                                                }
+                                            }
                                         //Kleintier, keine Angabe
-                                            //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Kleintiere ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
+                                            suchergebnisse = TierheimMain.suchen('m');
+                                                if (suchergebnisse != null) {
+                                                    suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                    suchergebnis.getContentPane().add(name);
+                                                    suchergebnis.getContentPane().add(tierart);
+                                                    suchergebnis.getContentPane().add(rasse);
+                                                    suchergebnis.getContentPane().add(farbe);
+                                                    suchergebnis.getContentPane().add(geschlecht);
+                                                    suchergebnis.getContentPane().add(gebdat);
+                                                    for(int i =0; i<suchergebnisse.size();i++) {
+                                                        Tier tier = suchergebnisse.get(i);
+                                                        name2 = new JLabel(tier.getName());
+                                                        tierart2 = new JLabel("Kleintier");
+                                                        rasse2 = new JLabel(tier.gettRasse());
+                                                        farbe2 = new JLabel(tier.gettFarbe());
+                                                        geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                        gebdat2 = new JLabel(tier.getgebDat());
+                                                        suchergebnis.getContentPane().add(name2);
+                                                        suchergebnis.getContentPane().add(tierart2);
+                                                        suchergebnis.getContentPane().add(rasse2);
+                                                        suchergebnis.getContentPane().add(farbe2);
+                                                        suchergebnis.getContentPane().add(geschlecht2);
+                                                        suchergebnis.getContentPane().add(gebdat2);
+                                                    }
+                                                }
+                                            }
                                         //Vogel, keine Angabe
-                                            //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Vögel ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
+                                            suchergebnisse = TierheimMain.suchen('h');
+                                                if (suchergebnisse != null) {
+                                                    suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                    suchergebnis.getContentPane().add(name);
+                                                    suchergebnis.getContentPane().add(tierart);
+                                                    suchergebnis.getContentPane().add(rasse);
+                                                    suchergebnis.getContentPane().add(farbe);
+                                                    suchergebnis.getContentPane().add(geschlecht);
+                                                    suchergebnis.getContentPane().add(gebdat);
+                                                    for(int i =0; i<suchergebnisse.size();i++) {
+                                                        Tier tier = suchergebnisse.get(i);
+                                                        name2 = new JLabel(tier.getName());
+                                                        tierart2 = new JLabel("Hund");
+                                                        rasse2 = new JLabel(tier.gettRasse());
+                                                        farbe2 = new JLabel(tier.gettFarbe());
+                                                        geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                        gebdat2 = new JLabel(tier.getgebDat());
+                                                        suchergebnis.getContentPane().add(name2);
+                                                        suchergebnis.getContentPane().add(tierart2);
+                                                        suchergebnis.getContentPane().add(rasse2);
+                                                        suchergebnis.getContentPane().add(farbe2);
+                                                        suchergebnis.getContentPane().add(geschlecht2);
+                                                        suchergebnis.getContentPane().add(gebdat2);
+                                                    }
+                                                }
+                                            }
                                         //mit Angabe
                                             //if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && kriterium.getText() != ""){
                                             //Hier Methode die Nummer prüft, bei vorhandensein Tier ausgibt, sonst meldung.setText("Tier nicht vorhanden");
                                             //}
+                                        //Anzeigen von JFrame suchergebnis, unab-
+                                        //hängig von Suchkriterien.
+                                        suchergebnis.setLocation(50,50);
+                                        suchergebnis.setVisible(true);
+                                        
                                     //hinzufügen Hund
                                         if (frageA.getText()=="Tierart hinzufügen" && auswahl.getSelectedIndex() == 0){
                                         fenster.remove(grundHomeUeber);
@@ -805,15 +938,19 @@ public class Fenster {
                 //Startseite
                 fenster.add(grundHomeUeber);
                 grundHomeUeber.add(uberschriftHome);
+                grundHomeUeber.add(speichernbeenden);
                 grundHomeUeber.add(logo);
-            
-                
                 
             
         fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Fenster(JFrame) wird geschlossen
         fenster.setVisible(true);
         
-        
-        
     }
+
+    /*protected void suchen(String tierart, String nummer) {
+        switch (tierart) {
+            case "Alle"
+        }
+    }
+    */
 }

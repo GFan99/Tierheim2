@@ -8,7 +8,7 @@
  *
  * @author becksusanna
  */
-public class Person {
+public abstract class Person {
     protected String pName;
     protected String pVName;
     protected String pStrNr;
