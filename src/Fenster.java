@@ -601,7 +601,8 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
                                                 else {
@@ -641,9 +642,13 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                suchergebnis.setLocation(50,50);
+                                                suchergebnis.setVisible(true);
+                           
                                         //Hund
                                             if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1){
                                                 if (kriterium.getText() == "") {
@@ -683,7 +688,8 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
                                                 else {
@@ -723,9 +729,12 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                suchergebnis.setLocation(50,50);
+                                                suchergebnis.setVisible(true);
                                             }
                                         //Katze
                                             if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
@@ -766,7 +775,8 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
                                                 else {
@@ -806,9 +816,13 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                suchergebnis.setLocation(50,50);
+                                                suchergebnis.setVisible(true);
+                                            }
                                         //Kleintier
                                             if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
                                             if (kriterium.getText() == "") {
@@ -848,7 +862,8 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
                                                 else {
@@ -888,9 +903,12 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                suchergebnis.setLocation(50,50);
+                                                suchergebnis.setVisible(true);
                                             }
                                         //Vogel
                                             if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
@@ -931,7 +949,8 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
                                                 else {
@@ -971,13 +990,15 @@ public class Fenster {
                                                         }
                                                     }
                                                     else {
-                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                        suchergebnis.setBounds(501,0,350,150);
+                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                suchergebnis.setLocation(50,50);
+                                                suchergebnis.setVisible(true);
                                             }
                                         //Anzeigen von JFrame suchergebnis, unabhängig von Suchkriterien.
-                                        suchergebnis.setLocation(50,50);
-                                        suchergebnis.setVisible(true);
+                                        
                                         
                                     //hinzufügen Hund
                                         if (frageA.getText()=="Tierart hinzufügen" && auswahl.getSelectedIndex() == 0){
@@ -1276,6 +1297,9 @@ public class Fenster {
                                             //if (frageA.getText()=="Raum löschen" && frageB.getText()=="Bestimmte Nummer löschen" && kriterium.getText() != ""){
                                             //Hier Methode die  mit eingegebener Nummer (die Nummer erhält man mit kriterium.getText();) entfernt sonst meldung.setText("Tier nicht vorhanden");
                                             //}
+                                        
+                            }
+                });
                                     
                                       
                            
@@ -1357,7 +1381,4 @@ public class Fenster {
         }
     }
     */
-}
-                        });
-}
 }
