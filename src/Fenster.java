@@ -100,11 +100,12 @@ public class Fenster {
                 grundHomeUeber = new JPanel();
                 grundHomeUeber.setLayout(null);
                 grundHomeUeber.setBounds(0,0,500,500);
-                grundHomeUeber.setBackground(new Color(182,236,255));
+                grundHomeUeber.setBackground(Color.CYAN);
                 uberschriftHome = new JLabel("Tierheim Berlin");
                 uberschriftHome.setBounds(20,30,300,30);
                 uberschriftHome.setFont(new Font("Arial", Font.BOLD, 30));
                 logo = new JLabel(new ImageIcon("tierheimgruen.tiff"));
+                logo.setVisible(true);
                 logo.setBounds(20,200,100,100);
                 speichernbeenden = new JButton("Speichern und beenden");
                 speichernbeenden.setBounds(50,100,250,50);

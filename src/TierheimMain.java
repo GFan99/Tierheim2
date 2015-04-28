@@ -631,20 +631,27 @@ public class TierheimMain {
     }
     
     public static void main(String[] args) {
-        //pfleger = lesen("pfleger");
-        //aerzte = lesen("aerzte");
-        //verwalter = lesen("verwalter");
-        //traeume = lesen("traeume");
-        /*for (int i = 0; i < traeume.size(); i++) {
+        traeume = new ArrayList<TRaum>();
+        pfleger = new ArrayList<Pfleger>();
+        aerzte = new ArrayList<Arzt>();
+        verwalter = new ArrayList<Verwalter>();
+
+        
+        
+        pfleger = lesen("pfleger");
+        aerzte = lesen("aerzte");
+        verwalter = lesen("verwalter");
+        traeume = lesen("traeume");
+        for (int i = 0; i < traeume.size(); i++) {
             TRaum raum = traeume.get(i);
             raum.setTiere(lesen("tiereRaum"+raum.getNr()));
             raum.setWarteliste(lesen("wlRaum"+raum.getNr()));
         }
-        */
-
         
-        //TRaum raum = new TRaum(12,20, "Hund",100);
-        //traeume.add(raum);
+        
+        
+        TRaum raum = new TRaum(12,20, "Hund",100);
+        traeume.add(raum);
         
         //Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
         //pfleger.add(pfleger1);
