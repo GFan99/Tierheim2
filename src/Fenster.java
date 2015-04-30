@@ -1175,19 +1175,226 @@ public class Fenster {
                                                        suchergebnis.getContentPane().add(keinergebnis);
                                                     }
                                                 }
+                                                else {
+                                                    suchergebnisse = TierheimMain.personalSuchen('a', kriterium.getText());
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
                                             }
                                         //Arzt
-                                            //if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Ärzte ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1) {
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisse = TierheimMain.personalSuchen('ä');
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                                else {
+                                                    suchergebnisse = TierheimMain.personalSuchen('ä', kriterium.getText());
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                            }
                                         //Pfleger
-                                            //if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Pfleger ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2) {
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisse = TierheimMain.personalSuchen('p');
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                                else {
+                                                    suchergebnisse = TierheimMain.personalSuchen('p', kriterium.getText());
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                            }
                                         //Verwalter
-                                            //if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle Verwalter ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3) {
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisse = TierheimMain.personalSuchen('v');
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                                else {
+                                                    suchergebnisse = TierheimMain.personalSuchen('v', kriterium.getText());
+                                                    if (suchergebnisse != null) {
+                                                        suchergebnis.getContentPane().setLayout(new GridLayout(suchergebnisse.size()+1,6));
+                                                        suchergebnis.getContentPane().add(name);
+                                                        suchergebnis.getContentPane().add(tierart);
+                                                        suchergebnis.getContentPane().add(rasse);
+                                                        suchergebnis.getContentPane().add(farbe);
+                                                        suchergebnis.getContentPane().add(geschlecht);
+                                                        suchergebnis.getContentPane().add(gebdat);
+                                                        for(int i =0; i<suchergebnisse.size();i++) {
+                                                            Tier tier = suchergebnisse.get(i);
+                                                            name2 = new JLabel(tier.getName());
+                                                            tierart2 = new JLabel(tier.getClass().toString());
+                                                            rasse2 = new JLabel(tier.gettRasse());
+                                                            farbe2 = new JLabel(tier.gettFarbe());
+                                                            geschlecht2 = new JLabel(tier.gettGeschlecht());
+                                                            gebdat2 = new JLabel(tier.getgebDat());
+                                                            suchergebnis.getContentPane().add(name2);
+                                                            suchergebnis.getContentPane().add(tierart2);
+                                                            suchergebnis.getContentPane().add(rasse2);
+                                                            suchergebnis.getContentPane().add(farbe2);
+                                                            suchergebnis.getContentPane().add(geschlecht2);
+                                                            suchergebnis.getContentPane().add(gebdat2);
+                                                        }
+                                                    }
+                                                    else {
+                                                       suchergebnis.getContentPane().add(keinergebnis);
+                                                    }
+                                                }
+                                            }
                                         
                                     //hinzufügen Arzt
                                         if (frageA.getText()=="Personalart hinzufügen" && auswahl.getSelectedIndex() == 0){
