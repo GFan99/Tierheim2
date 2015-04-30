@@ -479,28 +479,28 @@ public class TierheimMain {
         switch (art) {
             case 'p':
                 for (int i = 0; i < pfleger.size(); i++) {
-                    ausgabe.add(pfleger.get(i));
+                    sortiertEinfuegen(ausgabe,pfleger.get(i));
                 }
                 break;
             case 'v':
                 for (int i = 0; i < verwalter.size(); i++) {
-                    ausgabe.add(verwalter.get(i));
+                    sortiertEinfuegen(ausgabe,verwalter.get(i));
                 }
                 break;
-            case 'ä':
+            case 'm':
                 for (int i = 0; i < aerzte.size(); i++) {
-                    ausgabe.add(aerzte.get(i));
+                    sortiertEinfuegen(ausgabe,aerzte.get(i));
                 }
                 break;
             case 'a':
                 for (int i = 0; i < pfleger.size(); i++) {
-                    ausgabe.add(pfleger.get(i));
+                    sortiertEinfuegen(ausgabe,pfleger.get(i));
                 }
                 for (int i = 0; i < aerzte.size(); i++) {
-                    ausgabe.add(aerzte.get(i));
+                    sortiertEinfuegen(ausgabe,aerzte.get(i));
                 }
                 for (int i = 0; i < verwalter.size(); i++) {
-                    ausgabe.add(verwalter.get(i));
+                    sortiertEinfuegen(ausgabe,verwalter.get(i));
                 }
                 break;
             default:
@@ -513,38 +513,38 @@ public class TierheimMain {
             case 'p':
                 for (int i = 0; i < pfleger.size(); i++) {
                     if (pfleger.get(i).getPNr() == nr) {
-                        ausgabe.add(pfleger.get(i));
+                        sortiertEinfuegen(ausgabe,pfleger.get(i));
                     }
                 }
                 break;
-            case 'ä':
+            case 'm':
                 for (int i = 0; i < aerzte.size(); i++) {
                     if (aerzte.get(i).getPNr() == nr) {
-                        ausgabe.add(aerzte.get(i));
+                        sortiertEinfuegen(ausgabe,aerzte.get(i));
                     }
                 }
                 break;
             case 'v':
                 for (int i = 0; i < verwalter.size(); i++) {
                     if (verwalter.get(i).getPNr() == nr) {
-                        ausgabe.add(verwalter.get(i));
+                        sortiertEinfuegen(ausgabe,verwalter.get(i));
                     }
                 }
                 break;
             case 'a':
                 for (int i = 0; i < verwalter.size(); i++) {
                     if (verwalter.get(i).getPNr() == nr) {
-                        ausgabe.add(verwalter.get(i));
+                        sortiertEinfuegen(ausgabe,verwalter.get(i));
                     }
                 }
                 for (int i = 0; i < aerzte.size(); i++) {
                     if (aerzte.get(i).getPNr() == nr) {
-                        ausgabe.add(aerzte.get(i));
+                        sortiertEinfuegen(ausgabe,aerzte.get(i));
                     }
                 }
                 for (int i = 0; i < pfleger.size(); i++) {
                     if (pfleger.get(i).getPNr() == nr) {
-                        ausgabe.add(pfleger.get(i));
+                        sortiertEinfuegen(ausgabe,pfleger.get(i));
                     }
                 }
             default:
@@ -564,7 +564,7 @@ public class TierheimMain {
                     verwalter.remove(i);
                 }
                 break;
-            case 'ä':
+            case 'm':
                 for (int i = 0; i < aerzte.size(); i++) {
                     aerzte.remove(i);
                 }
@@ -585,8 +585,7 @@ public class TierheimMain {
         }
         return true;
     }
-    protected static ArrayList personalLoeschen(char art, String nr) {
-        ArrayList<Personal> ausgabe = new ArrayList<Personal>();
+    protected static boolean personalLoeschen(char art, String nr) {
         switch (art) {
             case 'p':
                 for (int i = 0; i < pfleger.size(); i++) {
@@ -595,7 +594,7 @@ public class TierheimMain {
                     }
                 }
                 break;
-            case 'ä':
+            case 'm':
                 for (int i = 0; i < aerzte.size(); i++) {
                     if (aerzte.get(i).getPNr() == nr) {
                         aerzte.remove(i);
@@ -626,8 +625,9 @@ public class TierheimMain {
                     }
                 }
             default:
+                return false;
         }
-        return ausgabe;
+        return true;
     }
     
     public static void main(String[] args) {
