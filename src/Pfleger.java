@@ -58,10 +58,4 @@ import java.util.*;
             System.out.println("Dieser Hund wurde heute schon gassigeführt. Bitte wähle einen anderen.");
         }
     }
-    
-    @Override
-    protected String getArt() {
-        return "Pfleger";
-    }
-    
 }

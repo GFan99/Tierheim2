@@ -25,9 +25,5 @@ abstract class Personal extends Person{
     
     protected float getGehalt() {
         return gehalt;
-    }
-    
-    protected abstract String getArt();
-    
-    
+    }   
 }

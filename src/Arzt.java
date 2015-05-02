@@ -40,9 +40,4 @@ class Arzt extends Personal{
         neuerRaum = IOTools.readInteger("Bitte geben Sie eine neue Raum-Nummer für diesen Arzt ein:  ");
         rNr = neuerRaum;
     }
-    //überschreibt die Methode getArt der Superklasse, "Arzt" wird dabei ausgegeben
-    @Override
-    protected String getArt() {
-        return "Arzt";
-    }
 }

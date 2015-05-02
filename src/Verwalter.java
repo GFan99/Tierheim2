@@ -42,8 +42,4 @@ class Verwalter extends Personal{
     protected String getBereich() {
         return vBereich;
     }
-    @Override
-    protected String getArt() {
-        return "Verwalter";
-    }
 }
