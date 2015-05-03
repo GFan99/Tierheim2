@@ -18,6 +18,7 @@ class PRaum extends Raum{
         anzCom = 0;
     }
     
+    
     protected void setArt(String art) {
         rArt = art;
     }

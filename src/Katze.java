@@ -23,6 +23,17 @@ class Katze extends Tier{
         this.tFutterzeit=tFutterzeit;
         this.tNr = tNr;
     }
+    protected Katze(float tGebuehr, String tName, String tGeschlecht, String gebDat, String tFarbe, String tNr) {
+        this.tGebuehr=tGebuehr;
+        this.rNr=rNr;
+        this.tName=tName;
+        this.tRasse=tRasse;
+        this.tGeschlecht=tGeschlecht;
+        this.gebDat=gebDat;
+        this.tFarbe=tFarbe;
+        this.tFutterzeit=tFutterzeit;
+        this.tNr=tNr;
+    }
     
     protected String getkMarke() {
         return kMarke;

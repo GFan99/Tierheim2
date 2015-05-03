@@ -100,9 +100,13 @@ public class Fenster {
                 uberschriftHome = new JLabel("Tierheim Berlin");
                 uberschriftHome.setBounds(20,30,300,30);
                 uberschriftHome.setFont(new Font("Arial", Font.BOLD, 30));
+
                 logo = new JLabel(new ImageIcon("tierheimgruen.tiff"));
                 logo.setVisible(true);
                 logo.setBounds(20,200,100,100);
+
+                logo.setBounds(300,300,100,100);
+
                 speichernbeenden = new JButton("Speichern und beenden");
                 speichernbeenden.setBounds(50,100,250,50);
                 
@@ -464,7 +468,8 @@ public class Fenster {
                                 frageB.setVisible(true);
                                 kriterium.setVisible(true);
                                 auswahl.removeAllItems();
-                                auswahl.addItem("Alle");
+                                auswahl.addItem("Tierraum");
+                                auswahl.addItem("Personalraum");
                                 bestaetigen.setBounds(430,60,50,20);
                                 //meldung.setText("Folgende Räume wurden gefunden");
                                 fenster.repaint();
@@ -482,12 +487,13 @@ public class Fenster {
                                 frageB.setVisible(false);
                                 kriterium.setVisible(false);
                                 auswahl.removeAllItems();
-                                auswahl.addItem("Alle");
+                                auswahl.addItem("Tierraum");
+                                auswahl.addItem("Personalraum");
                                 bestaetigen.setBounds(430,20,50,20);
                                 fenster.repaint();
                                 frageHinzuA.setText("Nummer");
-                                frageHinzuB.setText("Tierart");
-                                frageHinzuC.setText("Größe");
+                                frageHinzuB.setText("Tier-/Personalart");
+                                frageHinzuC.setText("Platzanzahl");
                                 frageHinzuD.setText("");
                                 frageHinzuE.setText("");
                                 frageHinzuF.setText("");
@@ -516,7 +522,8 @@ public class Fenster {
                                 frageB.setVisible(true);
                                 kriterium.setVisible(true);
                                 auswahl.removeAllItems();
-                                auswahl.addItem("Alle");
+                                auswahl.addItem("Tierraum");
+                                auswahl.addItem("Personalraum");
                                 bestaetigen.setBounds(430,60,50,20);
                                 //meldung.setText("Löschen abgeschlossen");
                                 fenster.repaint();
@@ -903,14 +910,23 @@ public class Fenster {
                                             //if (frageA.getText()=="Raumart suchen"){
                                             //Hier Methode die Nummer prüft, bei vorhandensein Raum ausgibt, sonst meldung.setText("Raum nicht vorhanden");
                                             //}
-                                    //hinzufügen Raum
+                                    //hinzufügen Tierraum
                                         if (frageA.getText()=="Raumart hinzufügen" && auswahl.getSelectedIndex() == 0){
                                         fenster.remove(grundHomeUeber);
                                         fenster.remove(grundSuchen);
                                         fenster.add(grundHinzu);
-                                        ueberschriftHinzu.setText("Raum");
+                                        ueberschriftHinzu.setText("Tieraum");
                                         fenster.repaint();
                                         }
+                                    //hinzufügen Personalraum
+                                        if (frageA.getText()=="Raumart hinzufügen" && auswahl.getSelectedIndex() == 0){
+                                        fenster.remove(grundHomeUeber);
+                                        fenster.remove(grundSuchen);
+                                        fenster.add(grundHinzu);
+                                        ueberschriftHinzu.setText("Tieraum");
+                                        fenster.repaint();
+                                        }
+                                    
                                     //löschen
                                         //mit Angabe
                                             //if (frageA.getText()=="Raum löschen" && frageB.getText()=="Bestimmte Nummer löschen" && kriterium.getText() != ""){
@@ -926,17 +942,36 @@ public class Fenster {
                         public void actionPerformed(ActionEvent e){
                             
                                 String a = antwortHinzuA.getText();
+                                int ab = Integer.parseInt(a);
                                 String b = antwortHinzuB.getText();
                                 String c = antwortHinzuC.getText();
+                                int cb = Integer.parseInt(c);
                                 String d = antwortHinzuD.getText();
                                 String ea = antwortHinzuE.getText();
                                 int eb = Integer.parseInt(ea);
                                 String f = antwortHinzuF.getText();
+                                float fb = Float.parseFloat(f);
                                 String g = antwortHinzuG.getText();
                                 String h = antwortHinzuH.getText();
                                 String i = antwortHinzuI.getText();
                                 String ja = antwortHinzuJ.getText();
                                 float jb = Float.parseFloat(ja);
+                                
+                                if (ueberschriftHinzu.getText() == "Hund"){
+                                    
+                                    Hund hund1 = new Hund (fb,b,c,ea,d,a);
+                                    TierheimMain.hunde.add(hund1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Katze"){
+                                    
+                                    Katze katze1 = new Katze (fb,b,c,ea,d,a);
+                                    TierheimMain.katzen.add(katze1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Kleintier"){
+                                    
+                                    Kleintier kleintier1 = new Kleintier (fb,b,c,ea,d,a);
+                                    TierheimMain.kleintiere.add(kleintier1);
+                                }
                                 if (ueberschriftHinzu.getText() == "Arzt"){
                                     
                                     Arzt arzt1 = new Arzt (a,b,c,d,eb,f,g,h,i,jb);
@@ -952,9 +987,28 @@ public class Fenster {
                                     Verwalter verwalter1 = new Verwalter (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.verwalter.add(verwalter1);
                                 }
-                                
-                                //String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, float gehAlt        
-                            }
+                                if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
+                                    
+                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i);
+                                    TierheimMain.helfer.add(helfer1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
+                                    
+                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i);
+                                    TierheimMain.helfer.add(helfer1);
+                                }
+                                /*if (ueberschriftHinzu.getText() == "Tierraum"){
+                                    
+                                    TRaum traum1 = new TRaum (ab,b,cb);
+                                    TierheimMain.traume.add(traum1);
+                                }
+                                if (ueberschriftHinzu.getText() == "Personalraum"){
+                                    
+                                    PRaum praum1 = new PRaum (ab,b,cb);
+                                    TierheimMain.praume.add(praum1);
+                                }
+                                */
+                                }
                         
                     });
                                       
@@ -1027,6 +1081,7 @@ public class Fenster {
                 grundHomeUeber.add(uberschriftHome);
                 grundHomeUeber.add(speichernbeenden);
                 grundHomeUeber.add(logo);
+                logo.setVisible(true);
                 
             
         fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Fenster(JFrame) wird geschlossen

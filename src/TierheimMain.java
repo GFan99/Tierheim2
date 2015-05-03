@@ -15,6 +15,12 @@ public class TierheimMain {
     protected static ArrayList<Arzt> aerzte;
     protected static ArrayList<Verwalter> verwalter;
     protected static ArrayList<TRaum> traeume;
+    protected static ArrayList<PRaum> praeume;
+    protected static ArrayList<Hund> hunde;
+    protected static ArrayList<Katze> katzen;
+    protected static ArrayList<Kleintier> kleintiere;
+    protected static ArrayList<Helfer> helfer;
+    
     private static int tag;
     
     public static void speichern (ArrayList liste, String dateiname) {
@@ -192,6 +198,10 @@ public class TierheimMain {
         speichern(aerzte, "aerzte");
         speichern(verwalter, "verwalter");
         speichern(traeume, "traeume");
+        speichern(praeume, "praeume");
+        speichern(hunde, "hunde");
+        speichern(katzen, "katzen");
+        speichern(kleintiere, "kleintiere");
         for (int i = 0; i < traeume.size(); i++) {
             TRaum raum = traeume.get(i);
             speichern(raum.getTiere(),"tiereRaum"+raum.getNr());
@@ -493,18 +503,33 @@ public class TierheimMain {
     }
     
     public static void main(String[] args) {
+
         traeume = new ArrayList<TRaum>();
+        praeume = new ArrayList<PRaum>();
         pfleger = new ArrayList<Pfleger>();
         aerzte = new ArrayList<Arzt>();
         verwalter = new ArrayList<Verwalter>();
-
-        
+        helfer = new ArrayList<Helfer>();
+        hunde = new ArrayList<Hund>();
+        katzen = new ArrayList<Katze>();
+        kleintiere = new ArrayList<Kleintier>();
         
         pfleger = lesen("pfleger");
+
+
+        //pfleger = lesen("pfleger");
+        //aerzte = lesen("aerzte");
+        //verwalter = lesen("verwalter");
+        //traeume = lesen("traeume");
+        /*for (int i = 0; i < traeume.size(); i++) {
+
+        /*pfleger = lesen("pfleger");
+
         aerzte = lesen("aerzte");
         verwalter = lesen("verwalter");
         traeume = lesen("traeume");
         for (int i = 0; i < traeume.size(); i++) {
+
             TRaum raum = traeume.get(i);
             raum.setTiere(lesen("tiereRaum"+raum.getNr()));
             raum.setWarteliste(lesen("wlRaum"+raum.getNr()));
@@ -535,8 +560,10 @@ public class TierheimMain {
         //aum.addTier(hund2);
         //personalListeAusgeben();
         
+
         new Login();
         
+
     /*System.out.println("Test");
     
     System.out.println("Halter1 heißt "+halter1.getHaVorname()+" "+halter1.getHaNachname()+".");

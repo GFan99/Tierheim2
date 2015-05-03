@@ -29,6 +29,18 @@ class Hund extends Tier {
         this.tNr=tNr;
         heuteGassi = false;
     }
+    protected Hund(float tGebuehr, String tName, String tGeschlecht, String gebDat, String tFarbe, String tNr) {
+        this.tGebuehr=tGebuehr;
+        this.rNr=rNr;
+        this.tName=tName;
+        this.tRasse=tRasse;
+        this.tGeschlecht=tGeschlecht;
+        this.gebDat=gebDat;
+        this.tFarbe=tFarbe;
+        this.tFutterzeit=tFutterzeit;
+        this.tNr=tNr;
+        heuteGassi = false;
+    }
     
     protected boolean getGassi() {
         return heuteGassi;

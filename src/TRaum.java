@@ -22,7 +22,13 @@ class TRaum extends Raum{
         groesseAuslauf = auslaufGr;
         geputztWoche = false;
     }
-
+    protected TRaum(int nr, String tierartx, int anzKaefige) {
+        rNr = nr;
+        anzPlaetze = anzKaefige;
+        tierart = tierartx;
+        geputztWoche = false;
+    }
+    
     protected void setTierart(String nTierart) {
         tierart = nTierart;
     }

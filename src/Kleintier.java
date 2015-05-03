@@ -27,6 +27,17 @@ class Kleintier extends Tier{
     this.tFarbe=tFarbe;
     this.tFutterzeit=tFutterzeit;
     }
+    protected Kleintier(float tGebuehr, String tName, String tGeschlecht, String gebDat, String tFarbe, String tNr) {
+        this.tGebuehr=tGebuehr;
+        this.rNr=rNr;
+        this.tName=tName;
+        this.tRasse=tRasse;
+        this.tGeschlecht=tGeschlecht;
+        this.gebDat=gebDat;
+        this.tFarbe=tFarbe;
+        this.tFutterzeit=tFutterzeit;
+        this.tNr=tNr;
+    }
     
     @Override
     protected void neuerTag() {}
