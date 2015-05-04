@@ -14,8 +14,8 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 
-public class Fenster {
-    public Fenster() {        
+public class Fenster1 {
+    public Fenster1() {        
         //Deklaration
         final JFrame fenster;
 
@@ -1026,74 +1026,68 @@ public class Fenster {
                         public void actionPerformed(ActionEvent e){
                             
                                 String a = antwortHinzuA.getText();
-                                
+                                int ab = Integer.parseInt(a);
                                 String b = antwortHinzuB.getText();
                                 String c = antwortHinzuC.getText();
+                                int cb = Integer.parseInt(c);
                                 String d = antwortHinzuD.getText();
                                 String ea = antwortHinzuE.getText();
-                                String f = antwortHinzuF.getText(); 
+                                int eb = Integer.parseInt(ea);
+                                String f = antwortHinzuF.getText();
+                                float fb = Float.parseFloat(f);
                                 String g = antwortHinzuG.getText();
                                 String h = antwortHinzuH.getText();
                                 String i = antwortHinzuI.getText();
                                 String ja = antwortHinzuJ.getText();
+                                float jb = Float.parseFloat(ja);
                                 
                                 if (ueberschriftHinzu.getText() == "Hund"){
-                                    float fb = Float.parseFloat(f);
+                                    
                                     Hund hund1 = new Hund (fb,b,c,ea,d,a);
-                                    System.out.println("Tier hinzugefügt");
                                     TierheimMain.hunde.add(hund1);
                                 }
-                                else if(ueberschriftHinzu.getText() == "Katze")
-                                {
-                                    float fb = Float.parseFloat(f);
+                                if (ueberschriftHinzu.getText() == "Katze"){
+                                    
                                     Katze katze1 = new Katze (fb,b,c,ea,d,a);
-                                    System.out.println("Tier hinzugefügt");
-
                                     TierheimMain.katzen.add(katze1);
                                 }
-                                else if(ueberschriftHinzu.getText() == "Kleintier")
-                                {
-                                    float fb = Float.parseFloat(f);
+                                if (ueberschriftHinzu.getText() == "Kleintier"){
+                                    
                                     Kleintier kleintier1 = new Kleintier (fb,b,c,ea,d,a);
                                     TierheimMain.kleintiere.add(kleintier1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Arzt"){
-                                    int eb = Integer.parseInt(ea);
-                                    float jb = Float.parseFloat(ja);
+                                if (ueberschriftHinzu.getText() == "Arzt"){
+                                    
                                     Arzt arzt1 = new Arzt (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.aerzte.add(arzt1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Pfleger"){
-                                    int eb = Integer.parseInt(ea);
-                                    float jb = Float.parseFloat(ja);
+                                if (ueberschriftHinzu.getText() == "Pfleger"){
+                                    
                                     Pfleger pfleger1 = new Pfleger (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.pfleger.add(pfleger1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Verwalter"){
-                                    int eb = Integer.parseInt(ea);
-                                    float jb = Float.parseFloat(ja);
+                                if (ueberschriftHinzu.getText() == "Verwalter"){
+                                    
                                     Verwalter verwalter1 = new Verwalter (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.verwalter.add(verwalter1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
-                                    int eb = Integer.parseInt(ea);
+                                if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
+                                    
                                     Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, true);
                                     TierheimMain.helfer.add(helfer1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
-                                    int eb = Integer.parseInt(ea);
+                                if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
+                                    
                                     Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, false);
                                     TierheimMain.helfer.add(helfer1);
                                 }
-                                /*else if (ueberschriftHinzu.getText() == "Tierraum"){
-                                    int cb = Integer.parseInt(c);
-                                    int ab = Integer.parseInt(a);
+                                /*if (ueberschriftHinzu.getText() == "Tierraum"){
+                                    
                                     TRaum traum1 = new TRaum (ab,b,cb);
                                     TierheimMain.traume.add(traum1);
                                 }
-                                else if (ueberschriftHinzu.getText() == "Personalraum"){
-                                    int cb = Integer.parseInt(c);
-                                    int ab = Integer.parseInt(a);
+                                if (ueberschriftHinzu.getText() == "Personalraum"){
+                                    
                                     PRaum praum1 = new PRaum (ab,b,cb);
                                     TierheimMain.praume.add(praum1);
                                 }
@@ -1181,7 +1175,7 @@ public class Fenster {
      * Der char art gibt dabei an, ob das Ergebnis einer Suche nach Tieren ('t'),
      * Personal ('p'), Räumen ('r') oder Haltern ('h') ausgegeben wird.
      */
-    protected static void ergebnistabelleTier(ArrayList<Tier> ergebnisliste) {
+    protected void ergebnistabelleTier(ArrayList<Tier> ergebnisliste) {
         JFrame suchergebnis = new JFrame("Suchergebnisse");
         suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,7));
         
@@ -1314,10 +1308,10 @@ public class Fenster {
                 //gehalt2.setBounds(750,(i+1)*20,149,19);
                 suchergebnis.add(nummer2);
                 suchergebnis.add(name2);
-                suchergebnis.add(vname2);
-                suchergebnis.add(gebdat2);
                 suchergebnis.add(art2);
+                suchergebnis.add(vname2);
                 suchergebnis.add(gehalt2);
+                suchergebnis.add(gebdat2);
             }
         }
         else {
@@ -1327,7 +1321,7 @@ public class Fenster {
         suchergebnis.setLocation(501,50);
         suchergebnis.setVisible(true);
     }
-    protected static void ergebnistabelleHelfer(ArrayList<Helfer> ergebnisliste) {
+    protected void ergebnistabelleHelfer(ArrayList<Helfer> ergebnisliste) {
         JFrame suchergebnis = new JFrame("Suchergebnisse");
         suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,5));  
         JLabel nummer = new JLabel("Nummer");
@@ -1351,6 +1345,7 @@ public class Fenster {
         JLabel vname2;
         JLabel gebdat2;
         JLabel art2;
+        JLabel gehalt2;
         JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
         //keinergebnis.setBounds(300,100,0,0);
         
@@ -1377,94 +1372,14 @@ public class Fenster {
                 }
                 else art2 = new JLabel("zeitweise");
                 //art2.setBounds(600,(i+1)*20,149,19);
-                
+                gehalt2 = new JLabel(Float.toString(person.getGehalt()));
+                //gehalt2.setBounds(750,(i+1)*20,149,19);
                 suchergebnis.add(nummer2);
                 suchergebnis.add(name2);
-                suchergebnis.add(vname2);
-                suchergebnis.add(gebdat2);
                 suchergebnis.add(art2);
-            }
-        }
-        else {
-            //suchergebnis.setBounds(501,0,600,150);
-            suchergebnis.getContentPane().add(keinergebnis);
-        }
-        suchergebnis.setLocation(501,50);
-        suchergebnis.setVisible(true);
-    }
-    protected static void ergebnistabelleTRaum(ArrayList<TRaum> ergebnisliste) {
-        JFrame suchergebnis = new JFrame("Suchergebnisse");
-        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,3));  
-        JLabel nummer = new JLabel("Nummer");
-        nummer.setFont(new Font("Arial", Font.BOLD, 15));
-        //nummer.setBounds(0,0,99,19);
-        JLabel tierart = new JLabel("Tierart");
-        tierart.setFont(new Font("Arial", Font.BOLD, 15));
-        //name.setBounds(100,150,99,19);
-        JLabel plaetze = new JLabel("Plätze");
-        plaetze.setFont(new Font("Arial", Font.BOLD, 15));
-        //vname.setBounds(200,0,99,19);
-        
-        JLabel nummer2;
-        JLabel tierart2;
-        JLabel plaetze2;
-        JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
-        //keinergebnis.setBounds(300,100,0,0);
-        
-        if (ergebnisliste != null) {
-            //suchergebnis.setBounds(501, 0, 600, ergebnisliste.size()*20+20);
-            suchergebnis.add(nummer);
-            suchergebnis.add(tierart);
-            suchergebnis.add(plaetze);
-            
-            for(int i =0; i<ergebnisliste.size();i++) {
-                TRaum raum = ergebnisliste.get(i);
-                nummer2 = new JLabel(Integer.toString(raum.getNr()));
-                //nummer2.setBounds(0,(i+1)*20,149,19);
-                tierart2 = new JLabel(raum.getTierart());
-                //name2.setBounds(150,(i+1)*20,149,19);
-                plaetze2 = new JLabel(Integer.toString(raum.getPlaetze()));
-                //vname2.setBounds(300,(i+1)*20,149,19);
-                suchergebnis.add(nummer2);
-                suchergebnis.add(tierart2);
-                suchergebnis.add(plaetze2);
-            }
-        }
-        else {
-            //suchergebnis.setBounds(501,0,600,150);
-            suchergebnis.getContentPane().add(keinergebnis);
-        }
-        suchergebnis.setLocation(501,50);
-        suchergebnis.setVisible(true);
-    }
-    protected static void ergebnistabellePRaum(ArrayList<PRaum> ergebnisliste) {
-        JFrame suchergebnis = new JFrame("Suchergebnisse");
-        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,3));  
-        JLabel nummer = new JLabel("Nummer");
-        nummer.setFont(new Font("Arial", Font.BOLD, 15));
-        //nummer.setBounds(0,0,99,19);
-        JLabel tierart = new JLabel("Art");
-        tierart.setFont(new Font("Arial", Font.BOLD, 15));
-        //name.setBounds(100,150,99,19);
-        
-        JLabel nummer2;
-        JLabel tierart2;
-        JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
-        //keinergebnis.setBounds(300,100,0,0);
-        
-        if (ergebnisliste != null) {
-            //suchergebnis.setBounds(501, 0, 600, ergebnisliste.size()*20+20);
-            suchergebnis.add(nummer);
-            suchergebnis.add(tierart);
-            
-            for(int i =0; i<ergebnisliste.size();i++) {
-                PRaum raum = ergebnisliste.get(i);
-                nummer2 = new JLabel(Integer.toString(raum.getNr()));
-                //nummer2.setBounds(0,(i+1)*20,149,19);
-                tierart2 = new JLabel(raum.getRArt());
-                //name2.setBounds(150,(i+1)*20,149,19);
-                suchergebnis.add(nummer2);
-                suchergebnis.add(tierart2);
+                suchergebnis.add(vname2);
+                suchergebnis.add(gehalt2);
+                suchergebnis.add(gebdat2);
             }
         }
         else {
@@ -1481,51 +1396,61 @@ public class Fenster {
      * "h" für Hunde, "k" für Katzen, "m" für Kleintiere (wie Meerschweinchen) und
      * "v" für Vögel.
      */
-    
-    protected static ArrayList<Tier> suchen(char tierart) {
+    protected ArrayList<Tier> suchen(char tierart) {
         ArrayList<Tier> ausgabe = new ArrayList<Tier>();
         TRaum raum;
         switch (tierart) {
             case 'h':
-                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
-                    Tier tier = TierheimMain.hunde.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            sortiertEinfuegenTier(ausgabe,tier);
+                        }
+                    }
                 }
                 break;
             case 'k':
-                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
-                    Tier tier = TierheimMain.katzen.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            sortiertEinfuegenTier(ausgabe,tier);
+                        }
+                    }
                 }
                 break;
             case 'v':
-                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
-                    Tier tier = TierheimMain.voegel.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            sortiertEinfuegenTier(ausgabe,tier);
+                        }
+                    }
                 }
                 break;
             case 'm':
-                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
-                    Tier tier = TierheimMain.kleintiere.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            sortiertEinfuegenTier(ausgabe,tier);
+                        }
+                    }
                 }
             break;
             case 'a':
-                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
-                    Tier tier = TierheimMain.kleintiere.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
-                }
-                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
-                    Tier tier = TierheimMain.voegel.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
-                }
-                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
-                    Tier tier = TierheimMain.katzen.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
-                }
-                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
-                    Tier tier = TierheimMain.hunde.get(i);
-                    sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    for (int j = 0; j<raum.getTiere().size();j++) {
+                        Tier tier = raum.getTiere().get(j);
+                        sortiertEinfuegenTier(ausgabe,tier);
+                    }
                 }
                 break;
             default:
@@ -1533,65 +1458,72 @@ public class Fenster {
         }
         return ausgabe;
     }
-    protected static ArrayList suchen(char tierart, String nr) {
+    protected ArrayList suchen(char tierart, String nr) {
         ArrayList<Tier> ausgabe = new ArrayList<Tier>();
         TRaum raum;
         switch (tierart) {
             case 'h':
-                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
-                    Tier tier = TierheimMain.hunde.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                sortiertEinfuegenTier(ausgabe,tier);
+                            }
+                        }
                     }
                 }
                 break;
             case 'k':
-                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
-                    Tier tier = TierheimMain.katzen.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                sortiertEinfuegenTier(ausgabe,tier);
+                            }
+                        }
                     }
                 }
                 break;
             case 'v':
-                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
-                    Tier tier = TierheimMain.voegel.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                sortiertEinfuegenTier(ausgabe,tier);
+                            }
+                        }
                     }
                 }
                 break;
             case 'm':
-                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
-                    Tier tier = TierheimMain.kleintiere.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                sortiertEinfuegenTier(ausgabe,tier);
+                            }
+                        }
                     }
                 }
                 break;
             case 'a':
-                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
-                    Tier tier = TierheimMain.katzen.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
-                    }
-                }
-                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
-                    Tier tier = TierheimMain.hunde.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
-                    }
-                }
-                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
-                    Tier tier = TierheimMain.voegel.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
-                    }
-                }
-                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
-                    Tier tier = TierheimMain.kleintiere.get(i);
-                    if (tier.gettNr() == nr) {
-                        sortiertEinfuegenTier(ausgabe,tier);
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                sortiertEinfuegenTier(ausgabe,tier);
+                            }
+                        
                     }
                 }
             default:
@@ -2002,64 +1934,7 @@ public class Fenster {
         return true;
     }
     
-    protected static ArrayList raumSuchen(char art) {
-        ArrayList ausgabe = new ArrayList();
-        switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                }
-                break;
-            case 't':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe,TierheimMain.traeume.get(i));
-                }
-            case 'a':
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                }
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe,TierheimMain.traeume.get(i));
-                }
-                break;
-            default:
-        }
-        return ausgabe;
-    }
-    protected static ArrayList raumSuchen(char art, String nr) {
-        ArrayList ausgabe = new ArrayList();
-        switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    if (TierheimMain.praeume.get(i).getNr()== Integer.parseInt(nr)) {
-                        sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                    }
-                }
-                break;
-            case 't':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    if (TierheimMain.traeume.get(i).getNr()== Integer.parseInt(nr)) {
-                        sortiertEinfuegenRaum(ausgabe, TierheimMain.traeume.get(i));
-                    }
-                }
-            case 'a':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    if (TierheimMain.traeume.get(i).getNr()== Integer.parseInt(nr)) {
-                        sortiertEinfuegenRaum(ausgabe, TierheimMain.traeume.get(i));
-                    }
-                }
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    if (TierheimMain.praeume.get(i).getNr()== Integer.parseInt(nr)) {
-                        sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                    }
-                }
-                break;
-            default:
-        }
-        return ausgabe;
-    }
-    
-    private static void sortiertNachName(ArrayList<Tier> liste, Tier element) {
+    private void sortiertNachName(ArrayList<Tier> liste, Tier element) {
         String a = element.getName();
         int iNamenlaenge = a.length();
         for (int i=0;i<liste.size();i++)
@@ -2091,7 +1966,7 @@ public class Fenster {
 
         }
     }
-    protected static void sortiertEinfuegenTier(ArrayList<Tier> liste, Tier element) {
+    protected void sortiertEinfuegenTier(ArrayList<Tier> liste, Tier element) {
         String a = element.gettRasse();
         int iRassenNamenlaenge = a.length();
         for (int i=0;i<liste.size();i++)
@@ -2120,15 +1995,4 @@ public class Fenster {
              }
         }
     }
-    
-    protected static void sortiertEinfuegenRaum(ArrayList<Raum> liste, Raum element) {
-        for (int index = 0; index <= liste.size(); index++) {
-            if (element.getNr() <= liste.get(index).getNr()) {
-                liste.add(index, element);
-                break;
-            }
-        }
-        liste.add(element);
-    }
-    
 }

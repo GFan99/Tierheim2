@@ -20,6 +20,7 @@ public class TierheimMain {
     protected static ArrayList<Katze> katzen;
     protected static ArrayList<Kleintier> kleintiere;
     protected static ArrayList<Helfer> helfer;
+    protected static ArrayList<Vogel> voegel;
     
     private static int tag;
     
@@ -222,6 +223,7 @@ public class TierheimMain {
         hunde = new ArrayList<Hund>();
         katzen = new ArrayList<Katze>();
         kleintiere = new ArrayList<Kleintier>();
+        voegel = new ArrayList<Vogel>();
         
         
         pfleger = lesen("pfleger.th");
@@ -238,16 +240,17 @@ public class TierheimMain {
             raum.setTiere(lesen("tiereRaum"+raum.getNr()+".th"));
             raum.setWarteliste(lesen("wlRaum"+raum.getNr()+".th"));
         }
-        
         /*
         Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
         pfleger.add(pfleger1);
-        //Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
-        //sortiertEinfuegenP(pfleger, pfleger2);
+        Pfleger pfleger2 = new Pfleger("K35A83F2", "Schmidt", "Anna", "Hauptstraße 12", 12384, "Berlin", "12/06/1985", "0304574462", "AnnaSchmidt@googlemail.com", 1450.00f);
+        pfleger.add(pfleger2);
         Halter halter1 = new Halter("B29W30O3","Peter", "Pan", "Bahnhofstraße 506", 12333, "Potsdam", "12/09/1988", "0306792748", "pp@web.de", true);
         Halter halter2 = new Halter("D28H38W1","Krüger", "Marie", "Hauptstraße 34", 12643, "Berlin", "25/12/1977", "0306794548", "marie77@gmx.de", false);
         Arzt arzt1 = new Arzt("Q75U48C2", "Auge", "Hans", "Seestraße 5", 13056,"Ahrensfelde" ,"17/05/1975" , "014673298847", "TierarztAuge@yahoo.com", 2500.00f);
+        aerzte.add(arzt1);
         Verwalter verwalter1 = new Verwalter("H38W04L6", "Calussi", "Clemens", "Schulstraße 9", 18067, "Erkner", "15/09/1990", "0307889356", "Verwaltungsbüro@googlemail.com", 2100.00f);
+        verwalter.add(verwalter1);
         Hund hund1 = new Hund(1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
         Hund hund2 = new Hund(1020, 1, "Waldi", "Labrador", "weiblich", "28.05.2011", "beige", "abends", "132098");
         Katze katze1 = new Katze(450, 2, "Mietze", "Chartreux", "weiblich", "24.06.2012", "grau", "mittags", "123352");
@@ -260,13 +263,22 @@ public class TierheimMain {
         raum.addTier(hund1);
 
         raum.addTier(hund2);
-        
-        personalListeAusgeben();
+        ArrayList ergebnisse = new ArrayList();
+        Fenster1.ergebnistabellePersonal(Fenster.personalSuchen('a'));
         */
+        
+        //personalListeAusgeben();
         
         //speichernbeenden();
        
 
+        Hund hund1 = new Hund(1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
+        hunde.add(hund1);
+        Fenster.ergebnistabelleTier(Fenster.suchen('h'));
+        
+        Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
+        pfleger.add(pfleger1);
+        Fenster.ergebnistabellePersonal(Fenster.personalSuchen('a'));
         new Login();
         
 

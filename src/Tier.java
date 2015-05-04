@@ -9,8 +9,9 @@
  */
 
 import java.util.*;
+import java.io.Serializable;
         
-abstract class Tier{
+abstract class Tier implements Serializable{
     
     protected float tGebuehr;
     protected int rNr;

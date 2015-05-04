@@ -7,7 +7,10 @@
 /**
  * @author becksusanna
  */
-abstract class Raum{
+
+import java.io.Serializable;
+
+abstract class Raum implements Serializable{
     protected int rNr;
     protected int anzPlaetze;
     
