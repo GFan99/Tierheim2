@@ -33,11 +33,11 @@ class Hund extends Tier {
         this.tGebuehr=tGebuehr;
         this.rNr=rNr;
         this.tName=tName;
-        this.tRasse=tRasse;
+        this.tRasse="";
         this.tGeschlecht=tGeschlecht;
         this.gebDat=gebDat;
         this.tFarbe=tFarbe;
-        this.tFutterzeit=tFutterzeit;
+        this.tFutterzeit="";
         this.tNr=tNr;
         heuteGassi = false;
     }

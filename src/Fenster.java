@@ -1025,68 +1025,71 @@ public class Fenster {
                         public void actionPerformed(ActionEvent e){
                             
                                 String a = antwortHinzuA.getText();
-                                int ab = Integer.parseInt(a);
+                                
                                 String b = antwortHinzuB.getText();
                                 String c = antwortHinzuC.getText();
-                                int cb = Integer.parseInt(c);
                                 String d = antwortHinzuD.getText();
                                 String ea = antwortHinzuE.getText();
-                                int eb = Integer.parseInt(ea);
-                                String f = antwortHinzuF.getText();
-                                float fb = Float.parseFloat(f);
+                                String f = antwortHinzuF.getText(); 
                                 String g = antwortHinzuG.getText();
                                 String h = antwortHinzuH.getText();
                                 String i = antwortHinzuI.getText();
                                 String ja = antwortHinzuJ.getText();
-                                float jb = Float.parseFloat(ja);
                                 
                                 if (ueberschriftHinzu.getText() == "Hund"){
-                                    
+                                    float fb = Float.parseFloat(f);
                                     Hund hund1 = new Hund (fb,b,c,ea,d,a);
                                     TierheimMain.hunde.add(hund1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Katze"){
-                                    
+                                else if(ueberschriftHinzu.getText() == "Katze")
+                                {
+                                    float fb = Float.parseFloat(f);
                                     Katze katze1 = new Katze (fb,b,c,ea,d,a);
                                     TierheimMain.katzen.add(katze1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Kleintier"){
-                                    
+                                else if(ueberschriftHinzu.getText() == "Kleintier")
+                                {
+                                    float fb = Float.parseFloat(f);
                                     Kleintier kleintier1 = new Kleintier (fb,b,c,ea,d,a);
                                     TierheimMain.kleintiere.add(kleintier1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Arzt"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Arzt"){
+                                    int eb = Integer.parseInt(ea);
+                                    float jb = Float.parseFloat(ja);
                                     Arzt arzt1 = new Arzt (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.aerzte.add(arzt1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Pfleger"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Pfleger"){
+                                    int eb = Integer.parseInt(ea);
+                                    float jb = Float.parseFloat(ja);
                                     Pfleger pfleger1 = new Pfleger (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.pfleger.add(pfleger1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Verwalter"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Verwalter"){
+                                    int eb = Integer.parseInt(ea);
+                                    float jb = Float.parseFloat(ja);
                                     Verwalter verwalter1 = new Verwalter (a,b,c,d,eb,f,g,h,i,jb);
                                     TierheimMain.verwalter.add(verwalter1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
+                                    int eb = Integer.parseInt(ea);
                                     Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, true);
                                     TierheimMain.helfer.add(helfer1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
+                                    int eb = Integer.parseInt(ea);
                                     Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, false);
                                     TierheimMain.helfer.add(helfer1);
                                 }
-                                /*if (ueberschriftHinzu.getText() == "Tierraum"){
-                                    
+                                /*else if (ueberschriftHinzu.getText() == "Tierraum"){
+                                    int cb = Integer.parseInt(c);
+                                    int ab = Integer.parseInt(a);
                                     TRaum traum1 = new TRaum (ab,b,cb);
                                     TierheimMain.traume.add(traum1);
                                 }
-                                if (ueberschriftHinzu.getText() == "Personalraum"){
-                                    
+                                else if (ueberschriftHinzu.getText() == "Personalraum"){
+                                    int cb = Integer.parseInt(c);
+                                    int ab = Integer.parseInt(a);
                                     PRaum praum1 = new PRaum (ab,b,cb);
                                     TierheimMain.praume.add(praum1);
                                 }
