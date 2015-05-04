@@ -533,60 +533,60 @@ public class Fenster {
                                     //suchen
                                         ArrayList<Tier> suchergebnisseT;
                                         //alle
-                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0){    
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart suchen"  && auswahl.getSelectedIndex()==0){    
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseT = suchen('a');
                                                     ergebnistabelleTier(suchergebnisseT);
-                                                }
-                                                else {
-                                                    suchergebnisseT = suchen('a', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisseT);
-                                                }
+                                                //}
+                                                //else {
+                                                  //  suchergebnisseT = suchen('a', kriterium.getText());
+                                                //    ergebnistabelleTier(suchergebnisseT);
+                                                //}
                                                 
                                         }
                                         //Hund
-                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1){
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Tierart suchen"  && auswahl.getSelectedIndex()==1){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseT = suchen('h');
                                                     ergebnistabelleTier(suchergebnisseT);
-                                                }
-                                                else {
-                                                    suchergebnisseT = suchen('h', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisseT);
-                                                }
+                                                //}
+                                                //else {
+                                                //    suchergebnisseT = suchen('h', kriterium.getText());
+                                                //    ergebnistabelleTier(suchergebnisseT);
+                                                //}
                                             }
                                         //Katze
-                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Tierart suchen"  && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseT = suchen('k');
                                                     ergebnistabelleTier(suchergebnisseT);
-                                                }
-                                                else {
-                                                    suchergebnisseT = suchen('k', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisseT);
-                                                }
+                                                //}
+                                                //else {
+                                                //    suchergebnisseT = suchen('k', kriterium.getText());
+                                                //    ergebnistabelleTier(suchergebnisseT);
+                                                //}
                                             }
                                         //Kleintier
-                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Tierart suchen"  && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseT = suchen('m');
                                                     ergebnistabelleTier(suchergebnisseT);
-                                                }
-                                                else {
-                                                    suchergebnisseT = suchen('m', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisseT);
-                                                }
+                                                //}
+                                                //else {
+                                                  //  suchergebnisseT = suchen('m', kriterium.getText());
+                                                    //ergebnistabelleTier(suchergebnisseT);
+                                                //}
                                             }
                                         //Vogel
-                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Tierart suchen"  && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseT = suchen('v');
                                                     ergebnistabelleTier(suchergebnisseT);
-                                                }
-                                                else {
-                                                    suchergebnisseT = suchen('v', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisseT);
-                                                }
+                                                //}
+                                                //else {
+                                                //    suchergebnisseT = suchen('v', kriterium.getText());
+                                                //    ergebnistabelleTier(suchergebnisseT);
+                                                //}
                                             }                                        
                                         
                                     //hinzufügen Hund
@@ -628,8 +628,8 @@ public class Fenster {
                                         nichtErfolgreich.setBounds(20,100,215,20);
                                         
                                         //alle
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart löschen"  && auswahl.getSelectedIndex()==0){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = loeschen('a');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -637,16 +637,16 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = loeschen('a', kriterium.getText());
-                                                }
+                                                //}
+                                                //else {
+                                                  //  boolean a = loeschen('a', kriterium.getText());
+                                               // }
                                                 
                                             }
                                             
                                         //Hund
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart löschen"  && auswahl.getSelectedIndex()==1){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = loeschen('h');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -654,14 +654,14 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = loeschen('h', kriterium.getText());
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = loeschen('h', kriterium.getText());
+                                                //}
                                             }
                                         //Katze
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==2){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart löschen"  && auswahl.getSelectedIndex()==2){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = loeschen('k');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -669,14 +669,14 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = loeschen('k', kriterium.getText());
-                                                }
+                                                //}
+                                                //else {
+                                                  //  boolean a = loeschen('k', kriterium.getText());
+                                                //}
                                             }
                                         //Kleintier
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==3){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart löschen"  && auswahl.getSelectedIndex()==3){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = loeschen('m');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -684,14 +684,14 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = loeschen('m', kriterium.getText());
-                                                }
+                                                //}
+                                                //else {
+                                                    //boolean a = loeschen('m', kriterium.getText());
+                                                ////}
                                             }
                                         //Vogel
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==4){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Tierart löschen" && auswahl.getSelectedIndex()==4){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = loeschen('v');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -699,10 +699,10 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = loeschen('v', kriterium.getText());
-                                                }
+                                               // }
+                                                //else {
+                                                  //  boolean a = loeschen('v', kriterium.getText());
+                                                //}
                                             }
                                         
                                 //Personal
@@ -710,48 +710,52 @@ public class Fenster {
                                     ArrayList<Personal> suchergebnisseP = new ArrayList<Personal>();
                                         
                                         //alle
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0) {
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Personalart suchen"  && auswahl.getSelectedIndex()==0) {
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseP = personalSuchen('a');
                                                     ergebnistabellePersonal(suchergebnisseP);
-                                                }
+                                                
+                                            /*
+                                            }
                                                 else {
                                                     suchergebnisseP = personalSuchen('a', kriterium.getText());
                                                     ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                             }
+                                                    */
+                                            }
                                         //Arzt
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1) {
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Personalart suchen" && auswahl.getSelectedIndex()==1) {
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseP = personalSuchen('m');
                                                     ergebnistabellePersonal(suchergebnisseP);
-                                                }
-                                                else {
-                                                    suchergebnisseP = personalSuchen('m', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisseP);
-                                                }
+                                             //   }
+                                                //else {
+                                                //    suchergebnisseP = personalSuchen('m', kriterium.getText());
+                                                //    ergebnistabellePersonal(suchergebnisseP);
+                                                //}
                                             }
                                         //Pfleger
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2) {
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Personalart suchen"  && auswahl.getSelectedIndex()==2) {
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseP = personalSuchen('p');
                                                     ergebnistabellePersonal(suchergebnisseP);
-                                                }
-                                                else {
-                                                    suchergebnisseP = personalSuchen('p', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisseP);
-                                                }
+                                                //}
+                                                //else {
+                                                    //suchergebnisseP = personalSuchen('p', kriterium.getText());
+                                                  //  ergebnistabellePersonal(suchergebnisseP);
+                                                //}
                                             }
                                         //Verwalter
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==3) {
-                                                if (kriterium.getText() == "") {
+                                            else if (frageA.getText()=="Personalart suchen"  && auswahl.getSelectedIndex()==3) {
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseP = personalSuchen('v');
                                                     ergebnistabellePersonal(suchergebnisseP);
-                                                }
-                                                else {
-                                                    suchergebnisseP = personalSuchen('v', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisseP);
-                                                }
+                                                //}
+                                                //else {
+                                                ////    suchergebnisseP = personalSuchen('v', kriterium.getText());
+                                                //    ergebnistabellePersonal(suchergebnisseP);
+                                                //}
                                             }
                                         
                                     //hinzufügen Arzt
@@ -780,8 +784,8 @@ public class Fenster {
                                         }
                                     //löschen
                                         //alle
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0) {
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Personal löschen"  && auswahl.getSelectedIndex()==0) {
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = personalLoeschen('a');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -789,21 +793,21 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('a', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('a', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                //        fenster.add(nichtErfolgreich);
+                                                 //   }
+                                                //}
                                                 
                                             }
                                         //Arzt
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1) {
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Personal löschen"  && auswahl.getSelectedIndex()==1) {
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = personalLoeschen('m');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -811,21 +815,21 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('m', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('m', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                //        fenster.add(nichtErfolgreich);
+                                                  //  }
+                                                //}
                                                 
                                             }
                                         //Pfleger
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==2) {
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Personal löschen"  && auswahl.getSelectedIndex()==2) {
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = personalLoeschen('p');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -833,21 +837,20 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('p', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
-                                                
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('p', kriterium.getText());
+                                                //    if (a == true) {
+                                                // fenster.add(erfolgreich);
+                                                //        }
+                                                //        fenster.add(nichtErfolgreich);
+                                                  //  }
+                                                //}
+                                                //
                                             }
                                         //Verwalter
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==3) {
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Personal löschen"  && auswahl.getSelectedIndex()==3) {
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = personalLoeschen('v');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -855,53 +858,53 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('v', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('v', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                //        fenster.add(nichtErfolgreich);
+                                                //    }
+                                                //}
                                                 
                                             }
                                 //Helfer
                                     //suchen
                                         ArrayList<Helfer> suchergebnisseH = new ArrayList<Helfer>();
                                         //alle
-                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helferart suchen"  && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseH = helferSuchen('a');
                                                     ergebnistabelleHelfer(suchergebnisseH);
-                                                }
-                                                else {
-                                                    suchergebnisseH = helferSuchen('a', kriterium.getText());
-                                                    ergebnistabelleHelfer(suchergebnisseH);
-                                                }
+                                                //}
+                                                //else {
+                                                //    suchergebnisseH = helferSuchen('a', kriterium.getText());
+                                                //    ergebnistabelleHelfer(suchergebnisseH);
+                                                //}
                                             }
                                         //Dauerhaften, keine Angabe
-                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helferart suchen" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseH = helferSuchen('d');
                                                     ergebnistabelleHelfer(suchergebnisseH);
-                                                }
-                                                else {
-                                                    suchergebnisseH = helferSuchen('d', kriterium.getText());
-                                                    ergebnistabelleHelfer(suchergebnisseH);
-                                                }
+                                                //}
+                                                //else {
+                                                //    suchergebnisseH = helferSuchen('d', kriterium.getText());
+                                                //    ergebnistabelleHelfer(suchergebnisseH);
+                                                //}
                                             }
                                         //Zeitweisen, keine Angabe
-                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helferart suchen"  && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     suchergebnisseH = helferSuchen('z');
                                                     ergebnistabelleHelfer(suchergebnisseH);
-                                                }
-                                                else {
-                                                    suchergebnisseH = helferSuchen('z', kriterium.getText());
-                                                    ergebnistabelleHelfer(suchergebnisseH);
-                                                }
+                                                //}
+                                                //else {
+                                                //////    suchergebnisseH = helferSuchen('z', kriterium.getText());
+                                                //    ergebnistabelleHelfer(suchergebnisseH);
+                                                //}
                                             }
                                         
                                     //hinzufügen dauerhaften Helfer
@@ -922,8 +925,8 @@ public class Fenster {
                                         }
                                     //löschen
                                         //alle
-                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helfer löschen"  && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = helferLoeschen('a');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -931,20 +934,20 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('a', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('a', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                 //       fenster.add(nichtErfolgreich);
+                                                //    }
+                                                //}
                                             }
                                         //Dauerhaften
-                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helfer löschen"  && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = helferLoeschen('d');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -952,20 +955,20 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('d', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('d', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                //        fenster.add(nichtErfolgreich);
+                                                //    }
+                                                //}
                                             }
                                         //Zeitweisen
-                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschenß" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                                if (kriterium.getText() == "") {
+                                            if (frageA.getText()=="Helfer löschen"  && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                //if (kriterium.getText() == "") {
                                                     boolean a = helferLoeschen('d');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
@@ -973,25 +976,29 @@ public class Fenster {
                                                     else {
                                                         fenster.add(nichtErfolgreich);
                                                     }
-                                                }
-                                                else {
-                                                    boolean a = personalLoeschen('d', kriterium.getText());
-                                                    if (a == true) {
-                                                        fenster.add(erfolgreich);
-                                                    }
-                                                    else {
-                                                        fenster.add(nichtErfolgreich);
-                                                    }
-                                                }
+                                                //}
+                                                //else {
+                                                //    boolean a = personalLoeschen('d', kriterium.getText());
+                                                //    if (a == true) {
+                                                //        fenster.add(erfolgreich);
+                                                //    }
+                                                //    else {
+                                                //        fenster.add(nichtErfolgreich);
+                                                //    }
+                                                //}
                                             }
                                 //Räume
                                     //suchen
+                                        ArrayList<TRaum> ergebnisT = new ArrayList<TRaum>();
+                                        ArrayList<PRaum> ergebnisP = new ArrayList<PRaum>();
                                         //mit Angabe
-                                            if (frageA.getText()=="Raumart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex() == 0){
-                                                
+                                            if (frageA.getText()=="Raumart suchen"  && auswahl.getSelectedIndex() == 0){
+                                                ergebnisT = tRaumSuchen();
+                                                ergebnistabelleTRaum(ergebnisT);
                                             }
-                                            else if (frageA.getText()=="Raumart suchen" && frageB.getText() == "Bestimmte Nummer suchen?" && auswahl.getSelectedIndex() ==1) {
-                                                
+                                            else if (frageA.getText()=="Raumart suchen"  && auswahl.getSelectedIndex() ==1) {
+                                                ergebnisP = pRaumSuchen();
+                                                ergebnistabellePRaum(ergebnisP);
                                             }
                                             
                                     //hinzufügen Tierraum
@@ -1012,10 +1019,12 @@ public class Fenster {
                                         }
                                     
                                     //löschen
-                                        //mit Angabe
-                                            //if (frageA.getText()=="Raum löschen" && frageB.getText()=="Bestimmte Nummer löschen?"){
-                                            //Hier Methode die  mit eingegebener Nummer (die Nummer erhält man mit kriterium.getText();) entfernt sonst meldung.setText("Tier nicht vorhanden");
-                                            //}
+                                        if (frageA.getText()=="Raum löschen"&& auswahl.getSelectedIndex() == 0){
+                                            raumLoeschen('t');
+                                        }
+                                        else if (frageA.getText()=="Raum löschen"&& auswahl.getSelectedIndex() == 1) {
+                                            raumLoeschen('p');
+                                        }
                                         
                             }
                 });
@@ -1085,19 +1094,19 @@ public class Fenster {
                                     Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, false);
                                     TierheimMain.helfer.add(helfer1);
                                 }
-                                /*else if (ueberschriftHinzu.getText() == "Tierraum"){
+                                else if (ueberschriftHinzu.getText() == "Tierraum"){
                                     int cb = Integer.parseInt(c);
                                     int ab = Integer.parseInt(a);
                                     TRaum traum1 = new TRaum (ab,b,cb);
-                                    TierheimMain.traume.add(traum1);
+                                    TierheimMain.traeume.add(traum1);
                                 }
                                 else if (ueberschriftHinzu.getText() == "Personalraum"){
                                     int cb = Integer.parseInt(c);
                                     int ab = Integer.parseInt(a);
                                     PRaum praum1 = new PRaum (ab,b,cb);
-                                    TierheimMain.praume.add(praum1);
+                                    TierheimMain.praeume.add(praum1);
                                 }
-                                */
+                                
                                 }
                         
                     });
@@ -1439,7 +1448,7 @@ public class Fenster {
     }
     protected static void ergebnistabellePRaum(ArrayList<PRaum> ergebnisliste) {
         JFrame suchergebnis = new JFrame("Suchergebnisse");
-        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,3));  
+        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,2));  
         JLabel nummer = new JLabel("Nummer");
         nummer.setFont(new Font("Arial", Font.BOLD, 15));
         //nummer.setBounds(0,0,99,19);
@@ -1449,7 +1458,7 @@ public class Fenster {
         
         JLabel nummer2;
         JLabel tierart2;
-        JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
+        JLabel keinergebnis = new JLabel("Es wurde keine Räume gefunden. Bitte verändern Sie die Suchkriterien.");
         //keinergebnis.setBounds(300,100,0,0);
         
         if (ergebnisliste != null) {
@@ -1475,7 +1484,6 @@ public class Fenster {
         suchergebnis.setVisible(true);
     }
 
-    
     /** Die Methode suchen(char tierart) sucht alle Tiere einer Tierart heraus und
      * gibt diese in einer ArrayList gesammelt wieder. Bei den char-Werten steht
      * "h" für Hunde, "k" für Katzen, "m" für Kleintiere (wie Meerschweinchen) und
@@ -1600,59 +1608,41 @@ public class Fenster {
         return ausgabe;
     }
     
-    /** Die Methode loeschen(char tierart) löscht alle Tiere einer Tierart. Bei den char-Werten steht
-     * "h" für Hunde, "k" für Katzen, "m" für Kleintiere (wie Meerschweinchen) und
-     * "v" für Vögel.
-     */
     protected static boolean loeschen(char tierart) {
         TRaum raum;
         switch (tierart) {
             case 'h':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Hund") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            raum.getTiere().remove(0);
-                        }
-                    }
+                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
+                    TierheimMain.hunde.remove(i);
                 }
                 break;
             case 'k':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart() == "Katze") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            raum.getTiere().remove(0);
-                        }
-                    }
+                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
+                    TierheimMain.katzen.remove(i);
                 }
                 break;
             case 'v':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Vogel") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            raum.getTiere().remove(0);
-                        }
-                    }
+                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
+                    TierheimMain.voegel.remove(i);
                 }
                 break;
             case 'm':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Kleintier") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            raum.getTiere().remove(0);
-                        }
-                    }
+                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
+                    TierheimMain.kleintiere.remove(i);
                 }
             break;
             case 'a':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    for (int j = 0; j<raum.getTiere().size();j++) {
-                        raum.getTiere().remove(0);
-                    }
+                for (int i = 0; i < TierheimMain.hunde.size(); i++) {
+                    TierheimMain.hunde.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.kleintiere.size(); i++) {
+                    TierheimMain.kleintiere.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.voegel.size(); i++) {
+                    TierheimMain.voegel.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.katzen.size(); i++) {
+                    TierheimMain.katzen.remove(i);
                 }
                 break;
             default:
@@ -1660,78 +1650,8 @@ public class Fenster {
         }
         return true;
     }
-    protected static boolean loeschen(char tierart, String nr) {
-        TRaum raum;
-        switch (tierart) {
-            case 'h':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Hund") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            Tier tier = raum.getTiere().get(j);
-                            if (tier.gettNr() == nr) {
-                                raum.getTiere().remove(tier);
-                            }
-                        }
-                    }
-                }
-                break;
-            case 'k':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart() == "Katze") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            Tier tier = raum.getTiere().get(j);
-                            if (tier.gettNr() == nr) {
-                                raum.getTiere().remove(tier);
-                            }
-                        }
-                    }
-                }
-                break;
-            case 'v':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Vogel") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            Tier tier = raum.getTiere().get(j);
-                            if (tier.gettNr() == nr) {
-                                raum.getTiere().remove(tier);
-                            }
-                        }
-                    }
-                }
-                break;
-            case 'm':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    if (raum.getTierart()=="Kleintier") {
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            Tier tier = raum.getTiere().get(j);
-                            if (tier.gettNr() == nr) {
-                                raum.getTiere().remove(tier);
-                            }
-                        }
-                    }
-                }
-                break;
-            case 'a':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    raum = TierheimMain.traeume.get(i);
-                    
-                        for (int j = 0; j<raum.getTiere().size();j++) {
-                            Tier tier = raum.getTiere().get(j);
-                            if (tier.gettNr() == nr) {
-                                raum.getTiere().remove(tier);
-                            }
-                        
-                    }
-                }
-            default:
-                return false;
-        }
-        return true;
-    }
+    
+    
     
     protected static ArrayList personalSuchen(char art) {
         ArrayList ausgabe = new ArrayList();
@@ -2002,27 +1922,17 @@ public class Fenster {
         return true;
     }
     
-    protected static ArrayList raumSuchen(char art) {
+    protected static ArrayList pRaumSuchen() {
         ArrayList ausgabe = new ArrayList();
-        switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                }
-                break;
-            case 't':
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe,TierheimMain.traeume.get(i));
-                }
-            case 'a':
-                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
-                }
-                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
-                    sortiertEinfuegenRaum(ausgabe,TierheimMain.traeume.get(i));
-                }
-                break;
-            default:
+        for (int i = 0; i < TierheimMain.praeume.size(); i++) {
+            sortiertEinfuegenRaum(ausgabe, TierheimMain.praeume.get(i));
+        }
+        return ausgabe;
+    }
+    protected static ArrayList tRaumSuchen() {
+        ArrayList ausgabe = new ArrayList();
+        for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+            sortiertEinfuegenRaum(ausgabe,TierheimMain.traeume.get(i));
         }
         return ausgabe;
     }
@@ -2057,6 +1967,31 @@ public class Fenster {
             default:
         }
         return ausgabe;
+    }
+    
+    protected static boolean raumLoeschen(char art) {
+        switch (art) {
+            case 't':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    TierheimMain.traeume.remove(i);
+                }
+                break;
+            case 'p':
+                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
+                    TierheimMain.praeume.remove(i);
+                }
+            case 'a':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    TierheimMain.traeume.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.praeume.size(); i++) {
+                    TierheimMain.praeume.remove(i);
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
     }
     
     private static void sortiertNachName(ArrayList<Tier> liste, Tier element) {
