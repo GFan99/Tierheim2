@@ -15,10 +15,11 @@ class Helfer extends Personal
     protected ArrayList<String> aufgabe;
     protected ArrayList<String> tage;
     protected ArrayList<Tier> hTiere;
+    protected boolean aufDauer;
 
     //Konstruktor, um ein Objekt der Klasse Halter mit ID, Name, Vorname, Straße und Nummer,
     //PLZ, Ort, Geburtstag,Telefonnummer, EMail und Gehalt zu erstellen
-    protected Helfer(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail)
+    protected Helfer(String nr, String name, String vName, String strNr, int plz, String ort, String gebDat, String tel, String mail, boolean dauerhaft)
     {
         pNr = nr;
         pName = name;
@@ -30,6 +31,7 @@ class Helfer extends Personal
         pTel = tel;
         pMail = mail;
         gehalt = 0f;
+        aufDauer = dauerhaft;
     }
     
     //Bei Aufruf der Methode gassi wird, wenn ein Hund noch nicht Gassi geführt wurde, die Variable "heuteGassi"
@@ -43,5 +45,8 @@ class Helfer extends Personal
         {
             System.out.println("Dieser Hund wurde heute schon gassigeführt. Bitte wähle einen anderen.");
         }
+    }
+    protected boolean getAufDauer() {
+        return aufDauer;
     }
 }

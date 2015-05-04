@@ -1,10 +1,12 @@
-//@author schueler
+/**
+ * @author schueler
+ */
 
-/*Noch wichtig:
-* Object getSelectedItem() 
-* Hier wird das in der JComboBox ausgewählte Objekt zurückgegeben.
-* Um mit dem Objekt weiter zu arbeiten, ist eine Typumwandlung zu der jeweiligen Klasse nötig.
-*/
+/**Noch wichtig:
+ * Object getSelectedItem() 
+ * Hier wird das in der JComboBox ausgewählte Objekt zurückgegeben.
+ * Um mit dem Objekt weiter zu arbeiten, ist eine Typumwandlung zu der jeweiligen Klasse nötig.
+ */
 import java.awt.*;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
@@ -16,7 +18,6 @@ public class Fenster {
     public Fenster() {        
         //Deklaration
         final JFrame fenster;
-        Color hellblau;
 
             //Home
                 //Über uns
@@ -60,9 +61,6 @@ public class Fenster {
                 final JTextField antwortHinzuJ;
                 final JButton okHinzu;
                 
-                
-                
-            
             //Menu
             final JMenuBar menuezeile;
             final JMenu menuHome;
@@ -84,14 +82,11 @@ public class Fenster {
             final JMenuItem hinzufuegenH;
             final JMenuItem loeschenH;
 
-            
         //Initialisierung
         fenster = new JFrame();
         fenster.setBounds(0,0,500,500);
         
-        
             //Home
-        
                 //Startseite
                 grundHomeUeber = new JPanel();
                 grundHomeUeber.setLayout(null);
@@ -536,68 +531,63 @@ public class Fenster {
                             public void actionPerformed(ActionEvent e){
                                 //Tiere
                                     //suchen
-                                        ArrayList<Tier> suchergebnisse;
-                                        
-                                        
-                                        
+                                        ArrayList<Tier> suchergebnisseT;
                                         //alle
-                                        if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==0){    
-                                            if (kriterium.getText() == "") {
-                                                    suchergebnisse = suchen('a');
-                                                    ergebnistabelleTier(suchergebnisse);
+                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0){    
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisseT = suchen('a');
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 else {
-                                                    suchergebnisse = suchen('a', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('a', kriterium.getText());
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 
                                         }
                                         //Hund
-                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1){
+                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1){
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = suchen('h');
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('h');
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 else {
-                                                    suchergebnisse = suchen('h', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('h', kriterium.getText());
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                             }
                                         //Katze
-                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = suchen('k');
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('k');
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 else {
-                                                    suchergebnisse = suchen('k', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('k', kriterium.getText());
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                             }
                                         //Kleintier
-                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
+                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==3 && kriterium.getText() == ""){
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = suchen('m');
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('m');
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 else {
-                                                    suchergebnisse = suchen('m', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('m', kriterium.getText());
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                             }
                                         //Vogel
-                                            if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
+                                            else if (frageA.getText()=="Tierart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==4 && kriterium.getText() == ""){
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = suchen('v');
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('v');
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
                                                 else {
-                                                    suchergebnisse = suchen('v', kriterium.getText());
-                                                    ergebnistabelleTier(suchergebnisse);
+                                                    suchergebnisseT = suchen('v', kriterium.getText());
+                                                    ergebnistabelleTier(suchergebnisseT);
                                                 }
-                                            }
-                                        //Anzeigen von JFrame suchergebnis, unabhängig von Suchkriterien.
-                                        
+                                            }                                        
                                         
                                     //hinzufügen Hund
                                         if (frageA.getText()=="Tierart hinzufügen" && auswahl.getSelectedIndex() == 0){
@@ -638,9 +628,9 @@ public class Fenster {
                                         nichtErfolgreich.setBounds(20,100,215,20);
                                         
                                         //alle
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==0){
+                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0){
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.loeschen('a');
+                                                    boolean a = loeschen('a');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -649,15 +639,15 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.loeschen('a', kriterium.getText());
+                                                    boolean a = loeschen('a', kriterium.getText());
                                                 }
                                                 
                                             }
                                             
                                         //Hund
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==1){
+                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1){
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.loeschen('h');
+                                                    boolean a = loeschen('h');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -666,13 +656,13 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.loeschen('h', kriterium.getText());
+                                                    boolean a = loeschen('h', kriterium.getText());
                                                 }
                                             }
                                         //Katze
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==2){
+                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==2){
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.loeschen('k');
+                                                    boolean a = loeschen('k');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -681,13 +671,13 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.loeschen('k', kriterium.getText());
+                                                    boolean a = loeschen('k', kriterium.getText());
                                                 }
                                             }
                                         //Kleintier
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==3){
+                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==3){
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.loeschen('m');
+                                                    boolean a = loeschen('m');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -696,13 +686,13 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.loeschen('m', kriterium.getText());
+                                                    boolean a = loeschen('m', kriterium.getText());
                                                 }
                                             }
                                         //Vogel
-                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==4){
+                                            if (frageA.getText()=="Tierart löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==4){
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.loeschen('v');
+                                                    boolean a = loeschen('v');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -711,56 +701,56 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.loeschen('v', kriterium.getText());
+                                                    boolean a = loeschen('v', kriterium.getText());
                                                 }
                                             }
                                         
                                 //Personal
                                     //suchen
-                                        
+                                    ArrayList<Personal> suchergebnisseP = new ArrayList<Personal>();
                                         
                                         //alle
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==0) {
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0) {
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = TierheimMain.personalSuchen('a');
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('a');
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                                 else {
-                                                    suchergebnisse = TierheimMain.personalSuchen('a', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('a', kriterium.getText());
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                             }
                                         //Arzt
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1) {
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1) {
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = TierheimMain.personalSuchen('m');
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('m');
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                                 else {
-                                                    suchergebnisse = TierheimMain.personalSuchen('m', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('m', kriterium.getText());
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                             }
                                         //Pfleger
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2) {
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2) {
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = TierheimMain.personalSuchen('p');
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('p');
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                                 else {
-                                                    suchergebnisse = TierheimMain.personalSuchen('p', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('p', kriterium.getText());
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                             }
                                         //Verwalter
-                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==3) {
+                                            if (frageA.getText()=="Personalart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==3) {
                                                 if (kriterium.getText() == "") {
-                                                    suchergebnisse = TierheimMain.personalSuchen('v');
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('v');
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                                 else {
-                                                    suchergebnisse = TierheimMain.personalSuchen('v', kriterium.getText());
-                                                    ergebnistabellePersonal(suchergebnisse);
+                                                    suchergebnisseP = personalSuchen('v', kriterium.getText());
+                                                    ergebnistabellePersonal(suchergebnisseP);
                                                 }
                                             }
                                         
@@ -790,9 +780,9 @@ public class Fenster {
                                         }
                                     //löschen
                                         //alle
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==0) {
+                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0) {
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.personalLoeschen('a');
+                                                    boolean a = personalLoeschen('a');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -801,14 +791,14 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.personalLoeschen('a', kriterium.getText());
+                                                    boolean a = personalLoeschen('a', kriterium.getText());
                                                 }
                                                 
                                             }
                                         //Arzt
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==1) {
+                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1) {
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.personalLoeschen('m');
+                                                    boolean a = personalLoeschen('m');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -817,14 +807,14 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.personalLoeschen('m', kriterium.getText());
+                                                    boolean a = personalLoeschen('m', kriterium.getText());
                                                 }
                                                 
                                             }
                                         //Pfleger
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==2) {
+                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==2) {
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.personalLoeschen('p');
+                                                    boolean a = personalLoeschen('p');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -833,14 +823,14 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.personalLoeschen('p', kriterium.getText());
+                                                    boolean a = personalLoeschen('p', kriterium.getText());
                                                 }
                                                 
                                             }
                                         //Verwalter
-                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==3) {
+                                            if (frageA.getText()=="Personal löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==3) {
                                                 if (kriterium.getText() == "") {
-                                                    boolean a = TierheimMain.personalLoeschen('v');
+                                                    boolean a = personalLoeschen('v');
                                                     if (a == true) {
                                                         fenster.add(erfolgreich);
                                                     }
@@ -849,7 +839,7 @@ public class Fenster {
                                                     }
                                                 }
                                                 else {
-                                                    boolean a = TierheimMain.personalLoeschen('v', kriterium.getText());
+                                                    boolean a = personalLoeschen('v', kriterium.getText());
                                                 }
                                                 
                                             }
@@ -989,12 +979,12 @@ public class Fenster {
                                 }
                                 if (ueberschriftHinzu.getText() == "Dauerhafter Helfer"){
                                     
-                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i);
+                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, true);
                                     TierheimMain.helfer.add(helfer1);
                                 }
                                 if (ueberschriftHinzu.getText() == "Zeitweiser Helfer"){
                                     
-                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i);
+                                    Helfer helfer1 = new Helfer (a,b,c,d,eb,f,g,h,i, false);
                                     TierheimMain.helfer.add(helfer1);
                                 }
                                 /*if (ueberschriftHinzu.getText() == "Tierraum"){
@@ -1040,7 +1030,6 @@ public class Fenster {
             menuezeile.add(menuHelfer);
             menuezeile.add(menuRaum);
             
-            
             //suchen,löschen Tiere/Personal/Helfer/Raum
                 grundSuchen.add(frageA);
                 grundSuchen.add(frageB);
@@ -1073,8 +1062,6 @@ public class Fenster {
                 grundHinzu.add(antwortHinzuJ);
                 grundHinzu.add(okHinzu);
                 
-                
-                
             //Home
                 //Startseite
                 fenster.add(grundHomeUeber);
@@ -1096,28 +1083,29 @@ public class Fenster {
      */
     protected void ergebnistabelleTier(ArrayList<Tier> ergebnisliste) {
         JFrame suchergebnis = new JFrame("Suchergebnisse");
+        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,7));
         
         JLabel nummer = new JLabel("Nummer");
         nummer.setFont(new Font("Arial", Font.BOLD, 15));
-        nummer.setBounds(0,0,149,19);
+        //nummer.setBounds(0,0,149,19);
         JLabel name = new JLabel("Name");
         name.setFont(new Font("Arial", Font.BOLD, 15));
-        name.setBounds(150,0,149,19);
+        //name.setBounds(150,0,149,19);
         JLabel tierart = new JLabel("Tierart");
         tierart.setFont(new Font("Arial", Font.BOLD, 15));
-        tierart.setBounds(300,0,149,19);
+        //tierart.setBounds(300,0,149,19);
         JLabel rasse = new JLabel("Rasse");
         rasse.setFont(new Font("Arial", Font.BOLD, 15));
-        rasse.setBounds(450,0,149,19);
+        //rasse.setBounds(450,0,149,19);
         JLabel farbe = new JLabel("Farbe");
         farbe.setFont(new Font("Arial", Font.BOLD, 15));
-        farbe.setBounds(600,0,149,19);
+        //farbe.setBounds(600,0,149,19);
         JLabel geschlecht = new JLabel("Geschlecht");
         geschlecht.setFont(new Font("Arial", Font.BOLD, 15));
-        geschlecht.setBounds(750,0,149,19);
+        //geschlecht.setBounds(750,0,149,19);
         JLabel gebdat = new JLabel("Geburtsdatum");
         gebdat.setFont(new Font("Arial", Font.BOLD, 15));
-        gebdat.setBounds(900,0,149,19);
+        //gebdat.setBounds(900,0,149,19);
         
         JLabel nummer2;
         JLabel name2;
@@ -1127,10 +1115,10 @@ public class Fenster {
         JLabel geschlecht2;
         JLabel gebdat2;
         JLabel keinergebnis = new JLabel("Es wurde kein Tier gefunden. Bitte verändern Sie die Suchkriterien.");
-        keinergebnis.setBounds(300,100,0,0);
+        //keinergebnis.setBounds(300,100,0,0);
         
         if (ergebnisliste != null) {
-            suchergebnis.setBounds(501, 0, 1050, ergebnisliste.size()*20+20);
+            //suchergebnis.setBounds(501, 0, 1050, ergebnisliste.size()*20+20);
             suchergebnis.add(nummer);
             suchergebnis.add(name);
             suchergebnis.add(tierart);
@@ -1141,19 +1129,19 @@ public class Fenster {
             for(int i =0; i<ergebnisliste.size();i++) {
                 Tier tier = ergebnisliste.get(i);
                 nummer2 = new JLabel(tier.gettNr());
-                nummer2.setBounds(0,(i+1)*20,149,19);
+                //nummer2.setBounds(0,(i+1)*20,149,19);
                 name2 = new JLabel(tier.getName());
-                name2.setBounds(150,(i+1)*20,149,19);
+                //name2.setBounds(150,(i+1)*20,149,19);
                 tierart2 = new JLabel(tier.getClass().toString());
-                tierart2.setBounds(300,(i+1)*20,149,19);
+                //tierart2.setBounds(300,(i+1)*20,149,19);
                 rasse2 = new JLabel(tier.gettRasse());
-                rasse2.setBounds(450,(i+1)*20,149,19);
+                //rasse2.setBounds(450,(i+1)*20,149,19);
                 farbe2 = new JLabel(tier.gettFarbe());
-                farbe2.setBounds(600,(i+1)*20,149,19);
+                //farbe2.setBounds(600,(i+1)*20,149,19);
                 geschlecht2 = new JLabel(tier.gettGeschlecht());
-                geschlecht2.setBounds(750,(i+1)*20,149,19);
+                //geschlecht2.setBounds(750,(i+1)*20,149,19);
                 gebdat2 = new JLabel(tier.getgebDat());
-                gebdat2.setBounds(900,(i+1)*20,149,19);
+                //gebdat2.setBounds(900,(i+1)*20,149,19);
                 suchergebnis.add(nummer2);
                 suchergebnis.add(name2);
                 suchergebnis.add(tierart2);
@@ -1164,32 +1152,33 @@ public class Fenster {
             }
         }
         else {
-            suchergebnis.setBounds(501,0,350,150);
+            //suchergebnis.setBounds(501,0,350,150);
             suchergebnis.getContentPane().add(keinergebnis);
         }
-        suchergebnis.setLocation(50,50);
+        suchergebnis.setLocation(501,50);
         suchergebnis.setVisible(true);
     }
     protected void ergebnistabellePersonal(ArrayList<Personal> ergebnisliste) {
         JFrame suchergebnis = new JFrame("Suchergebnisse");
-                
+        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,5));  
         JLabel nummer = new JLabel("Nummer");
         nummer.setFont(new Font("Arial", Font.BOLD, 15));
-        nummer.setBounds(0,0,149,19);
-        JLabel name = new JLabel("Name");name.setFont(new Font("Arial", Font.BOLD, 17));
-        name.setBounds(0,150,149,19);
+        //nummer.setBounds(0,0,99,19);
+        JLabel name = new JLabel("Name");
+        name.setFont(new Font("Arial", Font.BOLD, 17));
+        //name.setBounds(100,150,99,19);
         JLabel vname = new JLabel("Vorname");
         vname.setFont(new Font("Arial", Font.BOLD, 17));
-        vname.setBounds(300,0,149,19);
+        //vname.setBounds(200,0,99,19);
         JLabel gebdat = new JLabel("Geburtsdatum");
         gebdat.setFont(new Font("Arial", Font.BOLD, 17));
-        gebdat.setBounds(450,0,149,19);
+        //gebdat.setBounds(300,0,99,19);
         JLabel art = new JLabel("Art");
         art.setFont(new Font("Arial", Font.BOLD, 17));
-        art.setBounds(600,0,149,19);
+        //art.setBounds(400,0,99,19);
         JLabel gehalt = new JLabel("Gehalt");
         gehalt.setFont(new Font("Arial", Font.BOLD, 17));
-        gehalt.setBounds(750,0,149,19);
+        //gehalt.setBounds(500,0,99,19);
         
         JLabel nummer2;
         JLabel name2;
@@ -1198,10 +1187,10 @@ public class Fenster {
         JLabel art2;
         JLabel gehalt2;
         JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
-        keinergebnis.setBounds(300,100,0,0);
+        //keinergebnis.setBounds(300,100,0,0);
         
         if (ergebnisliste != null) {
-            suchergebnis.setBounds(501, 0, 1050, ergebnisliste.size()*20+20);
+            //suchergebnis.setBounds(501, 0, 600, ergebnisliste.size()*20+20);
             suchergebnis.add(nummer);
             suchergebnis.add(name);
             suchergebnis.add(vname);
@@ -1212,17 +1201,17 @@ public class Fenster {
             for(int i =0; i<ergebnisliste.size();i++) {
                 Personal person = ergebnisliste.get(i);
                 nummer2 = new JLabel(person.getPNr());
-                nummer2.setBounds(0,(i+1)*20,149,19);
+                //nummer2.setBounds(0,(i+1)*20,149,19);
                 name2 = new JLabel(person.getName());
-                name2.setBounds(150,(i+1)*20,149,19);
+                //name2.setBounds(150,(i+1)*20,149,19);
                 vname2 = new JLabel(person.getVName());
-                vname2.setBounds(300,(i+1)*20,149,19);
+                //vname2.setBounds(300,(i+1)*20,149,19);
                 gebdat2 = new JLabel(person.getGebDat());
-                gebdat2.setBounds(450,(i+1)*20,149,19);
+                //gebdat2.setBounds(450,(i+1)*20,149,19);
                 art2 = new JLabel(person.getClass().toString());
-                art2.setBounds(600,(i+1)*20,149,19);
+                //art2.setBounds(600,(i+1)*20,149,19);
                 gehalt2 = new JLabel(Float.toString(person.getGehalt()));
-                gehalt2.setBounds(750,(i+1)*20,149,19);
+                //gehalt2.setBounds(750,(i+1)*20,149,19);
                 suchergebnis.add(nummer2);
                 suchergebnis.add(name2);
                 suchergebnis.add(art2);
@@ -1232,10 +1221,10 @@ public class Fenster {
             }
         }
         else {
-            suchergebnis.setBounds(501,0,350,150);
+            suchergebnis.setBounds(501,0,600,150);
             suchergebnis.getContentPane().add(keinergebnis);
         }
-        suchergebnis.setLocation(50,50);
+        suchergebnis.setLocation(501,50);
         suchergebnis.setVisible(true);
     }
     
@@ -1378,6 +1367,442 @@ public class Fenster {
                 System.out.println("Falscher char eingegeben");
         }
         return ausgabe;
+    }
+    
+    /** Die Methode loeschen(char tierart) löscht alle Tiere einer Tierart. Bei den char-Werten steht
+     * "h" für Hunde, "k" für Katzen, "m" für Kleintiere (wie Meerschweinchen) und
+     * "v" für Vögel.
+     */
+    protected static boolean loeschen(char tierart) {
+        TRaum raum;
+        switch (tierart) {
+            case 'h':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'k':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            raum.getTiere().remove(0);
+                        }
+                    }
+                }
+            break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    for (int j = 0; j<raum.getTiere().size();j++) {
+                        raum.getTiere().remove(0);
+                    }
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+    protected static boolean loeschen(char tierart, String nr) {
+        TRaum raum;
+        switch (tierart) {
+            case 'h':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Hund") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'k':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart() == "Katze") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Vogel") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    if (raum.getTierart()=="Kleintier") {
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        }
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.traeume.size(); i++) {
+                    raum = TierheimMain.traeume.get(i);
+                    
+                        for (int j = 0; j<raum.getTiere().size();j++) {
+                            Tier tier = raum.getTiere().get(j);
+                            if (tier.gettNr() == nr) {
+                                raum.getTiere().remove(tier);
+                            }
+                        
+                    }
+                }
+            default:
+                return false;
+        }
+        return true;
+    }
+    
+    protected static ArrayList personalSuchen(char art) {
+        ArrayList ausgabe = new ArrayList();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                }
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                }
+                break;
+            default:
+        }
+        return ausgabe;
+    }
+    protected static ArrayList personalSuchen(char art, String nr) {
+        ArrayList ausgabe = new ArrayList();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                    }
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                    }
+                }
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                    }
+                }
+            default:
+        }
+        return ausgabe;
+    }
+    
+    protected static boolean personalLoeschen(char art) {
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.pfleger.remove(i);
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.verwalter.remove(i);
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.aerzte.remove(i);
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.pfleger.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.aerzte.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.verwalter.remove(i);
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+    protected static boolean personalLoeschen(char art, String nr) {
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.pfleger.remove(i);
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.aerzte.remove(i);
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.verwalter.remove(i);
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.verwalter.remove(i);
+                    }
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.aerzte.remove(i);
+                    }
+                }
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.pfleger.remove(i);
+                    }
+                }
+            default:
+                return false;
+        }
+        return true;
+    }
+    
+    protected static ArrayList helferSuchen(char art) {
+        ArrayList ausgabe = new ArrayList();
+        switch (art) {
+            case 'z':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == false) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
+                    }
+                }
+                break;
+            case 'd':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                }
+                break;
+            default:
+        }
+        return ausgabe;
+    }
+    protected static ArrayList helferSuchen(char art, String nr) {
+        ArrayList ausgabe = new ArrayList();
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                    }
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                    }
+                }
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+                    }
+                }
+            default:
+        }
+        return ausgabe;
+    }
+    
+    protected static boolean helferLoeschen(char art) {
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.pfleger.remove(i);
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.verwalter.remove(i);
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.aerzte.remove(i);
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    TierheimMain.pfleger.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    TierheimMain.aerzte.remove(i);
+                }
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    TierheimMain.verwalter.remove(i);
+                }
+                break;
+            default:
+                return false;
+        }
+        return true;
+    }
+    protected static boolean helferLoeschen(char art, String nr) {
+        switch (art) {
+            case 'p':
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.pfleger.remove(i);
+                    }
+                }
+                break;
+            case 'm':
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.aerzte.remove(i);
+                    }
+                }
+                break;
+            case 'v':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.verwalter.remove(i);
+                    }
+                }
+                break;
+            case 'a':
+                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
+                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
+                        TierheimMain.verwalter.remove(i);
+                    }
+                }
+                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
+                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
+                        TierheimMain.aerzte.remove(i);
+                    }
+                }
+                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
+                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
+                        TierheimMain.pfleger.remove(i);
+                    }
+                }
+            default:
+                return false;
+        }
+        return true;
     }
     
     private void sortiertNachName(ArrayList<Tier> liste, Tier element) {

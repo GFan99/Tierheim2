@@ -8,7 +8,10 @@
  *
  * @author becksusanna
  */
-public abstract class Person {
+
+import java.io.Serializable;
+
+public abstract class Person implements Serializable{
     protected String pName;
     protected String pVName;
     protected String pStrNr;

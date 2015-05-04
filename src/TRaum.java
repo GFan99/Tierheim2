@@ -21,6 +21,8 @@ class TRaum extends Raum{
         tierart = tierartx;
         groesseAuslauf = auslaufGr;
         geputztWoche = false;
+        tiere = new ArrayList<Tier>();
+        warteliste = new ArrayList<Tier>();
     }
     protected TRaum(int nr, String tierartx, int anzKaefige) {
         rNr = nr;
