@@ -200,6 +200,9 @@ public class TierheimMain {
         speichern(traeume, "traeume.th");
         speichern(praeume, "praeume.th");
         speichern(helfer, "helfer.th");
+        speichern(hunde, "hunde.th");
+        speichern(katzen, "katzen.th");
+        speichern(kleintiere, "kleintiere.th");
         for (int i = 0; i < traeume.size(); i++) {
             TRaum raum = traeume.get(i);
             speichern(raum.getTiere(),"tiereRaum.th"+raum.getNr());
@@ -220,12 +223,16 @@ public class TierheimMain {
         katzen = new ArrayList<Katze>();
         kleintiere = new ArrayList<Kleintier>();
         
+        
         pfleger = lesen("pfleger.th");
         aerzte = lesen("aerzte.th");
         verwalter = lesen("verwalter.th");
         traeume = lesen("traeume.th");
         praeume = lesen("praeume.th");
         helfer = lesen("helfer.th");
+        hunde = lesen("hunde.th");
+        katzen = lesen("katzen.th");
+        kleintiere = lesen("kleintiere.th");
         for (int i = 0; i < traeume.size(); i++) {
             TRaum raum = traeume.get(i);
             raum.setTiere(lesen("tiereRaum"+raum.getNr()+".th"));
@@ -255,9 +262,10 @@ public class TierheimMain {
         raum.addTier(hund2);
         
         personalListeAusgeben();
-        
-        speichernbeenden();
         */
+        
+        //speichernbeenden();
+       
 
         new Login();
         

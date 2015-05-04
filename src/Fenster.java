@@ -792,6 +792,12 @@ public class Fenster {
                                                 }
                                                 else {
                                                     boolean a = personalLoeschen('a', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
                                                 }
                                                 
                                             }
@@ -808,6 +814,12 @@ public class Fenster {
                                                 }
                                                 else {
                                                     boolean a = personalLoeschen('m', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
                                                 }
                                                 
                                             }
@@ -824,6 +836,12 @@ public class Fenster {
                                                 }
                                                 else {
                                                     boolean a = personalLoeschen('p', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
                                                 }
                                                 
                                             }
@@ -840,27 +858,52 @@ public class Fenster {
                                                 }
                                                 else {
                                                     boolean a = personalLoeschen('v', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
                                                 }
                                                 
                                             }
                                 //Helfer
                                     //suchen
-                                        //alle, keine Angabe
-                                            //if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
-                                            //Hier Methode, die alle Helfer ausgibt.
-                                            //}
+                                        ArrayList<Helfer> suchergebnisseH = new ArrayList<Helfer>();
+                                        //alle
+                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisseH = helferSuchen('a');
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                                else {
+                                                    suchergebnisseH = helferSuchen('a', kriterium.getText());
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                            }
                                         //Dauerhaften, keine Angabe
-                                            //if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle dauerhaften Helfer ausgibt.
-                                            //}
+                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisseH = helferSuchen('d');
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                                else {
+                                                    suchergebnisseH = helferSuchen('d', kriterium.getText());
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                            }
                                         //Zeitweisen, keine Angabe
-                                            //if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle zeitweisen Helfer ausgibt.
-                                            //}
-                                        //mit Angabe
-                                            //if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen" && kriterium.getText() != ""){
-                                            //Hier Methode die Nummer prüft, bei vorhandensein Helfer ausgibt, sonst meldung.setText("Tier nicht vorhanden");
-                                            //}
+                                            if (frageA.getText()=="Helferart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    suchergebnisseH = helferSuchen('z');
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                                else {
+                                                    suchergebnisseH = helferSuchen('z', kriterium.getText());
+                                                    ergebnistabelleHelfer(suchergebnisseH);
+                                                }
+                                            }
+                                        
                                     //hinzufügen dauerhaften Helfer
                                         if (frageA.getText()=="Helferart hinzufügen" && auswahl.getSelectedIndex() == 0){
                                         fenster.remove(grundHomeUeber);
@@ -878,28 +921,78 @@ public class Fenster {
                                         fenster.repaint();
                                         }
                                     //löschen
-                                        //alle, keine Angabe
-                                            //if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
-                                            //Hier Methode, die alle Helfer entfernt.
-                                            //}
-                                        //Dauerhaften, keine Angabe
-                                            //if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle dauerhaften Helfer entfernt.
-                                            //}
-                                        //Zeitweisen, keine Angabe
-                                            //if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
-                                            // Hier Methode, die alle zeitweisen Helfer  entfernt.
-                                            //}
-                                        //mit Angabe
-                                            //if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen" && kriterium.getText() != ""){
-                                            //Hier Methode die  mit eingegebener Nummer (die Nummer erhält man mit kriterium.getText();) entfernt sonst meldung.setText("Helfer nicht vorhanden");
-                                            //}
+                                        //alle
+                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==0 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    boolean a = helferLoeschen('a');
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                                else {
+                                                    boolean a = personalLoeschen('a', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                            }
+                                        //Dauerhaften
+                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschen?" && auswahl.getSelectedIndex()==1 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    boolean a = helferLoeschen('d');
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                                else {
+                                                    boolean a = personalLoeschen('d', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                            }
+                                        //Zeitweisen
+                                            if (frageA.getText()=="Helfer löschen" && frageB.getText()=="Bestimmte Nummer löschenß" && auswahl.getSelectedIndex()==2 && kriterium.getText() == ""){
+                                                if (kriterium.getText() == "") {
+                                                    boolean a = helferLoeschen('d');
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                                else {
+                                                    boolean a = personalLoeschen('d', kriterium.getText());
+                                                    if (a == true) {
+                                                        fenster.add(erfolgreich);
+                                                    }
+                                                    else {
+                                                        fenster.add(nichtErfolgreich);
+                                                    }
+                                                }
+                                            }
                                 //Räume
                                     //suchen
                                         //mit Angabe
-                                            //if (frageA.getText()=="Raumart suchen"){
-                                            //Hier Methode die Nummer prüft, bei vorhandensein Raum ausgibt, sonst meldung.setText("Raum nicht vorhanden");
-                                            //}
+                                            if (frageA.getText()=="Raumart suchen" && frageB.getText()=="Bestimmte Nummer suchen?" && auswahl.getSelectedIndex() == 0){
+                                                
+                                            }
+                                            else if (frageA.getText()=="Raumart suchen" && frageB.getText() == "Bestimmte Nummer suchen?" && auswahl.getSelectedIndex() ==1) {
+                                                
+                                            }
                                     //hinzufügen Tierraum
                                         if (frageA.getText()=="Raumart hinzufügen" && auswahl.getSelectedIndex() == 0){
                                         fenster.remove(grundHomeUeber);
@@ -919,7 +1012,7 @@ public class Fenster {
                                     
                                     //löschen
                                         //mit Angabe
-                                            //if (frageA.getText()=="Raum löschen" && frageB.getText()=="Bestimmte Nummer löschen" && kriterium.getText() != ""){
+                                            //if (frageA.getText()=="Raum löschen" && frageB.getText()=="Bestimmte Nummer löschen?"){
                                             //Hier Methode die  mit eingegebener Nummer (die Nummer erhält man mit kriterium.getText();) entfernt sonst meldung.setText("Tier nicht vorhanden");
                                             //}
                                         
@@ -1165,19 +1258,19 @@ public class Fenster {
         nummer.setFont(new Font("Arial", Font.BOLD, 15));
         //nummer.setBounds(0,0,99,19);
         JLabel name = new JLabel("Name");
-        name.setFont(new Font("Arial", Font.BOLD, 17));
+        name.setFont(new Font("Arial", Font.BOLD, 15));
         //name.setBounds(100,150,99,19);
         JLabel vname = new JLabel("Vorname");
-        vname.setFont(new Font("Arial", Font.BOLD, 17));
+        vname.setFont(new Font("Arial", Font.BOLD, 15));
         //vname.setBounds(200,0,99,19);
         JLabel gebdat = new JLabel("Geburtsdatum");
-        gebdat.setFont(new Font("Arial", Font.BOLD, 17));
+        gebdat.setFont(new Font("Arial", Font.BOLD, 15));
         //gebdat.setBounds(300,0,99,19);
         JLabel art = new JLabel("Art");
-        art.setFont(new Font("Arial", Font.BOLD, 17));
+        art.setFont(new Font("Arial", Font.BOLD, 15));
         //art.setBounds(400,0,99,19);
         JLabel gehalt = new JLabel("Gehalt");
-        gehalt.setFont(new Font("Arial", Font.BOLD, 17));
+        gehalt.setFont(new Font("Arial", Font.BOLD, 15));
         //gehalt.setBounds(500,0,99,19);
         
         JLabel nummer2;
@@ -1227,6 +1320,75 @@ public class Fenster {
         suchergebnis.setLocation(501,50);
         suchergebnis.setVisible(true);
     }
+    protected void ergebnistabelleHelfer(ArrayList<Helfer> ergebnisliste) {
+        JFrame suchergebnis = new JFrame("Suchergebnisse");
+        suchergebnis.setLayout(new GridLayout(ergebnisliste.size()+1,5));  
+        JLabel nummer = new JLabel("Nummer");
+        nummer.setFont(new Font("Arial", Font.BOLD, 15));
+        //nummer.setBounds(0,0,99,19);
+        JLabel name = new JLabel("Name");
+        name.setFont(new Font("Arial", Font.BOLD, 15));
+        //name.setBounds(100,150,99,19);
+        JLabel vname = new JLabel("Vorname");
+        vname.setFont(new Font("Arial", Font.BOLD, 15));
+        //vname.setBounds(200,0,99,19);
+        JLabel gebdat = new JLabel("Geburtsdatum");
+        gebdat.setFont(new Font("Arial", Font.BOLD, 15));
+        //gebdat.setBounds(300,0,99,19);
+        JLabel art = new JLabel("Art");
+        art.setFont(new Font("Arial", Font.BOLD, 15));
+        //art.setBounds(400,0,99,19);
+        
+        JLabel nummer2;
+        JLabel name2;
+        JLabel vname2;
+        JLabel gebdat2;
+        JLabel art2;
+        JLabel gehalt2;
+        JLabel keinergebnis = new JLabel("Es wurde kein Mitarbeiter gefunden. Bitte verändern Sie die Suchkriterien.");
+        //keinergebnis.setBounds(300,100,0,0);
+        
+        if (ergebnisliste != null) {
+            //suchergebnis.setBounds(501, 0, 600, ergebnisliste.size()*20+20);
+            suchergebnis.add(nummer);
+            suchergebnis.add(name);
+            suchergebnis.add(vname);
+            suchergebnis.add(gebdat);
+            suchergebnis.add(art);
+            
+            for(int i =0; i<ergebnisliste.size();i++) {
+                Helfer person = ergebnisliste.get(i);
+                nummer2 = new JLabel(person.getPNr());
+                //nummer2.setBounds(0,(i+1)*20,149,19);
+                name2 = new JLabel(person.getName());
+                //name2.setBounds(150,(i+1)*20,149,19);
+                vname2 = new JLabel(person.getVName());
+                //vname2.setBounds(300,(i+1)*20,149,19);
+                gebdat2 = new JLabel(person.getGebDat());
+                //gebdat2.setBounds(450,(i+1)*20,149,19);
+                if (person.getAufDauer() ==true) {
+                    art2 = new JLabel("dauerhaft");
+                }
+                else art2 = new JLabel("zeitweise");
+                //art2.setBounds(600,(i+1)*20,149,19);
+                gehalt2 = new JLabel(Float.toString(person.getGehalt()));
+                //gehalt2.setBounds(750,(i+1)*20,149,19);
+                suchergebnis.add(nummer2);
+                suchergebnis.add(name2);
+                suchergebnis.add(art2);
+                suchergebnis.add(vname2);
+                suchergebnis.add(gehalt2);
+                suchergebnis.add(gebdat2);
+            }
+        }
+        else {
+            //suchergebnis.setBounds(501,0,600,150);
+            suchergebnis.getContentPane().add(keinergebnis);
+        }
+        suchergebnis.setLocation(501,50);
+        suchergebnis.setVisible(true);
+    }
+
     
     /** Die Methode suchen(char tierart) sucht alle Tiere einer Tierart heraus und
      * gibt diese in einer ArrayList gesammelt wieder. Bei den char-Werten steht
@@ -1669,13 +1831,14 @@ public class Fenster {
                 }
                 break;
             case 'd':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == true) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
+                    }
                 }
-                break;
             case 'a':
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
                 }
                 break;
             default:
@@ -1685,43 +1848,30 @@ public class Fenster {
     protected static ArrayList helferSuchen(char art, String nr) {
         ArrayList ausgabe = new ArrayList();
         switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
+            case 'z':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == false) {
+                        if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                            TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
+                        }
                     }
                 }
                 break;
-            case 'm':
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
+            case 'd':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == true) {
+                        if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                            TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
+                        }
                     }
                 }
-                break;
-            case 'v':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
-                    }
-                }
-                break;
             case 'a':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.verwalter.get(i));
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.helfer.get(i));
                     }
                 }
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.aerzte.get(i));
-                    }
-                }
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
-                        TierheimMain.sortiertEinfuegenP(ausgabe,TierheimMain.pfleger.get(i));
-                    }
-                }
+                break;
             default:
         }
         return ausgabe;
@@ -1729,30 +1879,22 @@ public class Fenster {
     
     protected static boolean helferLoeschen(char art) {
         switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    TierheimMain.pfleger.remove(i);
+            case 'z':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == false) {
+                        TierheimMain.helfer.remove(i);
+                    }
                 }
                 break;
-            case 'v':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    TierheimMain.verwalter.remove(i);
+            case 'd':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == true) {
+                        TierheimMain.helfer.remove(i);
+                    }
                 }
-                break;
-            case 'm':
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    TierheimMain.aerzte.remove(i);
-                }
-                break;
             case 'a':
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    TierheimMain.pfleger.remove(i);
-                }
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    TierheimMain.aerzte.remove(i);
-                }
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    TierheimMain.verwalter.remove(i);
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    TierheimMain.helfer.remove(i);
                 }
                 break;
             default:
@@ -1762,45 +1904,31 @@ public class Fenster {
     }
     protected static boolean helferLoeschen(char art, String nr) {
         switch (art) {
-            case 'p':
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
-                        TierheimMain.pfleger.remove(i);
+            case 'z':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == false) {
+                        if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                            TierheimMain.helfer.remove(i);
+                        }
                     }
                 }
                 break;
-            case 'm':
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
-                        TierheimMain.aerzte.remove(i);
+            case 'd':
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getAufDauer() == true) {
+                        if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                            TierheimMain.helfer.remove(i);
+                        }
                     }
                 }
-                break;
-            case 'v':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
-                        TierheimMain.verwalter.remove(i);
-                    }
-                }
-                break;
             case 'a':
-                for (int i = 0; i < TierheimMain.verwalter.size(); i++) {
-                    if (TierheimMain.verwalter.get(i).getPNr() == nr) {
-                        TierheimMain.verwalter.remove(i);
+                for (int i = 0; i < TierheimMain.helfer.size(); i++) {
+                    if (TierheimMain.helfer.get(i).getPNr() == nr) {
+                        TierheimMain.helfer.remove(i);
                     }
                 }
-                for (int i = 0; i < TierheimMain.aerzte.size(); i++) {
-                    if (TierheimMain.aerzte.get(i).getPNr() == nr) {
-                        TierheimMain.aerzte.remove(i);
-                    }
-                }
-                for (int i = 0; i < TierheimMain.pfleger.size(); i++) {
-                    if (TierheimMain.pfleger.get(i).getPNr() == nr) {
-                        TierheimMain.pfleger.remove(i);
-                    }
-                }
+                break;
             default:
-                return false;
         }
         return true;
     }
