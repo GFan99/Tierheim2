@@ -1141,9 +1141,9 @@ public class Fenster {
             
             //suchen,löschen Tiere/Personal/Helfer/Raum
                 grundSuchen.add(frageA);
-                grundSuchen.add(frageB);
+                //grundSuchen.add(frageB);
                 grundSuchen.add(auswahl);
-                grundSuchen.add(kriterium);
+                //grundSuchen.add(kriterium);
                 grundSuchen.add(bestaetigen);
                 grundSuchen.add(meldung);
                 //grundSuchen.add(ausgabe);

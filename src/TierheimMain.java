@@ -272,13 +272,13 @@ public class TierheimMain {
         //speichernbeenden();
        
 
-        Hund hund1 = new Hund(1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
-        hunde.add(hund1);
-        Fenster.ergebnistabelleTier(Fenster.suchen('h'));
+        //Hund hund1 = new Hund(1000, 1, "Bello", "Labrador", "männlich", "13.02.2010", "beige", "abends", "132098");
+        //hunde.add(hund1);
+        //Fenster.ergebnistabelleTier(Fenster.suchen('h'));
         
-        Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
-        pfleger.add(pfleger1);
-        Fenster.ergebnistabellePersonal(Fenster.personalSuchen('a'));
+        //Pfleger pfleger1 = new Pfleger("L32J56K2", "Maier", "Heinz", "Muehlweg 5", 12356, "Berlin", "12/04/1963", "0304573492", "HeinzMaier@googlemail.com", 1600.00f);
+        //pfleger.add(pfleger1);
+        //Fenster.ergebnistabellePersonal(Fenster.personalSuchen('a'));
         new Login();
         
 
